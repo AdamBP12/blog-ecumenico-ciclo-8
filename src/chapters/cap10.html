@@ -1,8 +1,8 @@
-<!-- title: Línea Base del Alcance, EDT y Plan Operativo -->
+<!-- title: Línea Base del Alcance, Cronograma y Plan Operativo -->
 
-            <h3 class="text-base sm:text-lg font-bold text-neutral-950 mt-5 mb-2">10.1 Enunciado del Alcance del Proyecto (Línea Base del Alcance)</h3>
+            <h3 class="text-base sm:text-lg font-bold text-neutral-950 mt-5 mb-2">10.1 Enunciado del Alcance del Proyecto (PMBOK / Norma UNTELS)</h3>
             <p class="text-justify mb-4">
-              Conforme a los lineamientos de la <i>Guía del PMBOK</i> y los estándares de Gestión del Alcance impartidos en la Universidad Nacional Tecnológica de Lima Sur (UNTELS), el enunciado del alcance define con rigurosidad los límites del trabajo, los entregables aceptados y las exclusiones explícitas para prevenir la corrupción del alcance o trabajos no solicitados (<i>gold plating</i>).
+              Conforme a los estándares de Gestión del Alcance del PMBOK impartidos por el <strong>Mg. MBA Antonio Arqque Pantigozo en la Universidad Nacional Tecnológica de Lima Sur (UNTELS)</strong>, el enunciado formaliza los límites del trabajo, los entregables aceptados y las exclusiones explícitas para prevenir la corrupción del alcance o trabajos no solicitados (<i>gold plating</i>):
             </p>
 
             <div class="overflow-x-auto">
@@ -34,21 +34,21 @@
                     <td><strong>Entregables Principales del Proyecto</strong></td>
                     <td>
                       <ol class="list-decimal pl-5 space-y-1">
-                        <li>Infraestructura de almacenamiento: 3 cuerpos de racks modulares armados, anclados y delimitados en zonas A, B y C con bandejas antiderrames.</li>
-                        <li>Codificación física integral: rotulado vinílico de pasillos, columnas y gavetas con nomenclatura espacial estandarizada.</li>
-                        <li>Sistema WMS Cloud: código fuente en Git, base de datos PostgreSQL y módulos operativos de ingresos, stock, picking y auditoría.</li>
-                        <li>Modo Offline-First: almacenamiento temporal en cliente para continuidad de picking ante fluctuaciones de red.</li>
-                        <li>Documentación y gestión: manuales SOP, plan de capacitación y actas de aceptación formal.</li>
+                        <li>Infraestructura física: 3 cuerpos de racks modulares pesados armados, anclados y zonificados (A, B y C) con bandejas antiderrames.</li>
+                        <li>Codificación espacial: rotulado vinílico de pasillos, columnas y gavetas con nomenclatura estandarizada.</li>
+                        <li>Sistema WMS Cloud: código fuente en Git, base de datos PostgreSQL y módulos de ingresos, inventario, picking y auditoría.</li>
+                        <li>Modo Offline-First: almacenamiento temporal en cliente para continuidad operativa ante cortes de red.</li>
+                        <li>Gestión y estandarización: manuales SOP, plan de capacitación y actas de aceptación firmadas.</li>
                       </ol>
                     </td>
                   </tr>
                   <tr>
-                    <td><strong>Exclusiones Explícitas (Sin <i>Gold Plating</i>)</strong></td>
+                    <td><strong>Exclusiones Explícitas (Prevención de <i>Gold Plating</i>)</strong></td>
                     <td>
                       <ul class="list-disc pl-5 space-y-1">
-                        <li><strong>No se incluye software de mapeo digital ni ruteo GPS propio:</strong> La optimización de rutas se gestiona mediante la estandarización del protocolo de carga previa por cuadrantes geográficos, evitando costos y demoras de desarrollo innecesarias.</li>
-                        <li><strong>No se adquieren terminales móviles industriales dedicadas (handhelds):</strong> La lectura óptica se realiza a través de la cámara de smartphones Android o minilectores Bluetooth económicos.</li>
-                        <li><strong>No se contempla automatización robótica ni fajas transportadoras:</strong> El traslado interno continúa con carretillas operativas manuales.</li>
+                        <li><strong>No se incluye software de mapeo catastral ni ruteo GPS propio:</strong> La optimización de rutas se gestiona mediante la estandarización de hojas de ruta organizadas por cuadrantes geográficos y consolidación de carga la tarde anterior.</li>
+                        <li><strong>No se adquieren terminales móviles dedicadas (handhelds):</strong> La lectura óptica se realiza con smartphones Android mediante cámara y/o minilectores Bluetooth económicos.</li>
+                        <li><strong>No se incluye automatización robótica ni fajas motorizadas:</strong> El transporte de piso se mantiene con carretillas operativas manuales.</li>
                       </ul>
                     </td>
                   </tr>
@@ -56,7 +56,7 @@
                     <td><strong>Restricciones y Supuestos</strong></td>
                     <td>
                       <strong>Restricción:</strong> Techo presupuestal de inversión inicial fijado entre S/ 5,000 y S/ 8,000 según viabilidad declarada por gerencia.<br>
-                      <strong>Supuesto:</strong> El personal operativo y de reparto dispone de smartphones compatibles con navegadores modernos y se mantiene la disponibilidad de energía y conectividad Wi-Fi básica en el local.
+                      <strong>Supuesto:</strong> Los operarios disponen de smartphones compatibles con navegadores modernos y se mantiene la disponibilidad de energía y conectividad Wi-Fi básica en el local.
                     </td>
                   </tr>
                 </tbody>
@@ -65,7 +65,7 @@
 
             <h3 class="text-base sm:text-lg font-bold text-neutral-950 mt-6 mb-2">10.2 Estructura de Desglose del Trabajo (EDT / WBS)</h3>
             <p class="text-justify mb-4">
-              En estricto cumplimiento del principio metodológico del PMBOK (y las directrices de la cátedra), la EDT descompone el alcance total del proyecto en entregables y paquetes de trabajo redactados <strong>exclusivamente con sustantivos, evitando verbos</strong>. Cada cuenta de control agrupa los elementos requeridos para completar los objetivos sin omisiones ni sobrecostos.
+              En estricto cumplimiento de la regla metodológica enseñada por el profesor (Diapositiva 36 de la sesión de Alcance), <strong>la EDT se compone exclusivamente de sustantivos, evitando el uso de verbos</strong>:
             </p>
 
             <div class="overflow-x-auto">
@@ -73,303 +73,248 @@
                 <thead>
                   <tr>
                     <th style="width: 15%; text-align: center;">Código EDT</th>
-                    <th style="width: 35%;">Elemento de la EDT (Sustantivos)</th>
-                    <th style="width: 18%; text-align: center;">Nivel Jerárquico</th>
-                    <th style="width: 32%;">Tipo de Componente</th>
+                    <th style="width: 38%;">Elemento de la EDT (Sustantivos)</th>
+                    <th style="width: 17%; text-align: center;">Nivel Jerárquico</th>
+                    <th style="width: 30%;">Tipo de Componente</th>
                   </tr>
                 </thead>
                 <tbody>
                   <tr style="background-color: #f8fafc;">
                     <td style="text-align: center;"><strong>1.0</strong></td>
-                    <td><strong>Proyecto Modernización Almacén y WMS Ecuménico</strong></td>
+                    <td><strong>Modernización de Almacén y Sistema WMS Ecuménico</strong></td>
                     <td style="text-align: center;">Nivel 1</td>
                     <td>Proyecto Integral</td>
                   </tr>
-                  <tr>
-                    <td style="text-align: center;"><strong>1.1</strong></td>
-                    <td><strong>Gestión del Proyecto</strong></td>
-                    <td style="text-align: center;">Nivel 2</td>
-                    <td>Cuenta de Control (Gestión)</td>
-                  </tr>
-                  <tr>
-                    <td style="text-align: center;">1.1.1</td>
-                    <td>Acta de Constitución y Línea Base del Alcance</td>
-                    <td style="text-align: center;">Nivel 3</td>
-                    <td>Paquete de Trabajo</td>
-                  </tr>
-                  <tr>
-                    <td style="text-align: center;">1.1.2</td>
-                    <td>Cronograma Ágil y Monitoreo de Entregables</td>
-                    <td style="text-align: center;">Nivel 3</td>
-                    <td>Paquete de Trabajo</td>
-                  </tr>
-                  <tr>
-                    <td style="text-align: center;">1.1.3</td>
-                    <td>Documentación de Cierre y Aceptación Formal</td>
-                    <td style="text-align: center;">Nivel 3</td>
-                    <td>Paquete de Trabajo</td>
-                  </tr>
-                  <tr>
-                    <td style="text-align: center;"><strong>1.2</strong></td>
-                    <td><strong>Infraestructura Física de Almacén</strong></td>
-                    <td style="text-align: center;">Nivel 2</td>
-                    <td>Cuenta de Control (Almacén)</td>
-                  </tr>
-                  <tr>
-                    <td style="text-align: center;">1.2.1</td>
-                    <td>Racks Industriales Modulares Metálicos</td>
-                    <td style="text-align: center;">Nivel 3</td>
-                    <td>Paquete de Trabajo</td>
-                  </tr>
-                  <tr>
-                    <td style="text-align: center;">1.2.2</td>
-                    <td>Zonificación ABC y Bandejas Antiderrames</td>
-                    <td style="text-align: center;">Nivel 3</td>
-                    <td>Paquete de Trabajo</td>
-                  </tr>
-                  <tr>
-                    <td style="text-align: center;">1.2.3</td>
-                    <td>Codificación Espacial de Pasillos, Columnas y Gavetas</td>
-                    <td style="text-align: center;">Nivel 3</td>
-                    <td>Paquete de Trabajo</td>
-                  </tr>
-                  <tr>
-                    <td style="text-align: center;"><strong>1.3</strong></td>
-                    <td><strong>Sistema de Gestión de Almacén (WMS Cloud)</strong></td>
-                    <td style="text-align: center;">Nivel 2</td>
-                    <td>Cuenta de Control (Software)</td>
-                  </tr>
-                  <tr>
-                    <td style="text-align: center;">1.3.1</td>
-                    <td>Infraestructura Cloud VPS y Conectividad Wi-Fi</td>
-                    <td style="text-align: center;">Nivel 3</td>
-                    <td>Paquete de Trabajo</td>
-                  </tr>
-                  <tr>
-                    <td style="text-align: center;">1.3.2</td>
-                    <td>Base de Datos de Catálogo de SKUs y Lotes PEPS</td>
-                    <td style="text-align: center;">Nivel 3</td>
-                    <td>Paquete de Trabajo</td>
-                  </tr>
-                  <tr>
-                    <td style="text-align: center;">1.3.3</td>
-                    <td>Módulo de Ubicaciones y Consultas en Piso</td>
-                    <td style="text-align: center;">Nivel 3</td>
-                    <td>Paquete de Trabajo</td>
-                  </tr>
-                  <tr>
-                    <td style="text-align: center;">1.3.4</td>
-                    <td>Módulo de Preparación Inteligente de Pedidos (Picking List)</td>
-                    <td style="text-align: center;">Nivel 3</td>
-                    <td>Paquete de Trabajo (Crítico)</td>
-                  </tr>
-                  <tr>
-                    <td style="text-align: center;">1.3.5</td>
-                    <td>Módulo de Auditoría (Audit Trail) y Sincronización Offline</td>
-                    <td style="text-align: center;">Nivel 3</td>
-                    <td>Paquete de Trabajo</td>
-                  </tr>
-                  <tr>
-                    <td style="text-align: center;"><strong>1.4</strong></td>
-                    <td><strong>Pruebas y Despliegue Operativo</strong></td>
-                    <td style="text-align: center;">Nivel 2</td>
-                    <td>Cuenta de Control (Transición)</td>
-                  </tr>
-                  <tr>
-                    <td style="text-align: center;">1.4.1</td>
-                    <td>Inventario Físico Inicial Conciliado</td>
-                    <td style="text-align: center;">Nivel 3</td>
-                    <td>Paquete de Trabajo</td>
-                  </tr>
-                  <tr>
-                    <td style="text-align: center;">1.4.2</td>
-                    <td>Pruebas Funcionales e Integradas de Picking</td>
-                    <td style="text-align: center;">Nivel 3</td>
-                    <td>Paquete de Trabajo</td>
-                  </tr>
-                  <tr>
-                    <td style="text-align: center;">1.4.3</td>
-                    <td>Puesta en Producción (Go-Live)</td>
-                    <td style="text-align: center;">Nivel 3</td>
-                    <td>Paquete de Trabajo</td>
-                  </tr>
-                  <tr>
-                    <td style="text-align: center;"><strong>1.5</strong></td>
-                    <td><strong>Estandarización y Capacitación</strong></td>
-                    <td style="text-align: center;">Nivel 2</td>
-                    <td>Cuenta de Control (Organización)</td>
-                  </tr>
-                  <tr>
-                    <td style="text-align: center;">1.5.1</td>
-                    <td>Manuales de Procedimientos Operativos (SOP)</td>
-                    <td style="text-align: center;">Nivel 3</td>
-                    <td>Paquete de Trabajo</td>
-                  </tr>
-                  <tr>
-                    <td style="text-align: center;">1.5.2</td>
-                    <td>Protocolo de Consolidación Previa y Despacho 06:00 a. m.</td>
-                    <td style="text-align: center;">Nivel 3</td>
-                    <td>Paquete de Trabajo</td>
-                  </tr>
-                  <tr>
-                    <td style="text-align: center;">1.5.3</td>
-                    <td>Talleres Prácticos de Entrenamiento al Personal</td>
-                    <td style="text-align: center;">Nivel 3</td>
-                    <td>Paquete de Trabajo</td>
-                  </tr>
+                  <tr><td style="text-align: center;"><strong>1.1</strong></td><td><strong>Gestión del Proyecto</strong></td><td style="text-align: center;">Nivel 2</td><td>Cuenta de Control (Gestión)</td></tr>
+                  <tr><td style="text-align: center;">1.1.1</td><td>Acta de Constitución y Línea Base del Alcance</td><td style="text-align: center;">Nivel 3</td><td>Paquete de Trabajo</td></tr>
+                  <tr><td style="text-align: center;">1.1.2</td><td>Cronograma Ágil y Monitoreo de Entregables</td><td style="text-align: center;">Nivel 3</td><td>Paquete de Trabajo</td></tr>
+                  <tr><td style="text-align: center;">1.1.3</td><td>Documentación de Cierre y Aceptación Formal</td><td style="text-align: center;">Nivel 3</td><td>Paquete de Trabajo</td></tr>
+                  <tr><td style="text-align: center;"><strong>1.2</strong></td><td><strong>Infraestructura Física de Almacén</strong></td><td style="text-align: center;">Nivel 2</td><td>Cuenta de Control (Almacén)</td></tr>
+                  <tr><td style="text-align: center;">1.2.1</td><td>Racks Industriales Modulares Metálicos</td><td style="text-align: center;">Nivel 3</td><td>Paquete de Trabajo</td></tr>
+                  <tr><td style="text-align: center;">1.2.2</td><td>Zonificación ABC y Bandejas Antiderrames</td><td style="text-align: center;">Nivel 3</td><td>Paquete de Trabajo</td></tr>
+                  <tr><td style="text-align: center;">1.2.3</td><td>Codificación Espacial de Pasillos, Columnas y Gavetas</td><td style="text-align: center;">Nivel 3</td><td>Paquete de Trabajo</td></tr>
+                  <tr><td style="text-align: center;"><strong>1.3</strong></td><td><strong>Sistema de Gestión de Almacén (WMS Cloud)</strong></td><td style="text-align: center;">Nivel 2</td><td>Cuenta de Control (Software)</td></tr>
+                  <tr><td style="text-align: center;">1.3.1</td><td>Infraestructura Cloud VPS y Conectividad Wi-Fi</td><td style="text-align: center;">Nivel 3</td><td>Paquete de Trabajo</td></tr>
+                  <tr><td style="text-align: center;">1.3.2</td><td>Base de Datos de Catálogo de SKUs y Lotes PEPS</td><td style="text-align: center;">Nivel 3</td><td>Paquete de Trabajo</td></tr>
+                  <tr><td style="text-align: center;">1.3.3</td><td>Módulo de Ubicaciones y Consultas en Piso</td><td style="text-align: center;">Nivel 3</td><td>Paquete de Trabajo</td></tr>
+                  <tr><td style="text-align: center;">1.3.4</td><td>Módulo de Preparación Inteligente de Pedidos (Picking List)</td><td style="text-align: center;">Nivel 3</td><td>Paquete de Trabajo (Crítico)</td></tr>
+                  <tr><td style="text-align: center;">1.3.5</td><td>Módulo de Auditoría (Audit Trail) y Sincronización Offline</td><td style="text-align: center;">Nivel 3</td><td>Paquete de Trabajo</td></tr>
+                  <tr><td style="text-align: center;"><strong>1.4</strong></td><td><strong>Pruebas y Despliegue Operativo</strong></td><td style="text-align: center;">Nivel 2</td><td>Cuenta de Control (Transición)</td></tr>
+                  <tr><td style="text-align: center;">1.4.1</td><td>Inventario Físico Inicial Conciliado</td><td style="text-align: center;">Nivel 3</td><td>Paquete de Trabajo</td></tr>
+                  <tr><td style="text-align: center;">1.4.2</td><td>Pruebas Funcionales e Integradas de Picking</td><td style="text-align: center;">Nivel 3</td><td>Paquete de Trabajo</td></tr>
+                  <tr><td style="text-align: center;">1.4.3</td><td>Puesta en Producción (Go-Live)</td><td style="text-align: center;">Nivel 3</td><td>Paquete de Trabajo</td></tr>
+                  <tr><td style="text-align: center;"><strong>1.5</strong></td><td><strong>Estandarización y Capacitación</strong></td><td style="text-align: center;">Nivel 2</td><td>Cuenta de Control (Organización)</td></tr>
+                  <tr><td style="text-align: center;">1.5.1</td><td>Manuales de Procedimientos Operativos (SOP)</td><td style="text-align: center;">Nivel 3</td><td>Paquete de Trabajo</td></tr>
+                  <tr><td style="text-align: center;">1.5.2</td><td>Protocolo de Consolidación Previa y Despacho 06:00 a. m.</td><td style="text-align: center;">Nivel 3</td><td>Paquete de Trabajo</td></tr>
+                  <tr><td style="text-align: center;">1.5.3</td><td>Talleres Prácticos de Entrenamiento al Personal</td><td style="text-align: center;">Nivel 3</td><td>Paquete de Trabajo</td></tr>
                 </tbody>
               </table>
             </div>
 
-            <h3 class="text-base sm:text-lg font-bold text-neutral-950 mt-6 mb-2">10.3 Diccionario de la EDT (Ficha Oficial del Paquete de Trabajo)</h3>
+            <h3 class="text-base sm:text-lg font-bold text-neutral-950 mt-6 mb-2">10.3 Diccionario de la EDT (Fichas Técnicas de los 15 Paquetes de Trabajo)</h3>
             <p class="text-justify mb-4">
-              A continuación se presenta la ficha técnica formal del paquete de trabajo de software nuclear, diseñada exactamente según el modelo oficial del curso (Diapositiva 39 de la sesión de Gestión del Alcance):
+              Tal como exige el estándar PMBOK y la <strong>Diapositiva 39 de la sesión de Alcance</strong>, el Diccionario de la EDT debe documentar <strong>CADA UNO de los paquetes de trabajo</strong> de la EDT. A continuación se presentan las 15 fichas técnicas completas agrupadas por Cuenta de Control:
             </p>
 
-            <div class="overflow-x-auto my-6">
-              <table style="width: 100%; border-collapse: collapse; border: 1.5px solid #0f172a; font-size: 0.95rem;">
-                <tbody>
-                  <tr style="background-color: #f1f5f9; border-bottom: 1.5px solid #0f172a;">
-                    <td style="padding: 8px 12px; border-right: 1px solid #cbd5e1; width: 20%;"><strong>ID #:</strong> 1.3.4</td>
-                    <td style="padding: 8px 12px; border-right: 1px solid #cbd5e1; width: 25%;"><strong>Cuenta Control #:</strong> 1.3</td>
-                    <td style="padding: 8px 12px; border-right: 1px solid #cbd5e1; width: 25%;"><strong>Última actualización:</strong> 15 de Noviembre</td>
-                    <td style="padding: 8px 12px; width: 30%;"><strong>Responsable:</strong> Modesto Bryan / Julca Cristian</td>
-                  </tr>
-                  <tr style="border-bottom: 1px solid #cbd5e1;">
-                    <td colspan="4" style="padding: 10px 12px;">
-                      <strong>Descripción:</strong> Desarrollo del módulo de software encargado de procesar los pedidos de preventa para generar listas de recojo (picking lists) ordenadas por la coordenada espacial más eficiente (Pasillo-Columna-Nivel), integrando validación óptica de producto por escaneo de código de barras.
-                    </td>
-                  </tr>
-                  <tr style="border-bottom: 1px solid #cbd5e1;">
-                    <td colspan="4" style="padding: 10px 12px;">
-                      <strong>Criterio de aceptación:</strong> La lista de picking debe ordenarse secuencialmente en menos de 2 segundos; emitir alerta acústica y visual ante el escaneo de un producto o lote erróneo; rebajar existencias en tiempo real; y operar bajo contingencia offline si el Wi-Fi experimenta intermitencia.
-                    </td>
-                  </tr>
-                  <tr style="border-bottom: 1px solid #cbd5e1;">
-                    <td colspan="4" style="padding: 10px 12px;">
-                      <strong>Entregables:</strong> Código fuente versionado en repositorio Git, aplicación web progresiva (PWA) desplegada en el VPS Cloud, API REST de sincronización y manual de usuario en piso para el operario de picking.
-                    </td>
-                  </tr>
-                  <tr style="border-bottom: 1px solid #cbd5e1;">
-                    <td colspan="4" style="padding: 10px 12px;">
-                      <strong>Supuestos:</strong> La codificación de racks y gavetas (1.2.3) se encuentra finalizada físicamente; el inventario inicial físico ha sido cargado en el sistema; y los operarios disponen de smartphones Android con cámara operativa.
-                    </td>
-                  </tr>
-                  <tr style="border-bottom: 1px solid #cbd5e1;">
-                    <td colspan="4" style="padding: 10px 12px;">
-                      <strong>Recursos asignados:</strong> 2 Desarrolladores asistidos por herramientas de IA, 1 Supervisor de Almacén (validador de flujos en piso), servidor Cloud VPS y 2 lectores ópticos de código de barras.
-                    </td>
-                  </tr>
-                  <tr style="border-bottom: 1px solid #cbd5e1;">
-                    <td colspan="4" style="padding: 10px 12px;">
-                      <strong>Duración:</strong> 5 días hábiles (desarrollo y validación acelerada mediante herramientas de IA).
-                    </td>
-                  </tr>
-                  <tr style="border-bottom: 1px solid #cbd5e1;">
-                    <td colspan="4" style="padding: 10px 12px;">
-                      <strong>Hitos:</strong><br>
-                      • <strong>H1 (Día 2):</strong> Prototipo funcional UI/UX de picking validado por supervisión.<br>
-                      • <strong>H2 (Día 4):</strong> Integración de validación óptica con cámara/Bluetooth completada.<br>
-                      • <strong>H3 (Día 5):</strong> Prueba piloto de recojo de 15 órdenes reales sin discrepancias.
-                    </td>
-                  </tr>
-                  <tr style="border-bottom: 1.5px solid #0f172a;">
-                    <td colspan="4" style="padding: 10px 12px;">
-                      <strong>Costo:</strong> S/ 650.00 (Servicios cloud asignados, tokens de ingeniería de software y pruebas operativas).
-                    </td>
-                  </tr>
-                  <tr>
-                    <td colspan="4" style="padding: 12px; background-color: #fafafa;">
-                      <strong>Firma del Director del Proyecto:</strong> __________________________________________________
-                    </td>
-                  </tr>
-                </tbody>
-              </table>
-            </div>
+            <details class="lk-items my-4" open>
+              <summary><b>Cuenta Control 1.3: Sistema WMS Cloud (Paquete Nuclear 1.3.4 - Picking Inteligente)</b></summary>
+              <div class="overflow-x-auto my-3">
+                <table style="width: 100%; border-collapse: collapse; border: 1.5px solid #0f172a; font-size: 0.95rem;">
+                  <tbody>
+                    <tr style="background-color: #f1f5f9; border-bottom: 1.5px solid #0f172a;">
+                      <td style="padding: 8px 12px; border-right: 1px solid #cbd5e1; width: 20%;"><strong>ID #:</strong> 1.3.4</td>
+                      <td style="padding: 8px 12px; border-right: 1px solid #cbd5e1; width: 25%;"><strong>Cuenta Control #:</strong> 1.3</td>
+                      <td style="padding: 8px 12px; border-right: 1px solid #cbd5e1; width: 25%;"><strong>Última actualización:</strong> 15 de Noviembre</td>
+                      <td style="padding: 8px 12px; width: 30%;"><strong>Responsable:</strong> Modesto Bryan / Julca Cristian</td>
+                    </tr>
+                    <tr style="border-bottom: 1px solid #cbd5e1;"><td colspan="4" style="padding: 10px 12px;"><strong>Descripción:</strong> Desarrollo del módulo de software encargado de procesar los pedidos de preventa para generar listas de recojo ordenadas por la coordenada espacial más eficiente (Pasillo-Columna-Nivel), integrando validación óptica de producto por escaneo de código de barras.</td></tr>
+                    <tr style="border-bottom: 1px solid #cbd5e1;"><td colspan="4" style="padding: 10px 12px;"><strong>Criterio de aceptación:</strong> Ordenamiento algorítmico en menos de 2 segundos; alerta sonora y visual ante escaneo erróneo; actualización de existencias en tiempo real; y soporte de almacenamiento temporal offline.</td></tr>
+                    <tr style="border-bottom: 1px solid #cbd5e1;"><td colspan="4" style="padding: 10px 12px;"><strong>Entregables:</strong> Código fuente versionado en Git, PWA desplegada en VPS Cloud, API REST documentada y manual técnico para operarios.</td></tr>
+                    <tr style="border-bottom: 1px solid #cbd5e1;"><td colspan="4" style="padding: 10px 12px;"><strong>Supuestos:</strong> Racks y gavetas codificados físicamente; inventario inicial cargado; smartphones Android con cámara operativa.</td></tr>
+                    <tr style="border-bottom: 1px solid #cbd5e1;"><td colspan="4" style="padding: 10px 12px;"><strong>Recursos asignados:</strong> 2 Desarrolladores asistidos con IA, 1 Supervisor de Almacén, servidor Cloud VPS y 2 lectores ópticos Bluetooth.</td></tr>
+                    <tr style="border-bottom: 1px solid #cbd5e1;"><td colspan="4" style="padding: 10px 12px;"><strong>Duración:</strong> 5 días hábiles (desarrollo y validación asistida por IA).</td></tr>
+                    <tr style="border-bottom: 1px solid #cbd5e1;"><td colspan="4" style="padding: 10px 12px;"><strong>Hitos:</strong> H1 (Día 2): Prototipo UI/UX aprobado. H2 (Día 4): Integración de lectura óptica validada. H3 (Día 5): Prueba piloto de 15 pedidos en piso sin discrepancias.</td></tr>
+                    <tr style="border-bottom: 1.5px solid #0f172a;"><td colspan="4" style="padding: 10px 12px;"><strong>Costo:</strong> S/ 650.00</td></tr>
+                    <tr><td colspan="4" style="padding: 10px 12px; background-color: #fafafa;"><strong>Firma del Director del Proyecto:</strong> __________________________________________________</td></tr>
+                  </tbody>
+                </table>
+              </div>
+            </details>
 
-            <h3 class="text-base sm:text-lg font-bold text-neutral-950 mt-6 mb-2">10.4 Lista de Actividades y Predecesores (Cronograma Ágil 2026)</h3>
+            <details class="lk-items my-4">
+              <summary><b>Cuenta Control 1.2: Infraestructura Física de Almacén (Paquetes 1.2.1, 1.2.2 y 1.2.3)</b></summary>
+              <div class="space-y-4 my-3">
+                <table style="width: 100%; border-collapse: collapse; border: 1px solid #0f172a; font-size: 0.9rem;">
+                  <tr style="background-color: #f1f5f9;"><td style="padding: 6px 10px; width: 25%;"><strong>ID #:</strong> 1.2.1</td><td style="padding: 6px 10px; width: 25%;"><strong>Cuenta:</strong> 1.2</td><td style="padding: 6px 10px; width: 25%;"><strong>Actualización:</strong> 15 Nov</td><td style="padding: 6px 10px; width: 25%;"><strong>Resp:</strong> Felix Cecinario Hernan</td></tr>
+                  <tr><td colspan="4" style="padding: 6px 10px;"><strong>Descripción:</strong> Adquisición, montaje y anclaje de 3 módulos de racks metálicos industriales de media/alta carga para verticalizar el almacenamiento.</td></tr>
+                  <tr><td colspan="4" style="padding: 6px 10px;"><strong>Criterio de aceptación:</strong> Resistencia certificada de carga mayor a 800 kg por nivel; fijación segura a piso nivelado y pasillo libre de 1.20 m para carretillas.</td></tr>
+                  <tr><td colspan="4" style="padding: 6px 10px;"><strong>Recursos y Costo:</strong> 3 operarios de montaje, herramientas mecánicas. <strong>Duración:</strong> 6 días. <strong>Costo:</strong> S/ 2,600.00.</td></tr>
+                </table>
+                <table style="width: 100%; border-collapse: collapse; border: 1px solid #0f172a; font-size: 0.9rem;">
+                  <tr style="background-color: #f1f5f9;"><td style="padding: 6px 10px; width: 25%;"><strong>ID #:</strong> 1.2.2</td><td style="padding: 6px 10px; width: 25%;"><strong>Cuenta:</strong> 1.2</td><td style="padding: 6px 10px; width: 25%;"><strong>Actualización:</strong> 15 Nov</td><td style="padding: 6px 10px; width: 25%;"><strong>Resp:</strong> Avalos Mendoza Jeshua</td></tr>
+                  <tr><td colspan="4" style="padding: 6px 10px;"><strong>Descripción:</strong> Delimitación de Zonas A (alta rotación), B (fardos/especias) y C (líquidos con bandejas antiderrames de contención).</td></tr>
+                  <tr><td colspan="4" style="padding: 6px 10px;"><strong>Criterio de aceptación:</strong> Pintura de piso epóxica de demarcación instalada; bandejas estancas con capacidad para 100 L en zona inferior de vinagres.</td></tr>
+                  <tr><td colspan="4" style="padding: 6px 10px;"><strong>Recursos y Costo:</strong> 2 operarios, bandejas plásticas industriales. <strong>Duración:</strong> 4 días. <strong>Costo:</strong> S/ 380.00.</td></tr>
+                </table>
+                <table style="width: 100%; border-collapse: collapse; border: 1px solid #0f172a; font-size: 0.9rem;">
+                  <tr style="background-color: #f1f5f9;"><td style="padding: 6px 10px; width: 25%;"><strong>ID #:</strong> 1.2.3</td><td style="padding: 6px 10px; width: 25%;"><strong>Cuenta:</strong> 1.2</td><td style="padding: 6px 10px; width: 25%;"><strong>Actualización:</strong> 15 Nov</td><td style="padding: 6px 10px; width: 25%;"><strong>Resp:</strong> Julca Achas Cristian</td></tr>
+                  <tr><td colspan="4" style="padding: 6px 10px;"><strong>Descripción:</strong> Rotulado con etiquetas vinílicas térmicas bajo el código espacial [Pasillo-Columna-Nivel-Gaveta] con código de barras legible.</td></tr>
+                  <tr><td colspan="4" style="padding: 6px 10px;"><strong>Criterio de aceptación:</strong> 100% de ubicaciones etiquetadas a contraste; legibilidad con escáner a 1 metro de distancia sin errores.</td></tr>
+                  <tr><td colspan="4" style="padding: 6px 10px;"><strong>Recursos y Costo:</strong> Etiquetas térmicas, impresora industrial. <strong>Duración:</strong> 4 días. <strong>Costo:</strong> S/ 150.00.</td></tr>
+                </table>
+              </div>
+            </details>
+
+            <details class="lk-items my-4">
+              <summary><b>Cuenta Control 1.1, 1.4 y 1.5: Gestión, Pruebas y Capacitación (Resto de Paquetes)</b></summary>
+              <div class="space-y-4 my-3">
+                <table style="width: 100%; border-collapse: collapse; border: 1px solid #0f172a; font-size: 0.9rem;">
+                  <tr style="background-color: #f1f5f9;"><td style="padding: 6px 10px; width: 25%;"><strong>ID #:</strong> 1.1.1, 1.1.2, 1.1.3</td><td style="padding: 6px 10px; width: 25%;"><strong>Cuenta:</strong> 1.1</td><td style="padding: 6px 10px; width: 25%;"><strong>Actualización:</strong> 15 Nov</td><td style="padding: 6px 10px; width: 25%;"><strong>Resp:</strong> Modesto Romero Bryan</td></tr>
+                  <tr><td colspan="4" style="padding: 6px 10px;"><strong>Entregables de Gestión:</strong> Acta de Constitución, Línea Base del Alcance y Cronograma, Monitoreo semanal de avances y Acta de Cierre formal firmada por gerencia. <strong>Duración:</strong> Continua a lo largo de las 8 semanas. <strong>Costo:</strong> S/ 470.00 (incluye reserva).</td></tr>
+                </table>
+                <table style="width: 100%; border-collapse: collapse; border: 1px solid #0f172a; font-size: 0.9rem;">
+                  <tr style="background-color: #f1f5f9;"><td style="padding: 6px 10px; width: 25%;"><strong>ID #:</strong> 1.4.1, 1.4.2, 1.4.3</td><td style="padding: 6px 10px; width: 25%;"><strong>Cuenta:</strong> 1.4</td><td style="padding: 6px 10px; width: 25%;"><strong>Actualización:</strong> 15 Nov</td><td style="padding: 6px 10px; width: 25%;"><strong>Resp:</strong> Todo el equipo</td></tr>
+                  <tr><td colspan="4" style="padding: 6px 10px;"><strong>Pruebas y Go-Live:</strong> Conteo físico inicial conciliado al 100%; pruebas integradas de 50 pedidos en piso real; salida en vivo con el primer despacho matutino a las 6:00 a. m. <strong>Duración:</strong> 9 días acumulados. <strong>Costo:</strong> S/ 300.00.</td></tr>
+                </table>
+                <table style="width: 100%; border-collapse: collapse; border: 1px solid #0f172a; font-size: 0.9rem;">
+                  <tr style="background-color: #f1f5f9;"><td style="padding: 6px 10px; width: 25%;"><strong>ID #:</strong> 1.5.1, 1.5.2, 1.5.3</td><td style="padding: 6px 10px; width: 25%;"><strong>Cuenta:</strong> 1.5</td><td style="padding: 6px 10px; width: 25%;"><strong>Actualización:</strong> 15 Nov</td><td style="padding: 6px 10px; width: 25%;"><strong>Resp:</strong> Supervisor de Almacén y TI</td></tr>
+                  <tr><td colspan="4" style="padding: 6px 10px;"><strong>Estandarización y Talleres:</strong> Manuales de procedimientos operativos (SOP) plastificados para racks; protocolo de carga armada la tarde anterior; 3 sesiones prácticas de capacitación al personal de picking y choferes. <strong>Duración:</strong> 5 días. <strong>Costo:</strong> S/ 200.00.</td></tr>
+                </table>
+              </div>
+            </details>
+
+            <h3 class="text-base sm:text-lg font-bold text-neutral-950 mt-6 mb-2">10.4 Lista de Actividades y Estimación por Tres Valores (Fórmulas PERT de la Diapositiva 27)</h3>
             <p class="text-justify mb-4">
-              Integrando el modelo detallado de actividades de desarrollo con los trabajos físicos de acondicionamiento en almacén, y considerando la aceleración por <strong>herramientas de Inteligencia Artificial</strong> en las etapas de diseño y codificación, el proyecto se programa en <strong>22 actividades estructuradas</strong> que cubren una duración de <strong>40 días hábiles (8 semanas)</strong>:
+              En la <strong>Diapositiva 27 de la sesión de Cronograma</strong>, el docente expone las técnicas matemáticas de estimación: la distribución triangular ($T_E = \frac{T_O + T_M + T_P}{3}$) y la distribución Beta / PERT ($T_E = \frac{T_O + 4T_M + T_P}{6}$). En este proyecto se emplea la <strong>Distribución Beta (PERT)</strong> con cálculo de desviación estándar ($\sigma = \frac{T_P - T_O}{6}$) y cálculo de <strong>Horas-Hombre de esfuerzo</strong> ($\text{Esfuerzo} = T_E \times 8\text{ h/día} \times \text{Recursos}$):
             </p>
 
             <div class="overflow-x-auto">
               <table class="wide">
                 <thead>
                   <tr>
-                    <th style="width: 8%; text-align: center;">Actividad</th>
-                    <th style="width: 44%;">Descripción del Paquete / Tarea</th>
-                    <th style="width: 14%; text-align: center;">Predecesor</th>
-                    <th style="width: 16%; text-align: center;">Duración (Días)</th>
-                    <th style="width: 18%;">Responsable</th>
+                    <th style="width: 6%; text-align: center;">Act.</th>
+                    <th style="width: 32%;">Descripción del Paquete de Trabajo</th>
+                    <th style="width: 10%; text-align: center;">Pred.</th>
+                    <th style="width: 7%; text-align: center;">$T_O$</th>
+                    <th style="width: 7%; text-align: center;">$T_M$</th>
+                    <th style="width: 7%; text-align: center;">$T_P$</th>
+                    <th style="width: 11%; text-align: center;">$T_E$ PERT (Días)</th>
+                    <th style="width: 8%; text-align: center;">$\sigma$</th>
+                    <th style="width: 12%; text-align: center;">Esfuerzo (HH)</th>
                   </tr>
                 </thead>
                 <tbody>
-                  <tr><td style="text-align: center;"><strong>A</strong></td><td>Requisitos funcionales y reglas de negocio de inventario</td><td style="text-align: center;">—</td><td style="text-align: center;">4 días</td><td>Equipo TI / Negocio</td></tr>
-                  <tr><td style="text-align: center;"><strong>B</strong></td><td>Flujos operativos de inventario y casos de uso UML</td><td style="text-align: center;">A</td><td style="text-align: center;">3 días</td><td>Analista Funcional</td></tr>
-                  <tr><td style="text-align: center;"><strong>C</strong></td><td>Arquitectura Cloud VPS y conectividad Wi-Fi almacén</td><td style="text-align: center;">A</td><td style="text-align: center;">3 días</td><td>Arquitecto Cloud</td></tr>
-                  <tr><td style="text-align: center;"><strong>D</strong></td><td>Modelo de datos relacional (DER) de inventario y lotes</td><td style="text-align: center;">B, C</td><td style="text-align: center;">2 días</td><td>Desarrollador Backend</td></tr>
-                  <tr><td style="text-align: center;"><strong>E</strong></td><td>Prototipos de pantallas de inventario y picking (PWA móvil)</td><td style="text-align: center;">B</td><td style="text-align: center;">3 días</td><td>Diseñador UI / IA</td></tr>
-                  <tr><td style="text-align: center;"><strong>F</strong></td><td>Servidor Cloud VPS y entorno de base de datos PostgreSQL</td><td style="text-align: center;">C</td><td style="text-align: center;">2 días</td><td>DevOps / TI</td></tr>
-                  <tr><td style="text-align: center;"><strong>G</strong></td><td>Base de datos desplegada, catálogo maestro de SKUs y migraciones</td><td style="text-align: center;">D, F</td><td style="text-align: center;">2 días</td><td>Desarrollador Backend</td></tr>
-                  <tr style="background-color: #fefce8;"><td style="text-align: center;"><strong>H</strong></td><td>Adquisición, armado de racks industriales y delimitación ABC</td><td style="text-align: center;">A</td><td style="text-align: center;">6 días</td><td>Supervisor de Almacén</td></tr>
-                  <tr style="background-color: #fefce8;"><td style="text-align: center;"><strong>I</strong></td><td>Señalética de pasillos, bandejas antiderrames y codificación física</td><td style="text-align: center;">H</td><td style="text-align: center;">4 días</td><td>Operarios de Almacén</td></tr>
-                  <tr><td style="text-align: center;"><strong>J</strong></td><td>Módulo de ubicaciones espaciales y consulta de stock en piso</td><td style="text-align: center;">E, G, I</td><td style="text-align: center;">3 días</td><td>Desarrollador Fullstack</td></tr>
-                  <tr><td style="text-align: center;"><strong>K</strong></td><td>Módulo de ingresos de mercadería, registro de lotes y regla PEPS</td><td style="text-align: center;">J</td><td style="text-align: center;">4 días</td><td>Desarrollador Fullstack</td></tr>
-                  <tr><td style="text-align: center;"><strong>L</strong></td><td>Módulo de pedidos sincronizados y listas de preparación</td><td style="text-align: center;">K</td><td style="text-align: center;">4 días</td><td>Desarrollador Fullstack</td></tr>
-                  <tr><td style="text-align: center;"><strong>M</strong></td><td>Módulo de picking secuencial y rebaja automática de existencias</td><td style="text-align: center;">L</td><td style="text-align: center;">4 días</td><td>Desarrollador Fullstack</td></tr>
-                  <tr><td style="text-align: center;"><strong>N</strong></td><td>Reportes de discrepancias de inventario e indicadores clave (KPIs)</td><td style="text-align: center;">K, M</td><td style="text-align: center;">3 días</td><td>Desarrollador Backend</td></tr>
-                  <tr><td style="text-align: center;"><strong>O</strong></td><td>Módulo de auditoría (Audit Trail) y controles de autorización</td><td style="text-align: center;">N</td><td style="text-align: center;">2 días</td><td>Desarrollador Backend</td></tr>
-                  <tr><td style="text-align: center;"><strong>P</strong></td><td>Almacenamiento temporal en cliente y sincronización offline-first</td><td style="text-align: center;">O</td><td style="text-align: center;">3 días</td><td>Desarrollador Frontend</td></tr>
-                  <tr><td style="text-align: center;"><strong>Q</strong></td><td>Etiquetas consolidadas de bulto y confirmación de despacho</td><td style="text-align: center;">M</td><td style="text-align: center;">2 días</td><td>Desarrollador Frontend</td></tr>
-                  <tr style="background-color: #fefce8;"><td style="text-align: center;"><strong>R</strong></td><td>Conciliación de inventario inicial físico vs. digital en racks</td><td style="text-align: center;">I, K</td><td style="text-align: center;">3 días</td><td>Almacén y TI</td></tr>
-                  <tr><td style="text-align: center;"><strong>S</strong></td><td>Pruebas funcionales por módulo y validación de escaneo óptico</td><td style="text-align: center;">P, Q, R</td><td style="text-align: center;">4 días</td><td>QA / Equipo TI</td></tr>
-                  <tr><td style="text-align: center;"><strong>T</strong></td><td>Pruebas integradas del flujo operativo completo en jornada real</td><td style="text-align: center;">S</td><td style="text-align: center;">3 días</td><td>Supervisor y Operarios</td></tr>
-                  <tr><td style="text-align: center;"><strong>U</strong></td><td>Manuales de procedimientos operativos y capacitación práctica</td><td style="text-align: center;">T</td><td style="text-align: center;">3 días</td><td>Equipo TI</td></tr>
-                  <tr style="background-color: #f0fdf4;"><td style="text-align: center;"><strong>V</strong></td><td>Aceptación final del sistema y salida en vivo (Go-Live)</td><td style="text-align: center;">U</td><td style="text-align: center;">2 días</td><td>Gerencia General</td></tr>
+                  <tr><td style="text-align: center;"><strong>A</strong></td><td>Requisitos funcionales y reglas de inventario</td><td style="text-align: center;">—</td><td style="text-align: center;">3.0</td><td style="text-align: center;">4.0</td><td style="text-align: center;">5.0</td><td style="text-align: center;"><strong>4.0</strong></td><td style="text-align: center;">0.33</td><td style="text-align: center;">64 HH (2 p)</td></tr>
+                  <tr><td style="text-align: center;"><strong>B</strong></td><td>Flujos operativos de inventario y casos de uso UML</td><td style="text-align: center;">A</td><td style="text-align: center;">2.0</td><td style="text-align: center;">3.0</td><td style="text-align: center;">4.0</td><td style="text-align: center;"><strong>3.0</strong></td><td style="text-align: center;">0.33</td><td style="text-align: center;">48 HH (2 p)</td></tr>
+                  <tr><td style="text-align: center;"><strong>C</strong></td><td>Arquitectura Cloud VPS y conectividad Wi-Fi almacén</td><td style="text-align: center;">A</td><td style="text-align: center;">2.0</td><td style="text-align: center;">3.0</td><td style="text-align: center;">4.0</td><td style="text-align: center;"><strong>3.0</strong></td><td style="text-align: center;">0.33</td><td style="text-align: center;">24 HH (1 p)</td></tr>
+                  <tr><td style="text-align: center;"><strong>D</strong></td><td>Modelo de datos relacional (DER) de inventario y lotes</td><td style="text-align: center;">B, C</td><td style="text-align: center;">1.5</td><td style="text-align: center;">2.0</td><td style="text-align: center;">2.5</td><td style="text-align: center;"><strong>2.0</strong></td><td style="text-align: center;">0.17</td><td style="text-align: center;">32 HH (2 p)</td></tr>
+                  <tr><td style="text-align: center;"><strong>E</strong></td><td>Prototipos de pantallas PWA móvil asistidos por IA</td><td style="text-align: center;">B</td><td style="text-align: center;">2.0</td><td style="text-align: center;">3.0</td><td style="text-align: center;">4.0</td><td style="text-align: center;"><strong>3.0</strong></td><td style="text-align: center;">0.33</td><td style="text-align: center;">24 HH (1 p)</td></tr>
+                  <tr><td style="text-align: center;"><strong>F</strong></td><td>Servidor Cloud VPS y entorno PostgreSQL</td><td style="text-align: center;">C</td><td style="text-align: center;">1.5</td><td style="text-align: center;">2.0</td><td style="text-align: center;">2.5</td><td style="text-align: center;"><strong>2.0</strong></td><td style="text-align: center;">0.17</td><td style="text-align: center;">16 HH (1 p)</td></tr>
+                  <tr><td style="text-align: center;"><strong>G</strong></td><td>Base de datos desplegada, catálogo SKUs y migraciones</td><td style="text-align: center;">D, F</td><td style="text-align: center;">1.5</td><td style="text-align: center;">2.0</td><td style="text-align: center;">2.5</td><td style="text-align: center;"><strong>2.0</strong></td><td style="text-align: center;">0.17</td><td style="text-align: center;">32 HH (2 p)</td></tr>
+                  <tr style="background-color: #fefce8;"><td style="text-align: center;"><strong>H</strong></td><td>Adquisición, armado de racks y zonificación ABC</td><td style="text-align: center;">A</td><td style="text-align: center;">4.0</td><td style="text-align: center;">6.0</td><td style="text-align: center;">8.0</td><td style="text-align: center;"><strong>6.0</strong></td><td style="text-align: center;">0.67</td><td style="text-align: center;">144 HH (3 p)</td></tr>
+                  <tr style="background-color: #fefce8;"><td style="text-align: center;"><strong>I</strong></td><td>Señalética de pasillos, bandejas y codificación física</td><td style="text-align: center;">H</td><td style="text-align: center;">3.0</td><td style="text-align: center;">4.0</td><td style="text-align: center;">5.0</td><td style="text-align: center;"><strong>4.0</strong></td><td style="text-align: center;">0.33</td><td style="text-align: center;">64 HH (2 p)</td></tr>
+                  <tr><td style="text-align: center;"><strong>J</strong></td><td>Módulo de ubicaciones espaciales y consulta WMS</td><td style="text-align: center;">E, G, I</td><td style="text-align: center;">2.0</td><td style="text-align: center;">3.0</td><td style="text-align: center;">4.0</td><td style="text-align: center;"><strong>3.0</strong></td><td style="text-align: center;">0.33</td><td style="text-align: center;">48 HH (2 p)</td></tr>
+                  <tr><td style="text-align: center;"><strong>K</strong></td><td>Módulo de ingresos de mercadería, lotes y PEPS</td><td style="text-align: center;">J</td><td style="text-align: center;">3.0</td><td style="text-align: center;">4.0</td><td style="text-align: center;">5.0</td><td style="text-align: center;"><strong>4.0</strong></td><td style="text-align: center;">0.33</td><td style="text-align: center;">64 HH (2 p)</td></tr>
+                  <tr><td style="text-align: center;"><strong>L</strong></td><td>Módulo de pedidos sincronizados y listas de preparación</td><td style="text-align: center;">K</td><td style="text-align: center;">3.0</td><td style="text-align: center;">4.0</td><td style="text-align: center;">5.0</td><td style="text-align: center;"><strong>4.0</strong></td><td style="text-align: center;">0.33</td><td style="text-align: center;">64 HH (2 p)</td></tr>
+                  <tr><td style="text-align: center;"><strong>M</strong></td><td>Módulo de picking secuencial y rebaja de stock</td><td style="text-align: center;">L</td><td style="text-align: center;">3.0</td><td style="text-align: center;">4.0</td><td style="text-align: center;">5.0</td><td style="text-align: center;"><strong>4.0</strong></td><td style="text-align: center;">0.33</td><td style="text-align: center;">64 HH (2 p)</td></tr>
+                  <tr><td style="text-align: center;"><strong>N</strong></td><td>Reportes de discrepancias e indicadores clave (KPIs)</td><td style="text-align: center;">K, M</td><td style="text-align: center;">2.0</td><td style="text-align: center;">3.0</td><td style="text-align: center;">4.0</td><td style="text-align: center;"><strong>3.0</strong></td><td style="text-align: center;">0.33</td><td style="text-align: center;">24 HH (1 p)</td></tr>
+                  <tr><td style="text-align: center;"><strong>O</strong></td><td>Módulo de auditoría (Audit Trail) y controles</td><td style="text-align: center;">N</td><td style="text-align: center;">1.5</td><td style="text-align: center;">2.0</td><td style="text-align: center;">2.5</td><td style="text-align: center;"><strong>2.0</strong></td><td style="text-align: center;">0.17</td><td style="text-align: center;">16 HH (1 p)</td></tr>
+                  <tr><td style="text-align: center;"><strong>P</strong></td><td>Almacenamiento temporal y sincronización offline-first</td><td style="text-align: center;">O</td><td style="text-align: center;">2.0</td><td style="text-align: center;">3.0</td><td style="text-align: center;">4.0</td><td style="text-align: center;"><strong>3.0</strong></td><td style="text-align: center;">0.33</td><td style="text-align: center;">24 HH (1 p)</td></tr>
+                  <tr><td style="text-align: center;"><strong>Q</strong></td><td>Etiquetas consolidadas y confirmación de despacho</td><td style="text-align: center;">M</td><td style="text-align: center;">1.5</td><td style="text-align: center;">2.0</td><td style="text-align: center;">2.5</td><td style="text-align: center;"><strong>2.0</strong></td><td style="text-align: center;">0.17</td><td style="text-align: center;">16 HH (1 p)</td></tr>
+                  <tr style="background-color: #fefce8;"><td style="text-align: center;"><strong>R</strong></td><td>Conciliación de inventario inicial físico vs. digital</td><td style="text-align: center;">I, K</td><td style="text-align: center;">2.0</td><td style="text-align: center;">3.0</td><td style="text-align: center;">4.0</td><td style="text-align: center;"><strong>3.0</strong></td><td style="text-align: center;">0.33</td><td style="text-align: center;">72 HH (3 p)</td></tr>
+                  <tr><td style="text-align: center;"><strong>S</strong></td><td>Pruebas funcionales por módulo y lectura óptica</td><td style="text-align: center;">P, Q, R</td><td style="text-align: center;">3.0</td><td style="text-align: center;">4.0</td><td style="text-align: center;">5.0</td><td style="text-align: center;"><strong>4.0</strong></td><td style="text-align: center;">0.33</td><td style="text-align: center;">64 HH (2 p)</td></tr>
+                  <tr><td style="text-align: center;"><strong>T</strong></td><td>Pruebas integradas del flujo operativo completo</td><td style="text-align: center;">S</td><td style="text-align: center;">2.0</td><td style="text-align: center;">3.0</td><td style="text-align: center;">4.0</td><td style="text-align: center;"><strong>3.0</strong></td><td style="text-align: center;">0.33</td><td style="text-align: center;">48 HH (2 p)</td></tr>
+                  <tr><td style="text-align: center;"><strong>U</strong></td><td>Manuales SOP y capacitación práctica al personal</td><td style="text-align: center;">T</td><td style="text-align: center;">2.0</td><td style="text-align: center;">3.0</td><td style="text-align: center;">4.0</td><td style="text-align: center;"><strong>3.0</strong></td><td style="text-align: center;">0.33</td><td style="text-align: center;">48 HH (2 p)</td></tr>
+                  <tr style="background-color: #f0fdf4;"><td style="text-align: center;"><strong>V</strong></td><td>Aceptación final del sistema y salida en vivo (Go-Live)</td><td style="text-align: center;">U</td><td style="text-align: center;">1.5</td><td style="text-align: center;">2.0</td><td style="text-align: center;">2.5</td><td style="text-align: center;"><strong>2.0</strong></td><td style="text-align: center;">0.17</td><td style="text-align: center;">32 HH (2 p)</td></tr>
                 </tbody>
               </table>
             </div>
 
-            <h3 class="text-base sm:text-lg font-bold text-neutral-950 mt-6 mb-2">10.5 Diagrama de Red de Actividades y Ruta Crítica (CPM)</h3>
+            <h3 class="text-base sm:text-lg font-bold text-neutral-950 mt-6 mb-2">10.5 Método de la Ruta Crítica (CPM) y Nodos de 6 Casillas (Diapositiva 30)</h3>
             <p class="text-justify mb-4">
-              La red de precedencias vincula la rama de ingeniería física con la rama de desarrollo de software. Como se observa, el desarrollo de software avanza velozmente asistido por IA, pero las pruebas y el inventario digital dependen estrictamente de que la infraestructura física esté armada y rotulada:
+              En la <strong>Diapositiva 30 de la sesión de Cronograma</strong>, el docente especifica el formato exacto de cada nodo para el cálculo de la red:
             </p>
 
-            <div class="p-6 bg-slate-900 text-slate-100 rounded-2xl my-6 overflow-x-auto text-xs leading-relaxed font-mono">
-              <div class="text-amber-400 font-bold mb-3 text-sm">DIAGRAMA DE RED DE ACTIVIDADES (MÉTODO DE DIAGRAMACIÓN POR PRECEDENCIA - PDM)</div>
-[Inicio] ──► [A. Requisitos] ─┬──► [B. Casos de Uso] ──┬──► [E. Prototipos UI] ──────────────────────┐
-                             │                        └──► [D. Modelo DER] ──┬──► [G. Base Datos] ──┼──► [J. Ubicaciones WMS]
-                             ├──► [C. Red y VPS] ────────────────────────────┴──► [F. Servidor]   ──┘           │
-                             │                                                                                  ▼
-                             └──► [H. Racks Modulares] ──► [I. Codificación Racks] ────────┬──────────────► [K. Ingresos PEPS]
-                                                                                            │                   │
-                                                                                            │                   ▼
-                                                                                            │       ┌──► [L. Pedidos Picking] ──► [M. Picking WMS] ──┬──► [Q. Etiquetas Despacho]
-                                                                                            │       │                                      │         │
-                                                                                            │       │                                      ▼         │
-                                                                                            │       │                       [N. Reportes / KPIs]     │
-                                                                                            │       │                                      │         │
-                                                                                            │       │                                      ▼         │
-                                                                                            │       │                       [O. Auditoría / Logs]    │
-                                                                                            │       │                                      │         │
-                                                                                            │       │                                      ▼         │
-                                                                                            │       │                       [P. Modo Offline]        │
-                                                                                            │       │                                      │         │
-                                                                                            └───────┼──────────────────────► [R. Inventario Físico]  │
-                                                                                                    │                                      │         │
-                                                                                                    └──────────────────────────────────────┴─────────┴──► [S. Pruebas Módulos]
-                                                                                                                                                               │
-                                                                                                                                                               ▼
-[Fin] ◄── [V. Go-Live / Aceptación] ◄── [U. Capacitación / Manuales] ◄── [T. Pruebas Integradas Flujo] ◄───────────────────────────────────────────────────────┘
+            <div class="overflow-x-auto my-4 text-center">
+              <table style="margin: 0 auto; border-collapse: collapse; border: 2px solid #0f172a; width: 340px; font-family: monospace; font-size: 0.9rem;">
+                <tr style="background-color: #e2e8f0; border-bottom: 1px solid #0f172a;">
+                  <td style="padding: 6px; width: 33%; border-right: 1px solid #0f172a;">Inicio Temprano (ES)</td>
+                  <td style="padding: 6px; width: 34%; border-right: 1px solid #0f172a;">Duración (T<sub>E</sub>)</td>
+                  <td style="padding: 6px; width: 33%;">Final Temprano (EF)</td>
+                </tr>
+                <tr style="background-color: #ffffff; font-weight: bold; border-bottom: 1px solid #0f172a;">
+                  <td colspan="3" style="padding: 10px;">NOMBRE DE LA ACTIVIDAD</td>
+                </tr>
+                <tr style="background-color: #f1f5f9;">
+                  <td style="padding: 6px; border-right: 1px solid #0f172a;">Inicio Tardío (LS)</td>
+                  <td style="padding: 6px; border-right: 1px solid #0f172a;">Holgura Total (HT)</td>
+                  <td style="padding: 6px;">Final Tardío (LF)</td>
+                </tr>
+              </table>
             </div>
 
             <p class="text-justify mb-4">
-              <strong>Análisis de Ruta Crítica:</strong> La secuencia crítica determinante del proyecto está conformada por:<br>
-              <code>A ➔ H (Racks) ➔ I (Codificación) ➔ J (Ubicaciones) ➔ K (PEPS) ➔ L (Pedidos) ➔ M (Picking) ➔ Q (Etiquetas) ➔ S (Pruebas) ➔ T (Integración) ➔ U (Capacitación) ➔ V (Go-Live)</code>.<br>
-              Cualquier retraso en la adquisición o armado físico de los racks impactará de inmediato la fecha de entrega, ya que el software no puede conciliar ubicaciones ni validar recorridos sin las coordenadas físicas instaladas en el almacén.
+              Realizando el <strong>Paso hacia Adelante (Forward Pass)</strong> para calcular $ES$ y $EF$, y el <strong>Paso hacia Atrás (Backward Pass)</strong> para calcular $LF$, $LS$ y la Holgura Total ($\text{HT} = LS - ES = LF - EF$), se obtiene la matriz de programación definitiva:
             </p>
 
-            <h3 class="text-base sm:text-lg font-bold text-neutral-950 mt-6 mb-2">10.6 Sustento Técnico de Arquitectura: Servidor Cloud VPS frente a Servidor Físico</h3>
+            <div class="overflow-x-auto">
+              <table class="wide">
+                <thead>
+                  <tr>
+                    <th style="width: 6%; text-align: center;">Act.</th>
+                    <th style="width: 32%;">Actividad</th>
+                    <th style="width: 8%; text-align: center;">$T_E$</th>
+                    <th style="width: 8%; text-align: center;">ES</th>
+                    <th style="width: 8%; text-align: center;">EF</th>
+                    <th style="width: 8%; text-align: center;">LS</th>
+                    <th style="width: 8%; text-align: center;">LF</th>
+                    <th style="width: 10%; text-align: center;">Holgura (HT)</th>
+                    <th style="width: 12%; text-align: center;">¿Es Crítica?</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr style="background-color: #fee2e2;"><td style="text-align: center;"><strong>A</strong></td><td>Requisitos y reglas de inventario</td><td style="text-align: center;">4</td><td style="text-align: center;">0</td><td style="text-align: center;">4</td><td style="text-align: center;">0</td><td style="text-align: center;">4</td><td style="text-align: center;"><strong>0</strong></td><td style="text-align: center;"><span class="pill pill-red">Crítica</span></td></tr>
+                  <tr><td style="text-align: center;"><strong>B</strong></td><td>Casos de uso y flujos de inventario</td><td style="text-align: center;">3</td><td style="text-align: center;">4</td><td style="text-align: center;">7</td><td style="text-align: center;">9</td><td style="text-align: center;">12</td><td style="text-align: center;">5</td><td style="text-align: center;"><span class="pill pill-slate">No</span></td></tr>
+                  <tr><td style="text-align: center;"><strong>C</strong></td><td>Arquitectura Cloud VPS y Wi-Fi</td><td style="text-align: center;">3</td><td style="text-align: center;">4</td><td style="text-align: center;">7</td><td style="text-align: center;">9</td><td style="text-align: center;">12</td><td style="text-align: center;">5</td><td style="text-align: center;"><span class="pill pill-slate">No</span></td></tr>
+                  <tr><td style="text-align: center;"><strong>D</strong></td><td>Modelo de datos relacional (DER)</td><td style="text-align: center;">2</td><td style="text-align: center;">7</td><td style="text-align: center;">9</td><td style="text-align: center;">12</td><td style="text-align: center;">14</td><td style="text-align: center;">5</td><td style="text-align: center;"><span class="pill pill-slate">No</span></td></tr>
+                  <tr><td style="text-align: center;"><strong>E</strong></td><td>Prototipos de pantallas PWA con IA</td><td style="text-align: center;">3</td><td style="text-align: center;">7</td><td style="text-align: center;">10</td><td style="text-align: center;">11</td><td style="text-align: center;">14</td><td style="text-align: center;">4</td><td style="text-align: center;"><span class="pill pill-slate">No</span></td></tr>
+                  <tr><td style="text-align: center;"><strong>F</strong></td><td>Servidor Cloud VPS y PostgreSQL</td><td style="text-align: center;">2</td><td style="text-align: center;">7</td><td style="text-align: center;">9</td><td style="text-align: center;">12</td><td style="text-align: center;">14</td><td style="text-align: center;">5</td><td style="text-align: center;"><span class="pill pill-slate">No</span></td></tr>
+                  <tr><td style="text-align: center;"><strong>G</strong></td><td>Base de datos y catálogo de SKUs</td><td style="text-align: center;">2</td><td style="text-align: center;">9</td><td style="text-align: center;">11</td><td style="text-align: center;">12</td><td style="text-align: center;">14</td><td style="text-align: center;">3</td><td style="text-align: center;"><span class="pill pill-slate">No</span></td></tr>
+                  <tr style="background-color: #fee2e2;"><td style="text-align: center;"><strong>H</strong></td><td>Armado de Racks y Zonificación ABC</td><td style="text-align: center;">6</td><td style="text-align: center;">4</td><td style="text-align: center;">10</td><td style="text-align: center;">4</td><td style="text-align: center;">10</td><td style="text-align: center;"><strong>0</strong></td><td style="text-align: center;"><span class="pill pill-red">Crítica</span></td></tr>
+                  <tr style="background-color: #fee2e2;"><td style="text-align: center;"><strong>I</strong></td><td>Codificación física de ubicaciones</td><td style="text-align: center;">4</td><td style="text-align: center;">10</td><td style="text-align: center;">14</td><td style="text-align: center;">10</td><td style="text-align: center;">14</td><td style="text-align: center;"><strong>0</strong></td><td style="text-align: center;"><span class="pill pill-red">Crítica</span></td></tr>
+                  <tr style="background-color: #fee2e2;"><td style="text-align: center;"><strong>J</strong></td><td>Módulo de ubicaciones espaciales WMS</td><td style="text-align: center;">3</td><td style="text-align: center;">14</td><td style="text-align: center;">17</td><td style="text-align: center;">14</td><td style="text-align: center;">17</td><td style="text-align: center;"><strong>0</strong></td><td style="text-align: center;"><span class="pill pill-red">Crítica</span></td></tr>
+                  <tr style="background-color: #fee2e2;"><td style="text-align: center;"><strong>K</strong></td><td>Módulo de ingresos, lotes y PEPS</td><td style="text-align: center;">4</td><td style="text-align: center;">17</td><td style="text-align: center;">21</td><td style="text-align: center;">17</td><td style="text-align: center;">21</td><td style="text-align: center;"><strong>0</strong></td><td style="text-align: center;"><span class="pill pill-red">Crítica</span></td></tr>
+                  <tr style="background-color: #fee2e2;"><td style="text-align: center;"><strong>L</strong></td><td>Módulo de pedidos y listas de picking</td><td style="text-align: center;">4</td><td style="text-align: center;">21</td><td style="text-align: center;">25</td><td style="text-align: center;">21</td><td style="text-align: center;">25</td><td style="text-align: center;"><strong>0</strong></td><td style="text-align: center;"><span class="pill pill-red">Crítica</span></td></tr>
+                  <tr style="background-color: #fee2e2;"><td style="text-align: center;"><strong>M</strong></td><td>Módulo de picking secuencial en piso</td><td style="text-align: center;">4</td><td style="text-align: center;">25</td><td style="text-align: center;">29</td><td style="text-align: center;">25</td><td style="text-align: center;">29</td><td style="text-align: center;"><strong>0</strong></td><td style="text-align: center;"><span class="pill pill-red">Crítica</span></td></tr>
+                  <tr><td style="text-align: center;"><strong>N</strong></td><td>Reportes de discrepancias y KPIs</td><td style="text-align: center;">3</td><td style="text-align: center;">29</td><td style="text-align: center;">32</td><td style="text-align: center;">29</td><td style="text-align: center;">32</td><td style="text-align: center;">0</td><td style="text-align: center;"><span class="pill pill-slate">No</span></td></tr>
+                  <tr><td style="text-align: center;"><strong>O</strong></td><td>Auditoría (Audit Trail) y roles</td><td style="text-align: center;">2</td><td style="text-align: center;">32</td><td style="text-align: center;">34</td><td style="text-align: center;">32</td><td style="text-align: center;">34</td><td style="text-align: center;">0</td><td style="text-align: center;"><span class="pill pill-slate">No</span></td></tr>
+                  <tr><td style="text-align: center;"><strong>P</strong></td><td>Sincronización y modo offline-first</td><td style="text-align: center;">3</td><td style="text-align: center;">34</td><td style="text-align: center;">37</td><td style="text-align: center;">34</td><td style="text-align: center;">37</td><td style="text-align: center;">0</td><td style="text-align: center;"><span class="pill pill-slate">No</span></td></tr>
+                  <tr style="background-color: #fee2e2;"><td style="text-align: center;"><strong>Q</strong></td><td>Etiquetas de bulto y confirmación</td><td style="text-align: center;">2</td><td style="text-align: center;">29</td><td style="text-align: center;">31</td><td style="text-align: center;">35</td><td style="text-align: center;">37</td><td style="text-align: center;">6</td><td style="text-align: center;"><span class="pill pill-slate">No</span></td></tr>
+                  <tr><td style="text-align: center;"><strong>R</strong></td><td>Inventario físico inicial en racks</td><td style="text-align: center;">3</td><td style="text-align: center;">21</td><td style="text-align: center;">24</td><td style="text-align: center;">34</td><td style="text-align: center;">37</td><td style="text-align: center;">13</td><td style="text-align: center;"><span class="pill pill-slate">No</span></td></tr>
+                  <tr style="background-color: #fee2e2;"><td style="text-align: center;"><strong>S</strong></td><td>Pruebas funcionales por módulo</td><td style="text-align: center;">4</td><td style="text-align: center;">37</td><td style="text-align: center;">41</td><td style="text-align: center;">37</td><td style="text-align: center;">41</td><td style="text-align: center;"><strong>0</strong></td><td style="text-align: center;"><span class="pill pill-red">Crítica</span></td></tr>
+                  <tr style="background-color: #fee2e2;"><td style="text-align: center;"><strong>T</strong></td><td>Pruebas integradas de flujo en piso</td><td style="text-align: center;">3</td><td style="text-align: center;">41</td><td style="text-align: center;">44</td><td style="text-align: center;">41</td><td style="text-align: center;">44</td><td style="text-align: center;"><strong>0</strong></td><td style="text-align: center;"><span class="pill pill-red">Crítica</span></td></tr>
+                  <tr style="background-color: #fee2e2;"><td style="text-align: center;"><strong>U</strong></td><td>Manuales SOP y capacitación práctica</td><td style="text-align: center;">3</td><td style="text-align: center;">44</td><td style="text-align: center;">47</td><td style="text-align: center;">44</td><td style="text-align: center;">47</td><td style="text-align: center;"><strong>0</strong></td><td style="text-align: center;"><span class="pill pill-red">Crítica</span></td></tr>
+                  <tr style="background-color: #fee2e2;"><td style="text-align: center;"><strong>V</strong></td><td>Go-Live y aceptación final formal</td><td style="text-align: center;">2</td><td style="text-align: center;">47</td><td style="text-align: center;">49</td><td style="text-align: center;">47</td><td style="text-align: center;">49</td><td style="text-align: center;"><strong>0</strong></td><td style="text-align: center;"><span class="pill pill-red">Crítica</span></td></tr>
+                </tbody>
+              </table>
+            </div>
+
+            <p class="text-justify mb-4">
+              <strong>Demostración de la Ruta Crítica (Duración total: 49 días hábiles):</strong><br>
+              <code>Inicio ➔ A ➔ H ➔ I ➔ J ➔ K ➔ L ➔ M ➔ S ➔ T ➔ U ➔ V ➔ Fin</code>.<br>
+              Cualquier día de demora en el armado físico de los racks (H) o en la codificación de pasillos (I) traslada inmediatamente la fecha de puesta en marcha del proyecto, ya que su holgura matemática es estrictamente <strong>0</strong>.
+            </p>
+
+            <h3 class="text-base sm:text-lg font-bold text-neutral-950 mt-6 mb-2">10.6 Técnicas de Optimización y Compresión del Cronograma (Diapositivas 31 y 32)</h3>
+            <p class="text-justify mb-4">
+              En las <strong>Diapositivas 31 y 32</strong>, el docente expone dos estrategias formales de ajuste del cronograma que se aplican directamente en este proyecto:
+            </p>
+            <ul class="list-disc pl-6 space-y-2 mb-4 text-justify">
+              <li><strong>Ejecución Rápida (Fast Tracking):</strong> Se programan las actividades de software (B, C, D, E, F y G) en paralelo con la adquisición física de los racks (H). Gracias a los agentes de Inteligencia Artificial para scaffolding de código, el software WMS se completa y espera con holgura positiva a que la infraestructura física esté anclada.</li>
+              <li><strong>Equilibrio y Nivelación de Recursos (Resource Leveling):</strong> La cuadrilla de 4 integrantes del proyecto se distribuye tácticamente: mientras 2 integrantes lideran el montaje físico y rotulado en almacén (H e I), los otros 2 integrantes configuran la base de datos PostgreSQL en el VPS y parametrizan la PWA móvil.</li>
+            </ul>
+
+            <h3 class="text-base sm:text-lg font-bold text-neutral-950 mt-6 mb-2">10.7 Sustento Técnico de Arquitectura: Servidor Cloud VPS frente a Servidor Físico</h3>
             <p class="text-justify mb-4">
               Uno de los puntos clave evaluados para la viabilidad de la solución fue la decisión entre adquirir un servidor físico local (<i>On-Premise</i>) o contratar una instancia privada virtual en la nube (<i>Cloud VPS</i>):
             </p>
@@ -387,7 +332,7 @@
                   <tr>
                     <td><strong>Inversión Inicial (CAPEX)</strong></td>
                     <td><span class="pill pill-red">Desfavorable (S/ 2,800 a S/ 4,000)</span> en hardware servidor, fuente redundante y sistema UPS de respaldo.</td>
-                    <td><span class="pill pill-green">Óptima (S/ 0 de inversión inicial)</span>; no se inmoviliza capital en fierros ni equipos que se deprecian.</td>
+                    <td><span class="pill pill-green">Óptima (S/ 0 de inversión inicial)</span>; no se inmoviliza capital en equipos que se deprecian.</td>
                   </tr>
                   <tr>
                     <td><strong>Costo Operativo (OPEX)</strong></td>
@@ -413,15 +358,7 @@
               </table>
             </div>
 
-            <p class="text-justify mb-4">
-              <strong>Veredicto de Ingeniería:</strong> Se seleccionó la arquitectura <strong>Cloud VPS con enfoque Offline-First</strong>. Esta alternativa libera el presupuesto para financiar la totalidad de los racks industriales y garantiza que la fuerza de ventas en ruta sincronice pedidos directamente sin sobrecostos de conectividad.
-            </p>
-
-            <h3 class="text-base sm:text-lg font-bold text-neutral-950 mt-6 mb-2">10.7 Presupuesto y Estructura de Costos del Proyecto (2026)</h3>
-            <p class="text-justify mb-4">
-              El presupuesto consolidado refleja los costos reales de mercado vigentes al año 2026 en el sector industrial de Lima Sur, estructurado bajo las categorías CAPEX (inversión de capital) y OPEX (gasto operativo del primer año de funcionamiento):
-            </p>
-
+            <h3 class="text-base sm:text-lg font-bold text-neutral-950 mt-6 mb-2">10.8 Presupuesto y Estructura de Costos del Proyecto (2026)</h3>
             <div class="overflow-x-auto">
               <table class="wide">
                 <thead>
@@ -436,7 +373,7 @@
                 <tbody>
                   <tr>
                     <td style="text-align: center;"><strong>1.2.1</strong></td>
-                    <td>3 Módulos de Racks Industriales metálicos para carga pesada (Zona A, B y C)</td>
+                    <td>3 Módulos de Racks Industriales metálicos pesados (Zonas A, B y C)</td>
                     <td style="text-align: center;"><span class="pill pill-slate">CAPEX</span></td>
                     <td style="text-align: right;">S/ 2,600.00</td>
                     <td rowspan="3" style="text-align: right; vertical-align: middle; font-weight: bold;">S/ 3,130.00</td>
@@ -507,6 +444,6 @@
             </div>
 
             <figure class="pullquote">
-              <figcaption>Conclusión de Viabilidad Presupuestal</figcaption>
-              <blockquote>El presupuesto de S/ 4,500.00 se posiciona cómodamente por debajo del tope de S/ 8,000.00 validado por la gerencia en las entrevistas de campo. La adopción de tecnología Cloud VPS y la lectura por dispositivos móviles existentes evitan sobrecostos de hardware, garantizando una relación beneficio/costo altamente favorable y un retorno de inversión en el primer semestre de operación.</blockquote>
+              <figcaption>Conclusión y Viabilidad del Proyecto</figcaption>
+              <blockquote>Con un presupuesto de S/ 4,500.00, una duración en ruta crítica de 49 días hábiles (10 semanas) y la total documentación formal de la línea base del alcance y cronograma según las normas del PMBOK, el proyecto moderniza la operación logística de Distribuidora Ecuménico asegurando exactitud de inventario al 99 % y despachos puntuales a las 6:00 a. m.</blockquote>
             </figure>
