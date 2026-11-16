@@ -2671,67 +2671,364 @@
               </div>
             </details>
 
-            <h3 class="text-base sm:text-lg font-bold text-neutral-950 mt-6 mb-2">10.4 Lista de Actividades y Estimación por Tres Valores (Fórmulas PERT de la Diapositiva 27)</h3>
+                        <h3 class="text-base sm:text-lg font-bold text-neutral-950 mt-6 mb-2">10.4 Diagrama de la Lista de Actividades y Estimación por Tres Valores (Fórmulas PERT de la Diapositiva 27)</h3>
             <p class="text-justify mb-4">
-              En la <strong>Diapositiva 27 de la sesión de Cronograma</strong>, el docente expone las técnicas matemáticas de estimación: la distribución triangular ($T_E = \frac{T_O + T_M + T_P}{3}$) y la distribución Beta / PERT ($T_E = \frac{T_O + 4T_M + T_P}{6}$). En este proyecto se emplea la <strong>Distribución Beta (PERT)</strong> con cálculo de desviación estándar ($\sigma = \frac{T_P - T_O}{6}$) y cálculo de <strong>Horas-Hombre de esfuerzo</strong> ($\text{Esfuerzo} = T_E \times 8\text{ h/día} \times \text{Recursos}$):
+              En estricto cumplimiento de los estándares del PMBOK y la <strong>metodología impartida por el Mg. MBA Antonio Arqque Pantigozo en la Universidad Nacional Tecnológica de Lima Sur (UNTELS)</strong>, los paquetes de trabajo de la EDT se descomponen a un nivel más granular de <strong>actividades operativas e ingenieriles</strong> (Diapositiva 18: Planificación gradual). Como se observa en la formulación de referencia del equipo, no se toman los bloques macro tal cual, sino que se separan en tareas secuenciales bien definidas de software, infraestructura física, hardware y despliegue.
+            </p>
+            <p class="text-justify mb-4">
+              Para calcular la duración esperada ($T_E$), se aplican las fórmulas matemáticas de la <strong>Diapositiva 27 de la sesión de Cronograma</strong>, empleando la <strong>Distribución Beta (PERT)</strong> ($T_E = rac{T_O + 4T_M + T_P}{6}$), la desviación estándar ($\sigma = rac{T_P - T_O}{6}$), la varianza ($\sigma^2$) y el cálculo de <strong>Horas-Hombre de esfuerzo</strong> ($	ext{Esfuerzo} = T_E 	imes 8	ext{ h/día} 	imes 	ext{Recursos}$):
             </p>
 
             <div class="overflow-x-auto">
               <table class="wide">
                 <thead>
                   <tr>
-                    <th style="width: 6%; text-align: center;">Act.</th>
-                    <th style="width: 32%;">Descripción del Paquete de Trabajo</th>
-                    <th style="width: 10%; text-align: center;">Pred.</th>
-                    <th style="width: 7%; text-align: center;">$T_O$</th>
-                    <th style="width: 7%; text-align: center;">$T_M$</th>
-                    <th style="width: 7%; text-align: center;">$T_P$</th>
-                    <th style="width: 11%; text-align: center;">$T_E$ PERT (Días)</th>
-                    <th style="width: 8%; text-align: center;">$\sigma$</th>
-                    <th style="width: 12%; text-align: center;">Esfuerzo (HH)</th>
+                    <th style="width: 5%; text-align: center;">Act.</th>
+                    <th style="width: 28%;">Descripción de la Actividad</th>
+                    <th style="width: 8%; text-align: center;">Pred.</th>
+                    <th style="width: 8%; text-align: center;">Duración (Semanas)</th>
+                    <th style="width: 6%; text-align: center;">$T_O$ (días)</th>
+                    <th style="width: 6%; text-align: center;">$T_M$ (días)</th>
+                    <th style="width: 6%; text-align: center;">$T_P$ (días)</th>
+                    <th style="width: 9%; text-align: center;">$T_E$ PERT (Días)</th>
+                    <th style="width: 7%; text-align: center;">$\sigma$ (días)</th>
+                    <th style="width: 6%; text-align: center;">$\sigma^2$</th>
+                    <th style="width: 11%; text-align: center;">Esfuerzo (HH)</th>
                   </tr>
                 </thead>
                 <tbody>
-                  <tr><td style="text-align: center;"><strong>A</strong></td><td>Requisitos funcionales y reglas de inventario</td><td style="text-align: center;">—</td><td style="text-align: center;">3.0</td><td style="text-align: center;">4.0</td><td style="text-align: center;">5.0</td><td style="text-align: center;"><strong>4.0</strong></td><td style="text-align: center;">0.33</td><td style="text-align: center;">64 HH (2 p)</td></tr>
-                  <tr><td style="text-align: center;"><strong>B</strong></td><td>Flujos operativos de inventario y casos de uso UML</td><td style="text-align: center;">A</td><td style="text-align: center;">2.0</td><td style="text-align: center;">3.0</td><td style="text-align: center;">4.0</td><td style="text-align: center;"><strong>3.0</strong></td><td style="text-align: center;">0.33</td><td style="text-align: center;">48 HH (2 p)</td></tr>
-                  <tr><td style="text-align: center;"><strong>C</strong></td><td>Arquitectura Cloud VPS y conectividad Wi-Fi almacén</td><td style="text-align: center;">A</td><td style="text-align: center;">2.0</td><td style="text-align: center;">3.0</td><td style="text-align: center;">4.0</td><td style="text-align: center;"><strong>3.0</strong></td><td style="text-align: center;">0.33</td><td style="text-align: center;">24 HH (1 p)</td></tr>
-                  <tr><td style="text-align: center;"><strong>D</strong></td><td>Modelo de datos relacional (DER) de inventario y lotes</td><td style="text-align: center;">B, C</td><td style="text-align: center;">1.5</td><td style="text-align: center;">2.0</td><td style="text-align: center;">2.5</td><td style="text-align: center;"><strong>2.0</strong></td><td style="text-align: center;">0.17</td><td style="text-align: center;">32 HH (2 p)</td></tr>
-                  <tr><td style="text-align: center;"><strong>E</strong></td><td>Prototipos de pantallas PWA móvil asistidos por IA</td><td style="text-align: center;">B</td><td style="text-align: center;">2.0</td><td style="text-align: center;">3.0</td><td style="text-align: center;">4.0</td><td style="text-align: center;"><strong>3.0</strong></td><td style="text-align: center;">0.33</td><td style="text-align: center;">24 HH (1 p)</td></tr>
-                  <tr><td style="text-align: center;"><strong>F</strong></td><td>Servidor Cloud VPS y entorno PostgreSQL</td><td style="text-align: center;">C</td><td style="text-align: center;">1.5</td><td style="text-align: center;">2.0</td><td style="text-align: center;">2.5</td><td style="text-align: center;"><strong>2.0</strong></td><td style="text-align: center;">0.17</td><td style="text-align: center;">16 HH (1 p)</td></tr>
-                  <tr><td style="text-align: center;"><strong>G</strong></td><td>Base de datos desplegada, catálogo SKUs y migraciones</td><td style="text-align: center;">D, F</td><td style="text-align: center;">1.5</td><td style="text-align: center;">2.0</td><td style="text-align: center;">2.5</td><td style="text-align: center;"><strong>2.0</strong></td><td style="text-align: center;">0.17</td><td style="text-align: center;">32 HH (2 p)</td></tr>
-                  <tr style="background-color: #fefce8;"><td style="text-align: center;"><strong>H</strong></td><td>Adquisición, armado de racks y zonificación ABC</td><td style="text-align: center;">A</td><td style="text-align: center;">4.0</td><td style="text-align: center;">6.0</td><td style="text-align: center;">8.0</td><td style="text-align: center;"><strong>6.0</strong></td><td style="text-align: center;">0.67</td><td style="text-align: center;">144 HH (3 p)</td></tr>
-                  <tr style="background-color: #fefce8;"><td style="text-align: center;"><strong>I</strong></td><td>Señalética de pasillos, bandejas y codificación física</td><td style="text-align: center;">H</td><td style="text-align: center;">3.0</td><td style="text-align: center;">4.0</td><td style="text-align: center;">5.0</td><td style="text-align: center;"><strong>4.0</strong></td><td style="text-align: center;">0.33</td><td style="text-align: center;">64 HH (2 p)</td></tr>
-                  <tr><td style="text-align: center;"><strong>J</strong></td><td>Módulo de ubicaciones espaciales y consulta WMS</td><td style="text-align: center;">E, G, I</td><td style="text-align: center;">2.0</td><td style="text-align: center;">3.0</td><td style="text-align: center;">4.0</td><td style="text-align: center;"><strong>3.0</strong></td><td style="text-align: center;">0.33</td><td style="text-align: center;">48 HH (2 p)</td></tr>
-                  <tr><td style="text-align: center;"><strong>K</strong></td><td>Módulo de ingresos de mercadería, lotes y PEPS</td><td style="text-align: center;">J</td><td style="text-align: center;">3.0</td><td style="text-align: center;">4.0</td><td style="text-align: center;">5.0</td><td style="text-align: center;"><strong>4.0</strong></td><td style="text-align: center;">0.33</td><td style="text-align: center;">64 HH (2 p)</td></tr>
-                  <tr><td style="text-align: center;"><strong>L</strong></td><td>Módulo de pedidos sincronizados y listas de preparación</td><td style="text-align: center;">K</td><td style="text-align: center;">3.0</td><td style="text-align: center;">4.0</td><td style="text-align: center;">5.0</td><td style="text-align: center;"><strong>4.0</strong></td><td style="text-align: center;">0.33</td><td style="text-align: center;">64 HH (2 p)</td></tr>
-                  <tr><td style="text-align: center;"><strong>M</strong></td><td>Módulo de picking secuencial y rebaja de stock</td><td style="text-align: center;">L</td><td style="text-align: center;">3.0</td><td style="text-align: center;">4.0</td><td style="text-align: center;">5.0</td><td style="text-align: center;"><strong>4.0</strong></td><td style="text-align: center;">0.33</td><td style="text-align: center;">64 HH (2 p)</td></tr>
-                  <tr><td style="text-align: center;"><strong>N</strong></td><td>Reportes de discrepancias e indicadores clave (KPIs)</td><td style="text-align: center;">K, M</td><td style="text-align: center;">2.0</td><td style="text-align: center;">3.0</td><td style="text-align: center;">4.0</td><td style="text-align: center;"><strong>3.0</strong></td><td style="text-align: center;">0.33</td><td style="text-align: center;">24 HH (1 p)</td></tr>
-                  <tr><td style="text-align: center;"><strong>O</strong></td><td>Módulo de auditoría (Audit Trail) y controles</td><td style="text-align: center;">N</td><td style="text-align: center;">1.5</td><td style="text-align: center;">2.0</td><td style="text-align: center;">2.5</td><td style="text-align: center;"><strong>2.0</strong></td><td style="text-align: center;">0.17</td><td style="text-align: center;">16 HH (1 p)</td></tr>
-                  <tr><td style="text-align: center;"><strong>P</strong></td><td>Almacenamiento temporal y sincronización offline-first</td><td style="text-align: center;">O</td><td style="text-align: center;">2.0</td><td style="text-align: center;">3.0</td><td style="text-align: center;">4.0</td><td style="text-align: center;"><strong>3.0</strong></td><td style="text-align: center;">0.33</td><td style="text-align: center;">24 HH (1 p)</td></tr>
-                  <tr><td style="text-align: center;"><strong>Q</strong></td><td>Etiquetas consolidadas y confirmación de despacho</td><td style="text-align: center;">M</td><td style="text-align: center;">1.5</td><td style="text-align: center;">2.0</td><td style="text-align: center;">2.5</td><td style="text-align: center;"><strong>2.0</strong></td><td style="text-align: center;">0.17</td><td style="text-align: center;">16 HH (1 p)</td></tr>
-                  <tr style="background-color: #fefce8;"><td style="text-align: center;"><strong>R</strong></td><td>Conciliación de inventario inicial físico vs. digital</td><td style="text-align: center;">I, K</td><td style="text-align: center;">2.0</td><td style="text-align: center;">3.0</td><td style="text-align: center;">4.0</td><td style="text-align: center;"><strong>3.0</strong></td><td style="text-align: center;">0.33</td><td style="text-align: center;">72 HH (3 p)</td></tr>
-                  <tr><td style="text-align: center;"><strong>S</strong></td><td>Pruebas funcionales por módulo y lectura óptica</td><td style="text-align: center;">P, Q, R</td><td style="text-align: center;">3.0</td><td style="text-align: center;">4.0</td><td style="text-align: center;">5.0</td><td style="text-align: center;"><strong>4.0</strong></td><td style="text-align: center;">0.33</td><td style="text-align: center;">64 HH (2 p)</td></tr>
-                  <tr><td style="text-align: center;"><strong>T</strong></td><td>Pruebas integradas del flujo operativo completo</td><td style="text-align: center;">S</td><td style="text-align: center;">2.0</td><td style="text-align: center;">3.0</td><td style="text-align: center;">4.0</td><td style="text-align: center;"><strong>3.0</strong></td><td style="text-align: center;">0.33</td><td style="text-align: center;">48 HH (2 p)</td></tr>
-                  <tr><td style="text-align: center;"><strong>U</strong></td><td>Manuales SOP y capacitación práctica al personal</td><td style="text-align: center;">T</td><td style="text-align: center;">2.0</td><td style="text-align: center;">3.0</td><td style="text-align: center;">4.0</td><td style="text-align: center;"><strong>3.0</strong></td><td style="text-align: center;">0.33</td><td style="text-align: center;">48 HH (2 p)</td></tr>
-                  <tr style="background-color: #f0fdf4;"><td style="text-align: center;"><strong>V</strong></td><td>Aceptación final del sistema y salida en vivo (Go-Live)</td><td style="text-align: center;">U</td><td style="text-align: center;">1.5</td><td style="text-align: center;">2.0</td><td style="text-align: center;">2.5</td><td style="text-align: center;"><strong>2.0</strong></td><td style="text-align: center;">0.17</td><td style="text-align: center;">32 HH (2 p)</td></tr>
+                  <tr style="background-color: #fee2e2;">
+                    <td style="text-align: center;"><strong>A</strong></td>
+                    <td>Requisitos funcionales y reglas de negocio del almacén</td>
+                    <td style="text-align: center;">—</td>
+                    <td style="text-align: center;">0.8 sem</td>
+                    <td style="text-align: center;">3.0</td>
+                    <td style="text-align: center;">4.0</td>
+                    <td style="text-align: center;">5.0</td>
+                    <td style="text-align: center;"><strong>4.0</strong></td>
+                    <td style="text-align: center;">0.33</td>
+                    <td style="text-align: center;">0.11</td>
+                    <td style="text-align: center;">64 HH (2 p)</td>
+                  </tr>
+                  <tr>
+                    <td style="text-align: center;"><strong>B</strong></td>
+                    <td>Flujos de inventario, zonificación ABC y casos de uso</td>
+                    <td style="text-align: center;">A</td>
+                    <td style="text-align: center;">0.6 sem</td>
+                    <td style="text-align: center;">2.0</td>
+                    <td style="text-align: center;">3.0</td>
+                    <td style="text-align: center;">4.0</td>
+                    <td style="text-align: center;"><strong>3.0</strong></td>
+                    <td style="text-align: center;">0.33</td>
+                    <td style="text-align: center;">0.11</td>
+                    <td style="text-align: center;">48 HH (2 p)</td>
+                  </tr>
+                  <tr>
+                    <td style="text-align: center;"><strong>C</strong></td>
+                    <td>Arquitectura técnica Cloud VPS y conectividad Wi-Fi</td>
+                    <td style="text-align: center;">A</td>
+                    <td style="text-align: center;">0.6 sem</td>
+                    <td style="text-align: center;">2.0</td>
+                    <td style="text-align: center;">3.0</td>
+                    <td style="text-align: center;">4.0</td>
+                    <td style="text-align: center;"><strong>3.0</strong></td>
+                    <td style="text-align: center;">0.33</td>
+                    <td style="text-align: center;">0.11</td>
+                    <td style="text-align: center;">24 HH (1 p)</td>
+                  </tr>
+                  <tr>
+                    <td style="text-align: center;"><strong>D</strong></td>
+                    <td>Modelo de datos relacional (DER) de inventario y lotes</td>
+                    <td style="text-align: center;">B, C</td>
+                    <td style="text-align: center;">0.4 sem</td>
+                    <td style="text-align: center;">1.0</td>
+                    <td style="text-align: center;">2.0</td>
+                    <td style="text-align: center;">3.0</td>
+                    <td style="text-align: center;"><strong>2.0</strong></td>
+                    <td style="text-align: center;">0.33</td>
+                    <td style="text-align: center;">0.11</td>
+                    <td style="text-align: center;">32 HH (2 p)</td>
+                  </tr>
+                  <tr>
+                    <td style="text-align: center;"><strong>E</strong></td>
+                    <td>Prototipos de interfaces de usuario PWA asistidos por IA</td>
+                    <td style="text-align: center;">B</td>
+                    <td style="text-align: center;">0.6 sem</td>
+                    <td style="text-align: center;">2.0</td>
+                    <td style="text-align: center;">3.0</td>
+                    <td style="text-align: center;">4.0</td>
+                    <td style="text-align: center;"><strong>3.0</strong></td>
+                    <td style="text-align: center;">0.33</td>
+                    <td style="text-align: center;">0.11</td>
+                    <td style="text-align: center;">24 HH (1 p)</td>
+                  </tr>
+                  <tr>
+                    <td style="text-align: center;"><strong>F</strong></td>
+                    <td>Aprovisionamiento de servidor Cloud VPS y PostgreSQL</td>
+                    <td style="text-align: center;">C</td>
+                    <td style="text-align: center;">0.4 sem</td>
+                    <td style="text-align: center;">1.0</td>
+                    <td style="text-align: center;">2.0</td>
+                    <td style="text-align: center;">3.0</td>
+                    <td style="text-align: center;"><strong>2.0</strong></td>
+                    <td style="text-align: center;">0.33</td>
+                    <td style="text-align: center;">0.11</td>
+                    <td style="text-align: center;">16 HH (1 p)</td>
+                  </tr>
+                  <tr style="background-color: #fee2e2;">
+                    <td style="text-align: center;"><strong>G</strong></td>
+                    <td>Montaje mecánico y anclaje de racks industriales (3 niveles)</td>
+                    <td style="text-align: center;">A</td>
+                    <td style="text-align: center;">1.0 sem</td>
+                    <td style="text-align: center;">4.0</td>
+                    <td style="text-align: center;">5.0</td>
+                    <td style="text-align: center;">6.0</td>
+                    <td style="text-align: center;"><strong>5.0</strong></td>
+                    <td style="text-align: center;">0.33</td>
+                    <td style="text-align: center;">0.11</td>
+                    <td style="text-align: center;">120 HH (3 p)</td>
+                  </tr>
+                  <tr style="background-color: #fee2e2;">
+                    <td style="text-align: center;"><strong>H</strong></td>
+                    <td>Codificación espacial vinílica de pasillos, columnas y gavetas</td>
+                    <td style="text-align: center;">G</td>
+                    <td style="text-align: center;">0.6 sem</td>
+                    <td style="text-align: center;">2.0</td>
+                    <td style="text-align: center;">3.0</td>
+                    <td style="text-align: center;">4.0</td>
+                    <td style="text-align: center;"><strong>3.0</strong></td>
+                    <td style="text-align: center;">0.33</td>
+                    <td style="text-align: center;">0.11</td>
+                    <td style="text-align: center;">48 HH (2 p)</td>
+                  </tr>
+                  <tr>
+                    <td style="text-align: center;"><strong>I</strong></td>
+                    <td>Base de datos desplegada, catálogo SKUs y migraciones</td>
+                    <td style="text-align: center;">D, F</td>
+                    <td style="text-align: center;">0.4 sem</td>
+                    <td style="text-align: center;">1.0</td>
+                    <td style="text-align: center;">2.0</td>
+                    <td style="text-align: center;">3.0</td>
+                    <td style="text-align: center;"><strong>2.0</strong></td>
+                    <td style="text-align: center;">0.33</td>
+                    <td style="text-align: center;">0.11</td>
+                    <td style="text-align: center;">32 HH (2 p)</td>
+                  </tr>
+                  <tr style="background-color: #fee2e2;">
+                    <td style="text-align: center;"><strong>J</strong></td>
+                    <td>Módulo WMS de ubicaciones espaciales y consulta stock real</td>
+                    <td style="text-align: center;">E, H, I</td>
+                    <td style="text-align: center;">0.6 sem</td>
+                    <td style="text-align: center;">2.0</td>
+                    <td style="text-align: center;">3.0</td>
+                    <td style="text-align: center;">4.0</td>
+                    <td style="text-align: center;"><strong>3.0</strong></td>
+                    <td style="text-align: center;">0.33</td>
+                    <td style="text-align: center;">0.11</td>
+                    <td style="text-align: center;">48 HH (2 p)</td>
+                  </tr>
+                  <tr style="background-color: #fee2e2;">
+                    <td style="text-align: center;"><strong>K</strong></td>
+                    <td>Módulo de ingresos de mercadería, lotes y regla PEPS</td>
+                    <td style="text-align: center;">J</td>
+                    <td style="text-align: center;">0.8 sem</td>
+                    <td style="text-align: center;">3.0</td>
+                    <td style="text-align: center;">4.0</td>
+                    <td style="text-align: center;">5.0</td>
+                    <td style="text-align: center;"><strong>4.0</strong></td>
+                    <td style="text-align: center;">0.33</td>
+                    <td style="text-align: center;">0.11</td>
+                    <td style="text-align: center;">64 HH (2 p)</td>
+                  </tr>
+                  <tr style="background-color: #fee2e2;">
+                    <td style="text-align: center;"><strong>L</strong></td>
+                    <td>Módulo de pedidos de preventa y listas de preparación</td>
+                    <td style="text-align: center;">K</td>
+                    <td style="text-align: center;">0.6 sem</td>
+                    <td style="text-align: center;">2.0</td>
+                    <td style="text-align: center;">3.0</td>
+                    <td style="text-align: center;">4.0</td>
+                    <td style="text-align: center;"><strong>3.0</strong></td>
+                    <td style="text-align: center;">0.33</td>
+                    <td style="text-align: center;">0.11</td>
+                    <td style="text-align: center;">48 HH (2 p)</td>
+                  </tr>
+                  <tr style="background-color: #fee2e2;">
+                    <td style="text-align: center;"><strong>M</strong></td>
+                    <td>Algoritmo de picking óptimo y rebaja de stock en tiempo real</td>
+                    <td style="text-align: center;">L</td>
+                    <td style="text-align: center;">0.8 sem</td>
+                    <td style="text-align: center;">3.0</td>
+                    <td style="text-align: center;">4.0</td>
+                    <td style="text-align: center;">5.0</td>
+                    <td style="text-align: center;"><strong>4.0</strong></td>
+                    <td style="text-align: center;">0.33</td>
+                    <td style="text-align: center;">0.11</td>
+                    <td style="text-align: center;">64 HH (2 p)</td>
+                  </tr>
+                  <tr style="background-color: #fee2e2;">
+                    <td style="text-align: center;"><strong>N</strong></td>
+                    <td>Módulo de auditoría de inventario, mermas e indicadores (KPIs)</td>
+                    <td style="text-align: center;">K, M</td>
+                    <td style="text-align: center;">0.6 sem</td>
+                    <td style="text-align: center;">2.0</td>
+                    <td style="text-align: center;">3.0</td>
+                    <td style="text-align: center;">4.0</td>
+                    <td style="text-align: center;"><strong>3.0</strong></td>
+                    <td style="text-align: center;">0.33</td>
+                    <td style="text-align: center;">0.11</td>
+                    <td style="text-align: center;">24 HH (1 p)</td>
+                  </tr>
+                  <tr style="background-color: #fee2e2;">
+                    <td style="text-align: center;"><strong>O</strong></td>
+                    <td>Modo offline-first con IndexedDB y sincronización en cola</td>
+                    <td style="text-align: center;">N</td>
+                    <td style="text-align: center;">0.6 sem</td>
+                    <td style="text-align: center;">2.0</td>
+                    <td style="text-align: center;">3.0</td>
+                    <td style="text-align: center;">4.0</td>
+                    <td style="text-align: center;"><strong>3.0</strong></td>
+                    <td style="text-align: center;">0.33</td>
+                    <td style="text-align: center;">0.11</td>
+                    <td style="text-align: center;">24 HH (1 p)</td>
+                  </tr>
+                  <tr>
+                    <td style="text-align: center;"><strong>P</strong></td>
+                    <td>Confirmación de despacho, rotulado y etiquetas de bultos</td>
+                    <td style="text-align: center;">M</td>
+                    <td style="text-align: center;">0.4 sem</td>
+                    <td style="text-align: center;">1.0</td>
+                    <td style="text-align: center;">2.0</td>
+                    <td style="text-align: center;">3.0</td>
+                    <td style="text-align: center;"><strong>2.0</strong></td>
+                    <td style="text-align: center;">0.33</td>
+                    <td style="text-align: center;">0.11</td>
+                    <td style="text-align: center;">16 HH (1 p)</td>
+                  </tr>
+                  <tr style="background-color: #fee2e2;">
+                    <td style="text-align: center;"><strong>Q</strong></td>
+                    <td>Pruebas funcionales unitarias por módulo y lectura óptica</td>
+                    <td style="text-align: center;">O, P</td>
+                    <td style="text-align: center;">0.6 sem</td>
+                    <td style="text-align: center;">2.0</td>
+                    <td style="text-align: center;">3.0</td>
+                    <td style="text-align: center;">4.0</td>
+                    <td style="text-align: center;"><strong>3.0</strong></td>
+                    <td style="text-align: center;">0.33</td>
+                    <td style="text-align: center;">0.11</td>
+                    <td style="text-align: center;">48 HH (2 p)</td>
+                  </tr>
+                  <tr style="background-color: #fee2e2;">
+                    <td style="text-align: center;"><strong>R</strong></td>
+                    <td>Pruebas integradas de flujo continuo físico-digital en piso</td>
+                    <td style="text-align: center;">Q</td>
+                    <td style="text-align: center;">0.6 sem</td>
+                    <td style="text-align: center;">2.0</td>
+                    <td style="text-align: center;">3.0</td>
+                    <td style="text-align: center;">4.0</td>
+                    <td style="text-align: center;"><strong>3.0</strong></td>
+                    <td style="text-align: center;">0.33</td>
+                    <td style="text-align: center;">0.11</td>
+                    <td style="text-align: center;">72 HH (3 p)</td>
+                  </tr>
+                  <tr style="background-color: #fee2e2;">
+                    <td style="text-align: center;"><strong>S</strong></td>
+                    <td>Elaboración de manuales SOP y capacitación práctica al personal</td>
+                    <td style="text-align: center;">R</td>
+                    <td style="text-align: center;">0.6 sem</td>
+                    <td style="text-align: center;">2.0</td>
+                    <td style="text-align: center;">3.0</td>
+                    <td style="text-align: center;">4.0</td>
+                    <td style="text-align: center;"><strong>3.0</strong></td>
+                    <td style="text-align: center;">0.33</td>
+                    <td style="text-align: center;">0.11</td>
+                    <td style="text-align: center;">48 HH (2 p)</td>
+                  </tr>
+                  <tr style="background-color: #fee2e2;">
+                    <td style="text-align: center;"><strong>T</strong></td>
+                    <td>Migración, etiquetado masivo y conteo físico inicial de stock</td>
+                    <td style="text-align: center;">S</td>
+                    <td style="text-align: center;">0.8 sem</td>
+                    <td style="text-align: center;">3.0</td>
+                    <td style="text-align: center;">4.0</td>
+                    <td style="text-align: center;">5.0</td>
+                    <td style="text-align: center;"><strong>4.0</strong></td>
+                    <td style="text-align: center;">0.33</td>
+                    <td style="text-align: center;">0.11</td>
+                    <td style="text-align: center;">128 HH (4 p)</td>
+                  </tr>
+                  <tr style="background-color: #fee2e2;">
+                    <td style="text-align: center;"><strong>U</strong></td>
+                    <td>Marcha blanca operativa y calibración en vivo (5 días piloto)</td>
+                    <td style="text-align: center;">T</td>
+                    <td style="text-align: center;">0.6 sem</td>
+                    <td style="text-align: center;">2.0</td>
+                    <td style="text-align: center;">3.0</td>
+                    <td style="text-align: center;">4.0</td>
+                    <td style="text-align: center;"><strong>3.0</strong></td>
+                    <td style="text-align: center;">0.33</td>
+                    <td style="text-align: center;">0.11</td>
+                    <td style="text-align: center;">72 HH (3 p)</td>
+                  </tr>
+                  <tr style="background-color: #fee2e2;">
+                    <td style="text-align: center;"><strong>V</strong></td>
+                    <td>Acta de aceptación formal, entrega de llaves y cierre del proyecto</td>
+                    <td style="text-align: center;">U</td>
+                    <td style="text-align: center;">0.2 sem</td>
+                    <td style="text-align: center;">1.0</td>
+                    <td style="text-align: center;">1.0</td>
+                    <td style="text-align: center;">1.0</td>
+                    <td style="text-align: center;"><strong>1.0</strong></td>
+                    <td style="text-align: center;">0.00</td>
+                    <td style="text-align: center;">0.00</td>
+                    <td style="text-align: center;">16 HH (2 p)</td>
+                  </tr>
                 </tbody>
+                <tfoot>
+                  <tr style="background-color: #f1f5f9; font-weight: bold;">
+                    <td colspan="3" style="text-align: right; padding: 10px;">TOTALES DEL PROYECTO:</td>
+                    <td style="text-align: center;">9.8 semanas</td>
+                    <td colspan="3" style="text-align: center;">—</td>
+                    <td style="text-align: center;">49.0 días</td>
+                    <td style="text-align: center;">—</td>
+                    <td style="text-align: center;">1.39 d²</td>
+                    <td style="text-align: center;">984 HH</td>
+                  </tr>
+                </tfoot>
               </table>
             </div>
 
-            <h3 class="text-base sm:text-lg font-bold text-neutral-950 mt-6 mb-2">10.5 Método de la Ruta Crítica (CPM) y Nodos de 6 Casillas (Diapositiva 30)</h3>
+            <h3 class="text-base sm:text-lg font-bold text-neutral-950 mt-6 mb-2">10.5 Diagrama de Red de Actividades y Método de la Ruta Crítica (CPM)</h3>
             <p class="text-justify mb-4">
-              En la <strong>Diapositiva 30 de la sesión de Cronograma</strong>, el docente especifica el formato exacto de cada nodo para el cálculo de la red:
+              En la <strong>Diapositiva 25 de la sesión de Cronograma</strong>, el docente establece como salida clave del proceso de secuenciación el <strong>Diagrama de Red del Cronograma del Proyecto</strong> mediante el <i>Método de Diagramación por Precedencia (PDM)</i>. Siguiendo la estructura visual del diseño presentado por el equipo para Distribuidora Ecuménico, las actividades se organizan con nodos rectangulares redondeados, líneas ortogonales con cabezas de flecha direccionales, hitos en cápsulas verdes (Inicio y Fin) y la <strong>Ruta Crítica destacada en color rojo con holgura $HT = 0$</strong>:
+            </p>
+
+            <figure class="dg-fig">
+              <div class="dg-frame" onclick="openLightbox('assets/images/diagrama-red-actividades.png', 'Diagrama de red de actividades y ruta crítica CPM — Distribuidora Ecuménico')">
+                <img src="assets/images/diagrama-red-actividades.png" alt="Diagrama de red de actividades y ruta crítica CPM — Distribuidora Ecuménico" loading="lazy">
+              </div>
+              <figcaption>
+                <span><b>Diagrama de Red de actividades y Ruta Crítica (CPM).</b> Red de precedencias (PDM) con 22 actividades operativas e ingenieriles, hitos de control (Inicio y Fin), ruta crítica continua destacada en rojo (duración total: 49 días hábiles / 9.8 semanas), leyenda de holguras ($HT=0$) y formulación metodológica según la Diapositiva 30 de la sesión de Cronograma impartida por el Mg. MBA Antonio Arqque Pantigozo (UNTELS).</span>
+                <span class="dg-act">
+                  <button type="button" onclick="openLightbox('assets/images/diagrama-red-actividades.png', 'Diagrama de red de actividades y ruta crítica CPM — Distribuidora Ecuménico')">Ampliar</button>
+                  <a href="assets/images/diagrama-red-actividades.png" download>Descargar PNG</a>
+                </span>
+              </figcaption>
+            </figure>
+
+            <p class="text-justify mb-4">
+              En la <strong>Diapositiva 30 de la sesión de Cronograma</strong>, el docente especifica el formato estándar de cada nodo para el cálculo de la red por el Método del Camino Crítico (CPM):
             </p>
 
             <div class="overflow-x-auto my-4 text-center">
-              <table style="margin: 0 auto; border-collapse: collapse; border: 2px solid #0f172a; width: 340px; font-family: monospace; font-size: 0.9rem;">
+              <table style="margin: 0 auto; border-collapse: collapse; border: 2px solid #0f172a; width: 360px; font-family: monospace; font-size: 0.9rem;">
                 <tr style="background-color: #e2e8f0; border-bottom: 1px solid #0f172a;">
                   <td style="padding: 6px; width: 33%; border-right: 1px solid #0f172a;">Inicio Temprano (ES)</td>
                   <td style="padding: 6px; width: 34%; border-right: 1px solid #0f172a;">Duración (T<sub>E</sub>)</td>
                   <td style="padding: 6px; width: 33%;">Final Temprano (EF)</td>
                 </tr>
                 <tr style="background-color: #ffffff; font-weight: bold; border-bottom: 1px solid #0f172a;">
-                  <td colspan="3" style="padding: 10px;">NOMBRE DE LA ACTIVIDAD</td>
+                  <td colspan="3" style="padding: 10px;">NOMBRE / CÓDIGO DE LA ACTIVIDAD</td>
                 </tr>
                 <tr style="background-color: #f1f5f9;">
                   <td style="padding: 6px; border-right: 1px solid #0f172a;">Inicio Tardío (LS)</td>
@@ -2742,58 +3039,65 @@
             </div>
 
             <p class="text-justify mb-4">
-              Realizando el <strong>Paso hacia Adelante (Forward Pass)</strong> para calcular $ES$ y $EF$, y el <strong>Paso hacia Atrás (Backward Pass)</strong> para calcular $LF$, $LS$ y la Holgura Total ($\text{HT} = LS - ES = LF - EF$), se obtiene la matriz de programación definitiva:
+              Aplicando el <strong>Paso hacia Adelante (Forward Pass)</strong> para determinar las fechas tempranas ($ES, EF$), y el <strong>Paso hacia Atrás (Backward Pass)</strong> para determinar las fechas tardías ($LF, LS$) y la Holgura Total ($	ext{HT} = LS - ES = LF - EF$), se obtiene la matriz de cálculo matemático CPM:
             </p>
 
             <div class="overflow-x-auto">
               <table class="wide">
                 <thead>
                   <tr>
-                    <th style="width: 6%; text-align: center;">Act.</th>
-                    <th style="width: 32%;">Actividad</th>
-                    <th style="width: 8%; text-align: center;">$T_E$</th>
-                    <th style="width: 8%; text-align: center;">ES</th>
-                    <th style="width: 8%; text-align: center;">EF</th>
-                    <th style="width: 8%; text-align: center;">LS</th>
-                    <th style="width: 8%; text-align: center;">LF</th>
-                    <th style="width: 10%; text-align: center;">Holgura (HT)</th>
-                    <th style="width: 12%; text-align: center;">¿Es Crítica?</th>
+                    <th style="width: 5%; text-align: center;">Act.</th>
+                    <th style="width: 31%;">Nombre de la Actividad</th>
+                    <th style="width: 8%; text-align: center;">$T_E$ (Días)</th>
+                    <th style="width: 8%; text-align: center;">Dur. (Sem.)</th>
+                    <th style="width: 7%; text-align: center;">ES</th>
+                    <th style="width: 7%; text-align: center;">EF</th>
+                    <th style="width: 7%; text-align: center;">LS</th>
+                    <th style="width: 7%; text-align: center;">LF</th>
+                    <th style="width: 9%; text-align: center;">Holgura (HT)</th>
+                    <th style="width: 11%; text-align: center;">¿Es Crítica?</th>
                   </tr>
                 </thead>
                 <tbody>
-                  <tr style="background-color: #fee2e2;"><td style="text-align: center;"><strong>A</strong></td><td>Requisitos y reglas de inventario</td><td style="text-align: center;">4</td><td style="text-align: center;">0</td><td style="text-align: center;">4</td><td style="text-align: center;">0</td><td style="text-align: center;">4</td><td style="text-align: center;"><strong>0</strong></td><td style="text-align: center;"><span class="pill pill-red">Crítica</span></td></tr>
-                  <tr><td style="text-align: center;"><strong>B</strong></td><td>Casos de uso y flujos de inventario</td><td style="text-align: center;">3</td><td style="text-align: center;">4</td><td style="text-align: center;">7</td><td style="text-align: center;">9</td><td style="text-align: center;">12</td><td style="text-align: center;">5</td><td style="text-align: center;"><span class="pill pill-slate">No</span></td></tr>
-                  <tr><td style="text-align: center;"><strong>C</strong></td><td>Arquitectura Cloud VPS y Wi-Fi</td><td style="text-align: center;">3</td><td style="text-align: center;">4</td><td style="text-align: center;">7</td><td style="text-align: center;">9</td><td style="text-align: center;">12</td><td style="text-align: center;">5</td><td style="text-align: center;"><span class="pill pill-slate">No</span></td></tr>
-                  <tr><td style="text-align: center;"><strong>D</strong></td><td>Modelo de datos relacional (DER)</td><td style="text-align: center;">2</td><td style="text-align: center;">7</td><td style="text-align: center;">9</td><td style="text-align: center;">12</td><td style="text-align: center;">14</td><td style="text-align: center;">5</td><td style="text-align: center;"><span class="pill pill-slate">No</span></td></tr>
-                  <tr><td style="text-align: center;"><strong>E</strong></td><td>Prototipos de pantallas PWA con IA</td><td style="text-align: center;">3</td><td style="text-align: center;">7</td><td style="text-align: center;">10</td><td style="text-align: center;">11</td><td style="text-align: center;">14</td><td style="text-align: center;">4</td><td style="text-align: center;"><span class="pill pill-slate">No</span></td></tr>
-                  <tr><td style="text-align: center;"><strong>F</strong></td><td>Servidor Cloud VPS y PostgreSQL</td><td style="text-align: center;">2</td><td style="text-align: center;">7</td><td style="text-align: center;">9</td><td style="text-align: center;">12</td><td style="text-align: center;">14</td><td style="text-align: center;">5</td><td style="text-align: center;"><span class="pill pill-slate">No</span></td></tr>
-                  <tr><td style="text-align: center;"><strong>G</strong></td><td>Base de datos y catálogo de SKUs</td><td style="text-align: center;">2</td><td style="text-align: center;">9</td><td style="text-align: center;">11</td><td style="text-align: center;">12</td><td style="text-align: center;">14</td><td style="text-align: center;">3</td><td style="text-align: center;"><span class="pill pill-slate">No</span></td></tr>
-                  <tr style="background-color: #fee2e2;"><td style="text-align: center;"><strong>H</strong></td><td>Armado de Racks y Zonificación ABC</td><td style="text-align: center;">6</td><td style="text-align: center;">4</td><td style="text-align: center;">10</td><td style="text-align: center;">4</td><td style="text-align: center;">10</td><td style="text-align: center;"><strong>0</strong></td><td style="text-align: center;"><span class="pill pill-red">Crítica</span></td></tr>
-                  <tr style="background-color: #fee2e2;"><td style="text-align: center;"><strong>I</strong></td><td>Codificación física de ubicaciones</td><td style="text-align: center;">4</td><td style="text-align: center;">10</td><td style="text-align: center;">14</td><td style="text-align: center;">10</td><td style="text-align: center;">14</td><td style="text-align: center;"><strong>0</strong></td><td style="text-align: center;"><span class="pill pill-red">Crítica</span></td></tr>
-                  <tr style="background-color: #fee2e2;"><td style="text-align: center;"><strong>J</strong></td><td>Módulo de ubicaciones espaciales WMS</td><td style="text-align: center;">3</td><td style="text-align: center;">14</td><td style="text-align: center;">17</td><td style="text-align: center;">14</td><td style="text-align: center;">17</td><td style="text-align: center;"><strong>0</strong></td><td style="text-align: center;"><span class="pill pill-red">Crítica</span></td></tr>
-                  <tr style="background-color: #fee2e2;"><td style="text-align: center;"><strong>K</strong></td><td>Módulo de ingresos, lotes y PEPS</td><td style="text-align: center;">4</td><td style="text-align: center;">17</td><td style="text-align: center;">21</td><td style="text-align: center;">17</td><td style="text-align: center;">21</td><td style="text-align: center;"><strong>0</strong></td><td style="text-align: center;"><span class="pill pill-red">Crítica</span></td></tr>
-                  <tr style="background-color: #fee2e2;"><td style="text-align: center;"><strong>L</strong></td><td>Módulo de pedidos y listas de picking</td><td style="text-align: center;">4</td><td style="text-align: center;">21</td><td style="text-align: center;">25</td><td style="text-align: center;">21</td><td style="text-align: center;">25</td><td style="text-align: center;"><strong>0</strong></td><td style="text-align: center;"><span class="pill pill-red">Crítica</span></td></tr>
-                  <tr style="background-color: #fee2e2;"><td style="text-align: center;"><strong>M</strong></td><td>Módulo de picking secuencial en piso</td><td style="text-align: center;">4</td><td style="text-align: center;">25</td><td style="text-align: center;">29</td><td style="text-align: center;">25</td><td style="text-align: center;">29</td><td style="text-align: center;"><strong>0</strong></td><td style="text-align: center;"><span class="pill pill-red">Crítica</span></td></tr>
-                  <tr><td style="text-align: center;"><strong>N</strong></td><td>Reportes de discrepancias y KPIs</td><td style="text-align: center;">3</td><td style="text-align: center;">29</td><td style="text-align: center;">32</td><td style="text-align: center;">29</td><td style="text-align: center;">32</td><td style="text-align: center;">0</td><td style="text-align: center;"><span class="pill pill-slate">No</span></td></tr>
-                  <tr><td style="text-align: center;"><strong>O</strong></td><td>Auditoría (Audit Trail) y roles</td><td style="text-align: center;">2</td><td style="text-align: center;">32</td><td style="text-align: center;">34</td><td style="text-align: center;">32</td><td style="text-align: center;">34</td><td style="text-align: center;">0</td><td style="text-align: center;"><span class="pill pill-slate">No</span></td></tr>
-                  <tr><td style="text-align: center;"><strong>P</strong></td><td>Sincronización y modo offline-first</td><td style="text-align: center;">3</td><td style="text-align: center;">34</td><td style="text-align: center;">37</td><td style="text-align: center;">34</td><td style="text-align: center;">37</td><td style="text-align: center;">0</td><td style="text-align: center;"><span class="pill pill-slate">No</span></td></tr>
-                  <tr style="background-color: #fee2e2;"><td style="text-align: center;"><strong>Q</strong></td><td>Etiquetas de bulto y confirmación</td><td style="text-align: center;">2</td><td style="text-align: center;">29</td><td style="text-align: center;">31</td><td style="text-align: center;">35</td><td style="text-align: center;">37</td><td style="text-align: center;">6</td><td style="text-align: center;"><span class="pill pill-slate">No</span></td></tr>
-                  <tr><td style="text-align: center;"><strong>R</strong></td><td>Inventario físico inicial en racks</td><td style="text-align: center;">3</td><td style="text-align: center;">21</td><td style="text-align: center;">24</td><td style="text-align: center;">34</td><td style="text-align: center;">37</td><td style="text-align: center;">13</td><td style="text-align: center;"><span class="pill pill-slate">No</span></td></tr>
-                  <tr style="background-color: #fee2e2;"><td style="text-align: center;"><strong>S</strong></td><td>Pruebas funcionales por módulo</td><td style="text-align: center;">4</td><td style="text-align: center;">37</td><td style="text-align: center;">41</td><td style="text-align: center;">37</td><td style="text-align: center;">41</td><td style="text-align: center;"><strong>0</strong></td><td style="text-align: center;"><span class="pill pill-red">Crítica</span></td></tr>
-                  <tr style="background-color: #fee2e2;"><td style="text-align: center;"><strong>T</strong></td><td>Pruebas integradas de flujo en piso</td><td style="text-align: center;">3</td><td style="text-align: center;">41</td><td style="text-align: center;">44</td><td style="text-align: center;">41</td><td style="text-align: center;">44</td><td style="text-align: center;"><strong>0</strong></td><td style="text-align: center;"><span class="pill pill-red">Crítica</span></td></tr>
-                  <tr style="background-color: #fee2e2;"><td style="text-align: center;"><strong>U</strong></td><td>Manuales SOP y capacitación práctica</td><td style="text-align: center;">3</td><td style="text-align: center;">44</td><td style="text-align: center;">47</td><td style="text-align: center;">44</td><td style="text-align: center;">47</td><td style="text-align: center;"><strong>0</strong></td><td style="text-align: center;"><span class="pill pill-red">Crítica</span></td></tr>
-                  <tr style="background-color: #fee2e2;"><td style="text-align: center;"><strong>V</strong></td><td>Go-Live y aceptación final formal</td><td style="text-align: center;">2</td><td style="text-align: center;">47</td><td style="text-align: center;">49</td><td style="text-align: center;">47</td><td style="text-align: center;">49</td><td style="text-align: center;"><strong>0</strong></td><td style="text-align: center;"><span class="pill pill-red">Crítica</span></td></tr>
+                  <tr style="background-color: #fee2e2;"><td style="text-align: center;"><strong>A</strong></td><td>Requisitos funcionales y reglas de negocio del almacén</td><td style="text-align: center;">4.0</td><td style="text-align: center;">0.8 sem</td><td style="text-align: center;">0.0</td><td style="text-align: center;">4.0</td><td style="text-align: center;">0.0</td><td style="text-align: center;">4.0</td><td style="text-align: center;"><strong>0.0</strong></td><td style="text-align: center;"><span class="pill pill-red">SÍ (CRÍTICA)</span></td></tr>
+                  <tr><td style="text-align: center;"><strong>B</strong></td><td>Flujos de inventario, zonificación ABC y casos de uso</td><td style="text-align: center;">3.0</td><td style="text-align: center;">0.6 sem</td><td style="text-align: center;">4.0</td><td style="text-align: center;">7.0</td><td style="text-align: center;">5.0</td><td style="text-align: center;">8.0</td><td style="text-align: center;">1.0</td><td style="text-align: center;"><span class="pill pill-slate">No</span></td></tr>
+                  <tr><td style="text-align: center;"><strong>C</strong></td><td>Arquitectura técnica Cloud VPS y conectividad Wi-Fi</td><td style="text-align: center;">3.0</td><td style="text-align: center;">0.6 sem</td><td style="text-align: center;">4.0</td><td style="text-align: center;">7.0</td><td style="text-align: center;">5.0</td><td style="text-align: center;">8.0</td><td style="text-align: center;">1.0</td><td style="text-align: center;"><span class="pill pill-slate">No</span></td></tr>
+                  <tr><td style="text-align: center;"><strong>D</strong></td><td>Modelo de datos relacional (DER) de inventario y lotes</td><td style="text-align: center;">2.0</td><td style="text-align: center;">0.4 sem</td><td style="text-align: center;">7.0</td><td style="text-align: center;">9.0</td><td style="text-align: center;">8.0</td><td style="text-align: center;">10.0</td><td style="text-align: center;">1.0</td><td style="text-align: center;"><span class="pill pill-slate">No</span></td></tr>
+                  <tr><td style="text-align: center;"><strong>E</strong></td><td>Prototipos de interfaces de usuario PWA asistidos por IA</td><td style="text-align: center;">3.0</td><td style="text-align: center;">0.6 sem</td><td style="text-align: center;">7.0</td><td style="text-align: center;">10.0</td><td style="text-align: center;">9.0</td><td style="text-align: center;">12.0</td><td style="text-align: center;">2.0</td><td style="text-align: center;"><span class="pill pill-slate">No</span></td></tr>
+                  <tr><td style="text-align: center;"><strong>F</strong></td><td>Aprovisionamiento de servidor Cloud VPS y PostgreSQL</td><td style="text-align: center;">2.0</td><td style="text-align: center;">0.4 sem</td><td style="text-align: center;">7.0</td><td style="text-align: center;">9.0</td><td style="text-align: center;">8.0</td><td style="text-align: center;">10.0</td><td style="text-align: center;">1.0</td><td style="text-align: center;"><span class="pill pill-slate">No</span></td></tr>
+                  <tr style="background-color: #fee2e2;"><td style="text-align: center;"><strong>G</strong></td><td>Montaje mecánico y anclaje de racks industriales de 3 niveles</td><td style="text-align: center;">5.0</td><td style="text-align: center;">1.0 sem</td><td style="text-align: center;">4.0</td><td style="text-align: center;">9.0</td><td style="text-align: center;">4.0</td><td style="text-align: center;">9.0</td><td style="text-align: center;"><strong>0.0</strong></td><td style="text-align: center;"><span class="pill pill-red">SÍ (CRÍTICA)</span></td></tr>
+                  <tr style="background-color: #fee2e2;"><td style="text-align: center;"><strong>H</strong></td><td>Codificación espacial vinílica de pasillos, columnas y gavetas</td><td style="text-align: center;">3.0</td><td style="text-align: center;">0.6 sem</td><td style="text-align: center;">9.0</td><td style="text-align: center;">12.0</td><td style="text-align: center;">9.0</td><td style="text-align: center;">12.0</td><td style="text-align: center;"><strong>0.0</strong></td><td style="text-align: center;"><span class="pill pill-red">SÍ (CRÍTICA)</span></td></tr>
+                  <tr><td style="text-align: center;"><strong>I</strong></td><td>Base de datos desplegada, catálogo SKUs y migraciones</td><td style="text-align: center;">2.0</td><td style="text-align: center;">0.4 sem</td><td style="text-align: center;">9.0</td><td style="text-align: center;">11.0</td><td style="text-align: center;">10.0</td><td style="text-align: center;">12.0</td><td style="text-align: center;">1.0</td><td style="text-align: center;"><span class="pill pill-slate">No</span></td></tr>
+                  <tr style="background-color: #fee2e2;"><td style="text-align: center;"><strong>J</strong></td><td>Módulo WMS de ubicaciones espaciales y consulta en tiempo real</td><td style="text-align: center;">3.0</td><td style="text-align: center;">0.6 sem</td><td style="text-align: center;">12.0</td><td style="text-align: center;">15.0</td><td style="text-align: center;">12.0</td><td style="text-align: center;">15.0</td><td style="text-align: center;"><strong>0.0</strong></td><td style="text-align: center;"><span class="pill pill-red">SÍ (CRÍTICA)</span></td></tr>
+                  <tr style="background-color: #fee2e2;"><td style="text-align: center;"><strong>K</strong></td><td>Módulo de ingresos de mercadería, control de lotes y regla PEPS</td><td style="text-align: center;">4.0</td><td style="text-align: center;">0.8 sem</td><td style="text-align: center;">15.0</td><td style="text-align: center;">19.0</td><td style="text-align: center;">15.0</td><td style="text-align: center;">19.0</td><td style="text-align: center;"><strong>0.0</strong></td><td style="text-align: center;"><span class="pill pill-red">SÍ (CRÍTICA)</span></td></tr>
+                  <tr style="background-color: #fee2e2;"><td style="text-align: center;"><strong>L</strong></td><td>Módulo de pedidos de preventa y listas consolidadas</td><td style="text-align: center;">3.0</td><td style="text-align: center;">0.6 sem</td><td style="text-align: center;">19.0</td><td style="text-align: center;">22.0</td><td style="text-align: center;">19.0</td><td style="text-align: center;">22.0</td><td style="text-align: center;"><strong>0.0</strong></td><td style="text-align: center;"><span class="pill pill-red">SÍ (CRÍTICA)</span></td></tr>
+                  <tr style="background-color: #fee2e2;"><td style="text-align: center;"><strong>M</strong></td><td>Algoritmo de picking secuencial optimizado y rebaja de stock</td><td style="text-align: center;">4.0</td><td style="text-align: center;">0.8 sem</td><td style="text-align: center;">22.0</td><td style="text-align: center;">26.0</td><td style="text-align: center;">22.0</td><td style="text-align: center;">26.0</td><td style="text-align: center;"><strong>0.0</strong></td><td style="text-align: center;"><span class="pill pill-red">SÍ (CRÍTICA)</span></td></tr>
+                  <tr style="background-color: #fee2e2;"><td style="text-align: center;"><strong>N</strong></td><td>Módulo de auditoría de inventario, mermas e indicadores clave</td><td style="text-align: center;">3.0</td><td style="text-align: center;">0.6 sem</td><td style="text-align: center;">26.0</td><td style="text-align: center;">29.0</td><td style="text-align: center;">26.0</td><td style="text-align: center;">29.0</td><td style="text-align: center;"><strong>0.0</strong></td><td style="text-align: center;"><span class="pill pill-red">SÍ (CRÍTICA)</span></td></tr>
+                  <tr style="background-color: #fee2e2;"><td style="text-align: center;"><strong>O</strong></td><td>Módulo offline-first con IndexedDB y sincronización en cola</td><td style="text-align: center;">3.0</td><td style="text-align: center;">0.6 sem</td><td style="text-align: center;">29.0</td><td style="text-align: center;">32.0</td><td style="text-align: center;">29.0</td><td style="text-align: center;">32.0</td><td style="text-align: center;"><strong>0.0</strong></td><td style="text-align: center;"><span class="pill pill-red">SÍ (CRÍTICA)</span></td></tr>
+                  <tr><td style="text-align: center;"><strong>P</strong></td><td>Módulo de confirmación de despacho y rotulado de bultos</td><td style="text-align: center;">2.0</td><td style="text-align: center;">0.4 sem</td><td style="text-align: center;">26.0</td><td style="text-align: center;">28.0</td><td style="text-align: center;">30.0</td><td style="text-align: center;">32.0</td><td style="text-align: center;">4.0</td><td style="text-align: center;"><span class="pill pill-slate">No</span></td></tr>
+                  <tr style="background-color: #fee2e2;"><td style="text-align: center;"><strong>Q</strong></td><td>Pruebas funcionales unitarias por módulo y lectura óptica</td><td style="text-align: center;">3.0</td><td style="text-align: center;">0.6 sem</td><td style="text-align: center;">32.0</td><td style="text-align: center;">35.0</td><td style="text-align: center;">32.0</td><td style="text-align: center;">35.0</td><td style="text-align: center;"><strong>0.0</strong></td><td style="text-align: center;"><span class="pill pill-red">SÍ (CRÍTICA)</span></td></tr>
+                  <tr style="background-color: #fee2e2;"><td style="text-align: center;"><strong>R</strong></td><td>Pruebas integradas de flujo continuo físico-digital en piso</td><td style="text-align: center;">3.0</td><td style="text-align: center;">0.6 sem</td><td style="text-align: center;">35.0</td><td style="text-align: center;">38.0</td><td style="text-align: center;">35.0</td><td style="text-align: center;">38.0</td><td style="text-align: center;"><strong>0.0</strong></td><td style="text-align: center;"><span class="pill pill-red">SÍ (CRÍTICA)</span></td></tr>
+                  <tr style="background-color: #fee2e2;"><td style="text-align: center;"><strong>S</strong></td><td>Elaboración de manuales SOP y capacitación práctica al personal</td><td style="text-align: center;">3.0</td><td style="text-align: center;">0.6 sem</td><td style="text-align: center;">38.0</td><td style="text-align: center;">41.0</td><td style="text-align: center;">38.0</td><td style="text-align: center;">41.0</td><td style="text-align: center;"><strong>0.0</strong></td><td style="text-align: center;"><span class="pill pill-red">SÍ (CRÍTICA)</span></td></tr>
+                  <tr style="background-color: #fee2e2;"><td style="text-align: center;"><strong>T</strong></td><td>Migración, etiquetado masivo y conteo físico inicial de stock</td><td style="text-align: center;">4.0</td><td style="text-align: center;">0.8 sem</td><td style="text-align: center;">41.0</td><td style="text-align: center;">45.0</td><td style="text-align: center;">41.0</td><td style="text-align: center;">45.0</td><td style="text-align: center;"><strong>0.0</strong></td><td style="text-align: center;"><span class="pill pill-red">SÍ (CRÍTICA)</span></td></tr>
+                  <tr style="background-color: #fee2e2;"><td style="text-align: center;"><strong>U</strong></td><td>Marcha blanca operativa y calibración en vivo (5 días piloto)</td><td style="text-align: center;">3.0</td><td style="text-align: center;">0.6 sem</td><td style="text-align: center;">45.0</td><td style="text-align: center;">48.0</td><td style="text-align: center;">45.0</td><td style="text-align: center;">48.0</td><td style="text-align: center;"><strong>0.0</strong></td><td style="text-align: center;"><span class="pill pill-red">SÍ (CRÍTICA)</span></td></tr>
+                  <tr style="background-color: #fee2e2;"><td style="text-align: center;"><strong>V</strong></td><td>Acta de aceptación formal, entrega de llaves y cierre del proyecto</td><td style="text-align: center;">1.0</td><td style="text-align: center;">0.2 sem</td><td style="text-align: center;">48.0</td><td style="text-align: center;">49.0</td><td style="text-align: center;">48.0</td><td style="text-align: center;">49.0</td><td style="text-align: center;"><strong>0.0</strong></td><td style="text-align: center;"><span class="pill pill-red">SÍ (CRÍTICA)</span></td></tr>
                 </tbody>
               </table>
             </div>
 
             <p class="text-justify mb-4">
-              <strong>Demostración de la Ruta Crítica (Duración total: 49 días hábiles):</strong><br>
-              <code>Inicio ➔ A ➔ H ➔ I ➔ J ➔ K ➔ L ➔ M ➔ S ➔ T ➔ U ➔ V ➔ Fin</code>.<br>
-              Cualquier día de demora en el armado físico de los racks (H) o en la codificación de pasillos (I) traslada inmediatamente la fecha de puesta en marcha del proyecto, ya que su holgura matemática es estrictamente <strong>0</strong>.
+              <strong>Demostración Formal de la Ruta Crítica (Duración Total: 49 días hábiles / 9.8 semanas):</strong><br>
+              <code>Inicio ➔ A ➔ G ➔ H ➔ J ➔ K ➔ L ➔ M ➔ N ➔ O ➔ Q ➔ R ➔ S ➔ T ➔ U ➔ V ➔ Fin</code>.<br>
+              Cualquier retraso no planificado en el montaje de los racks (G), en la rotulación de gavetas (H) o en los módulos de software en ruta crítica traslada inmediatamente la fecha final del proyecto. Por su parte, las actividades técnicas paralelas (como el modelo de base de datos D con $HT=1$ o el diseño de interfaces E con $HT=2$) disponen de holgura suficiente para absorber imprevistos sin comprometer la entrega comprometida con la gerencia de Distribuidora Ecuménico.
             </p>
 
-            <h3 class="text-base sm:text-lg font-bold text-neutral-950 mt-6 mb-2">10.6 Técnicas de Optimización y Compresión del Cronograma (Diapositivas 31 y 32)</h3>
+            <p class="text-justify mb-4">
+              <strong>Análisis Probabilístico de Conclusión del Proyecto (Distribución Normal PERT):</strong><br>
+              La varianza acumulada de la ruta crítica es $\sigma_P^2 = \sum \sigma_{	ext{críticas}}^2 = 1.39	ext{ días}^2$, lo que arroja una desviación estándar del proyecto de $\sigma_P = \sqrt{1.39} = 1.18	ext{ días}$. Si la gerencia de Distribuidora Ecuménico establece una fecha contractual máxima de 52 días hábiles (~10.4 semanas laborales), el factor $Z$ se calcula como:
+              $$Z = rac{T_S - \mu}{\sigma_P} = rac{52 - 49}{1.18} = rac{3}{1.18} = 2.54$$
+              Consultando la tabla de distribución normal estándar acumulada, $P(Z \le 2.54) = 0.9945$. Es decir, <strong>el proyecto tiene un 99.45 % de probabilidad matemática de culminar a tiempo</strong> dentro del margen de 52 días laborables.
+            </p>
+<h3 class="text-base sm:text-lg font-bold text-neutral-950 mt-6 mb-2">10.6 Técnicas de Optimización y Compresión del Cronograma (Diapositivas 31 y 32)</h3>
             <p class="text-justify mb-4">
               En las <strong>Diapositivas 31 y 32</strong>, el docente expone dos estrategias formales de ajuste del cronograma que se aplican directamente en este proyecto:
             </p>
