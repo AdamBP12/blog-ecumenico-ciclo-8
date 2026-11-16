@@ -1,0 +1,125 @@
+<!-- title: Evaluación de Viabilidad, Monitoreo y Control -->
+<h3 class="text-base sm:text-lg font-bold text-neutral-950 mt-5 mb-2">6.1 Análisis Financiero y Viabilidad del Proyecto</h3>
+            <p class="text-justify mb-4">
+              La viabilidad económica de la propuesta se sustenta en la supresión de sobretiempos laborales innecesarios, la drástica reducción de mermas por productos vencidos u olvidados en almacén y el incremento en la capacidad diaria de despacho. Al implementar racks industriales modulares y una solución WMS ligera sobre infraestructura Wi-Fi existente, la inversión de capital (CAPEX) se mantiene contenida y escalonada, asegurando un período de recuperación de la inversión (Payback) a corto plazo y un retorno neto positivo para la organización.
+            </p>
+
+            <h3 class="text-base sm:text-lg font-bold text-neutral-950 mt-6 mb-2">6.2 Plan de Monitoreo de Alcance y Dashboard de Control WMS</h3>
+            <div class="overflow-x-auto">
+              <table>
+                <thead>
+                  <tr>
+                    <th style="width: 26%;">Indicador KPI</th>
+                    <th style="width: 16%; text-align: center;">Situación Actual</th>
+                    <th style="width: 16%; text-align: center;">Meta Propuesta</th>
+                    <th style="width: 18%; text-align: center;">Nivel de Alerta</th>
+                    <th style="width: 24%;">Acción Automatizada</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><strong>Tiempo de Ciclo de Picking</strong></td>
+                    <td style="text-align: center;">45 min / pedido</td>
+                    <td style="text-align: center;">27 min / pedido (-40%)</td>
+                    <td style="text-align: center;">Alerta Preventiva</td>
+                    <td>Notificación de desviación de ruta o lentitud en pasillo al supervisor.</td>
+                  </tr>
+                  <tr>
+                    <td><strong>Exactitud de Inventario (Físico vs. Digital)</strong></td>
+                    <td style="text-align: center;">78%</td>
+                    <td style="text-align: center;">99%</td>
+                    <td style="text-align: center;">Alerta Crítica</td>
+                    <td>Bloqueo inmediato de ajustes manuales sin autorización formal de jefatura.</td>
+                  </tr>
+                  <tr>
+                    <td><strong>Tasa de Incidencias en Despacho</strong></td>
+                    <td style="text-align: center;">8.50%</td>
+                    <td style="text-align: center;">Menor al 1%</td>
+                    <td style="text-align: center;">Alerta Crítica</td>
+                    <td>Alerta y bloqueo en el WMS al registrar un producto que no corresponde al pedido.</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+
+            <h4 class="font-bold text-neutral-950 text-base mt-6 mb-2">Matriz de Auditoría y Trazabilidad Operativa (Audit Trail WMS)</h4>
+            <div class="overflow-x-auto">
+              <table>
+                <thead>
+                  <tr>
+                    <th style="width: 10%; text-align: center;">Registro</th>
+                    <th style="width: 15%;">Operario</th>
+                    <th style="width: 20%;">Producto</th>
+                    <th style="width: 18%;">Ubicación Rack</th>
+                    <th style="width: 24%;">Incidencia Detectada</th>
+                    <th style="width: 13%; text-align: center;">Estado</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td style="text-align: center;">OP-201</td>
+                    <td>J. Huamán</td>
+                    <td>Sibarita Tuco x42</td>
+                    <td>Pasillo A - R1 - N2</td>
+                    <td>Intento de registro de producto no requerido en la orden.</td>
+                    <td style="text-align: center;">Corregido</td>
+                  </tr>
+                  <tr>
+                    <td style="text-align: center;">OP-205</td>
+                    <td>R. Cárdenas</td>
+                    <td>Sillao 1000 ml</td>
+                    <td>Pasillo B - R3 - N1</td>
+                    <td>Alerta PEPS: intento de extracción de lote con vencimiento posterior.</td>
+                    <td style="text-align: center;">Bloqueado</td>
+                  </tr>
+                  <tr>
+                    <td style="text-align: center;">OP-210</td>
+                    <td>M. Castillo</td>
+                    <td>Pimienta Molida</td>
+                    <td>Pasillo A - R2 - N3</td>
+                    <td>Discrepancia de conteo físico frente a registro digital.</td>
+                    <td style="text-align: center;">En Revisión</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+
+            <h3 class="text-base sm:text-lg font-bold text-neutral-950 mt-6 mb-2">6.3 Plan de Mitigación de Riesgos Operativos y Técnicos</h3>
+            <div class="overflow-x-auto">
+              <table>
+                <thead>
+                  <tr>
+                    <th style="width: 25%;">Riesgo Identificado</th>
+                    <th style="width: 15%; text-align: center;">Probabilidad / Impacto</th>
+                    <th style="width: 35%;">Estrategia de Mitigación</th>
+                    <th style="width: 25%;">Responsable</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><strong>Resistencia al cambio operativo</strong></td>
+                    <td style="text-align: center;">Media / Alto</td>
+                    <td>Involucramiento de los operarios en los Sprints de cocreación y demostración práctica del alivio de sobretiempos.</td>
+                    <td>Jefe de Operaciones / Supervisor</td>
+                  </tr>
+                  <tr>
+                    <td><strong>Intermitencia de red Wi-Fi en piso</strong></td>
+                    <td style="text-align: center;">Baja / Alto</td>
+                    <td>Equipos con almacenamiento temporal de datos y sincronización automática con el WMS ante microcortes.</td>
+                    <td>Equipo TI / Proveedor WMS</td>
+                  </tr>
+                  <tr>
+                    <td><strong>Discrepancias persistentes de inventario</strong></td>
+                    <td style="text-align: center;">Media / Medio</td>
+                    <td>Establecimiento de inventarios cíclicos rotativos por pasillo y auditoría en línea con el registro de eventos.</td>
+                    <td>Supervisor de Almacén</td>
+                  </tr>
+                  <tr>
+                    <td><strong>Retrasos en salidas matutinas (06:00 am)</strong></td>
+                    <td style="text-align: center;">Media / Alto</td>
+                    <td>Consolidación de carga en zona de staging la tarde previa y ruteo optimizado por cuadrantes geográficos.</td>
+                    <td>Jefe de Operaciones / Reparto</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>

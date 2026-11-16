@@ -1,0 +1,127 @@
+<div style="font-family: 'Times New Roman', Times, serif; font-size: 12pt; line-height: 1.6; color: #000000; text-align: justify;">
+
+  <h2 style="font-size: 14pt; font-weight: bold; color: #000000; text-align: justify; border-bottom: 1px solid #000000; padding-bottom: 4px; margin-top: 20px; margin-bottom: 12px;">6. Control y Evaluación de Viabilidad</h2>
+
+  <h3 style="font-size: 12pt; font-weight: bold; color: #000000; text-align: justify; margin-top: 16px; margin-bottom: 8px;">6.1 Análisis Financiero y Viabilidad del Proyecto</h3>
+  <p style="text-align: justify; margin-top: 0; margin-bottom: 12px;">
+    La viabilidad económica de la propuesta se sustenta en la supresión de sobretiempos laborales innecesarios, la drástica reducción de mermas por productos vencidos u olvidados en almacén y el incremento en la capacidad diaria de despacho. Al implementar racks industriales modulares y una solución WMS ligera sobre infraestructura Wi-Fi existente, la inversión de capital (CAPEX) se mantiene contenida y escalonada, asegurando un período de recuperación de la inversión (Payback) a corto plazo y un retorno neto positivo para la organización.
+  </p>
+
+  <h3 style="font-size: 12pt; font-weight: bold; color: #000000; text-align: justify; margin-top: 16px; margin-bottom: 8px;">6.2 Plan de Monitoreo de Alcance y Dashboard de Control WMS</h3>
+  <p style="font-weight: bold; text-align: justify; margin-top: 12px; margin-bottom: 8px;">Indicadores Clave de Rendimiento (KPIs) y Semáforo de Control Operativo</p>
+
+  <table style="width: 100%; border-collapse: collapse; border: 1px solid #000000; margin-top: 10px; margin-bottom: 20px; font-size: 10pt; color: #000000;">
+    <thead>
+      <tr style="background-color: #ffffff;">
+        <th style="border: 1px solid #000000; padding: 6px 8px; text-align: left; font-weight: bold; color: #000000; width: 26%;">Indicador KPI</th>
+        <th style="border: 1px solid #000000; padding: 6px 8px; text-align: center; font-weight: bold; color: #000000; width: 16%;">Situación Actual</th>
+        <th style="border: 1px solid #000000; padding: 6px 8px; text-align: center; font-weight: bold; color: #000000; width: 16%;">Meta Propuesta</th>
+        <th style="border: 1px solid #000000; padding: 6px 8px; text-align: center; font-weight: bold; color: #000000; width: 18%;">Nivel de Alerta</th>
+        <th style="border: 1px solid #000000; padding: 6px 8px; text-align: left; font-weight: bold; color: #000000; width: 24%;">Acción Automatizada</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td style="border: 1px solid #000000; padding: 6px 8px; vertical-align: middle;"><b>Tiempo de Ciclo de Picking</b></td>
+        <td style="border: 1px solid #000000; padding: 6px 8px; text-align: center; vertical-align: middle;">45 min / pedido</td>
+        <td style="border: 1px solid #000000; padding: 6px 8px; text-align: center; vertical-align: middle;">27 min / pedido (-40%)</td>
+        <td style="border: 1px solid #000000; padding: 6px 8px; text-align: center; vertical-align: middle;">Alerta Preventiva</td>
+        <td style="border: 1px solid #000000; padding: 6px 8px; vertical-align: middle;">Notificación de desviación de ruta o lentitud en pasillo al supervisor.</td>
+      </tr>
+      <tr>
+        <td style="border: 1px solid #000000; padding: 6px 8px; vertical-align: middle;"><b>Exactitud de Inventario (Físico vs. Digital)</b></td>
+        <td style="border: 1px solid #000000; padding: 6px 8px; text-align: center; vertical-align: middle;">78%</td>
+        <td style="border: 1px solid #000000; padding: 6px 8px; text-align: center; vertical-align: middle;">99%</td>
+        <td style="border: 1px solid #000000; padding: 6px 8px; text-align: center; vertical-align: middle;">Alerta Crítica</td>
+        <td style="border: 1px solid #000000; padding: 6px 8px; vertical-align: middle;">Bloqueo inmediato de ajustes manuales sin autorización formal de jefatura.</td>
+      </tr>
+      <tr>
+        <td style="border: 1px solid #000000; padding: 6px 8px; vertical-align: middle;"><b>Tasa de Incidencias en Despacho</b></td>
+        <td style="border: 1px solid #000000; padding: 6px 8px; text-align: center; vertical-align: middle;">8.50%</td>
+        <td style="border: 1px solid #000000; padding: 6px 8px; text-align: center; vertical-align: middle;">Menor al 1%</td>
+        <td style="border: 1px solid #000000; padding: 6px 8px; text-align: center; vertical-align: middle;">Alerta Crítica</td>
+        <td style="border: 1px solid #000000; padding: 6px 8px; vertical-align: middle;">Alarma acústica y bloqueo en terminal portátil al escanear un producto incorrecto.</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <p style="font-weight: bold; text-align: justify; margin-top: 16px; margin-bottom: 8px;">Matriz de Auditoría y Trazabilidad Operativa (Audit Trail WMS)</p>
+
+  <table style="width: 100%; border-collapse: collapse; border: 1px solid #000000; margin-top: 10px; margin-bottom: 20px; font-size: 10pt; color: #000000;">
+    <thead>
+      <tr style="background-color: #ffffff;">
+        <th style="border: 1px solid #000000; padding: 6px 8px; text-align: center; font-weight: bold; color: #000000; width: 10%;">Registro</th>
+        <th style="border: 1px solid #000000; padding: 6px 8px; text-align: left; font-weight: bold; color: #000000; width: 15%;">Operario</th>
+        <th style="border: 1px solid #000000; padding: 6px 8px; text-align: left; font-weight: bold; color: #000000; width: 20%;">Producto</th>
+        <th style="border: 1px solid #000000; padding: 6px 8px; text-align: left; font-weight: bold; color: #000000; width: 18%;">Ubicación Rack</th>
+        <th style="border: 1px solid #000000; padding: 6px 8px; text-align: left; font-weight: bold; color: #000000; width: 24%;">Incidencia Detectada</th>
+        <th style="border: 1px solid #000000; padding: 6px 8px; text-align: center; font-weight: bold; color: #000000; width: 13%;">Estado</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td style="border: 1px solid #000000; padding: 6px 8px; text-align: center; vertical-align: middle;">OP-201</td>
+        <td style="border: 1px solid #000000; padding: 6px 8px; vertical-align: middle;">J. Huamán</td>
+        <td style="border: 1px solid #000000; padding: 6px 8px; vertical-align: middle;">Sibarita Tuco x42</td>
+        <td style="border: 1px solid #000000; padding: 6px 8px; vertical-align: middle;">Pasillo A - R1 - N2</td>
+        <td style="border: 1px solid #000000; padding: 6px 8px; vertical-align: middle;">Intento de escaneo de producto no requerido en la orden.</td>
+        <td style="border: 1px solid #000000; padding: 6px 8px; text-align: center; vertical-align: middle;">Corregido</td>
+      </tr>
+      <tr>
+        <td style="border: 1px solid #000000; padding: 6px 8px; text-align: center; vertical-align: middle;">OP-205</td>
+        <td style="border: 1px solid #000000; padding: 6px 8px; vertical-align: middle;">R. Cárdenas</td>
+        <td style="border: 1px solid #000000; padding: 6px 8px; vertical-align: middle;">Sillao 1000 ml</td>
+        <td style="border: 1px solid #000000; padding: 6px 8px; vertical-align: middle;">Pasillo B - R3 - N1</td>
+        <td style="border: 1px solid #000000; padding: 6px 8px; vertical-align: middle;">Alerta PEPS: intento de extracción de lote con vencimiento posterior.</td>
+        <td style="border: 1px solid #000000; padding: 6px 8px; text-align: center; vertical-align: middle;">Bloqueado</td>
+      </tr>
+      <tr>
+        <td style="border: 1px solid #000000; padding: 6px 8px; text-align: center; vertical-align: middle;">OP-210</td>
+        <td style="border: 1px solid #000000; padding: 6px 8px; vertical-align: middle;">M. Castillo</td>
+        <td style="border: 1px solid #000000; padding: 6px 8px; vertical-align: middle;">Pimienta Molida</td>
+        <td style="border: 1px solid #000000; padding: 6px 8px; vertical-align: middle;">Pasillo A - R2 - N3</td>
+        <td style="border: 1px solid #000000; padding: 6px 8px; vertical-align: middle;">Discrepancia de conteo físico frente a registro digital.</td>
+        <td style="border: 1px solid #000000; padding: 6px 8px; text-align: center; vertical-align: middle;">En Revisión</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h3 style="font-size: 12pt; font-weight: bold; color: #000000; text-align: justify; margin-top: 16px; margin-bottom: 8px;">6.3 Plan de Mitigación de Riesgos Operativos y Técnicos</h3>
+  <table style="width: 100%; border-collapse: collapse; border: 1px solid #000000; margin-top: 10px; margin-bottom: 20px; font-size: 10pt; color: #000000;">
+    <thead>
+      <tr style="background-color: #ffffff;">
+        <th style="border: 1px solid #000000; padding: 6px 8px; text-align: left; font-weight: bold; color: #000000; width: 25%;">Riesgo Identificado</th>
+        <th style="border: 1px solid #000000; padding: 6px 8px; text-align: center; font-weight: bold; color: #000000; width: 15%;">Probabilidad / Impacto</th>
+        <th style="border: 1px solid #000000; padding: 6px 8px; text-align: left; font-weight: bold; color: #000000; width: 35%;">Estrategia de Mitigación</th>
+        <th style="border: 1px solid #000000; padding: 6px 8px; text-align: left; font-weight: bold; color: #000000; width: 25%;">Responsable</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td style="border: 1px solid #000000; padding: 6px 8px; vertical-align: middle;"><b>Resistencia al cambio operativo</b></td>
+        <td style="border: 1px solid #000000; padding: 6px 8px; text-align: center; vertical-align: middle;">Media / Alto</td>
+        <td style="border: 1px solid #000000; padding: 6px 8px; vertical-align: middle;">Involucramiento de los operarios en los Sprints de cocreación y demostración práctica del alivio de sobretiempos.</td>
+        <td style="border: 1px solid #000000; padding: 6px 8px; vertical-align: middle;">Jefe de Operaciones / Supervisor</td>
+      </tr>
+      <tr>
+        <td style="border: 1px solid #000000; padding: 6px 8px; vertical-align: middle;"><b>Intermitencia de red Wi-Fi en piso</b></td>
+        <td style="border: 1px solid #000000; padding: 6px 8px; text-align: center; vertical-align: middle;">Baja / Alto</td>
+        <td style="border: 1px solid #000000; padding: 6px 8px; vertical-align: middle;">Equipos portátiles con búfer de almacenamiento temporal y sincronización por lotes ante microcortes.</td>
+        <td style="border: 1px solid #000000; padding: 6px 8px; vertical-align: middle;">Equipo TI / Proveedor WMS</td>
+      </tr>
+      <tr>
+        <td style="border: 1px solid #000000; padding: 6px 8px; vertical-align: middle;"><b>Discrepancias persistentes de inventario</b></td>
+        <td style="border: 1px solid #000000; padding: 6px 8px; text-align: center; vertical-align: middle;">Media / Medio</td>
+        <td style="border: 1px solid #000000; padding: 6px 8px; vertical-align: middle;">Establecimiento de inventarios cíclicos rotativos por pasillo y auditoría en línea con el registro de eventos.</td>
+        <td style="border: 1px solid #000000; padding: 6px 8px; vertical-align: middle;">Supervisor de Almacén</td>
+      </tr>
+      <tr>
+        <td style="border: 1px solid #000000; padding: 6px 8px; vertical-align: middle;"><b>Retrasos en salidas matutinas (06:00 am)</b></td>
+        <td style="border: 1px solid #000000; padding: 6px 8px; text-align: center; vertical-align: middle;">Media / Alto</td>
+        <td style="border: 1px solid #000000; padding: 6px 8px; vertical-align: middle;">Consolidación de carga en zona de staging la tarde previa y ruteo optimizado por cuadrantes geográficos.</td>
+        <td style="border: 1px solid #000000; padding: 6px 8px; vertical-align: middle;">Jefe de Operaciones / Reparto</td>
+      </tr>
+    </tbody>
+  </table>
+
+</div>

@@ -1,0 +1,144 @@
+<!-- title: Marco Metodológico y Gestión Scrum -->
+<h3 class="text-base sm:text-lg font-bold text-neutral-950 mt-5 mb-2">4.1 Fases del Ciclo de Vida y Hoja de Ruta (Roadmap)</h3>
+            <ul class="list-disc pl-6 mb-4 space-y-2 text-justify">
+              <li><strong>Fase 1: Diagnóstico y Estructuración Física:</strong> Levantamiento planimétrico del almacén actual, zonificación técnica y diseño de la nueva codificación espacial en racks y pasillos.</li>
+              <li><strong>Fase 2: Desarrollo e Integración Tecnológica:</strong> Configuración de la base de datos del sistema WMS, parametrización del catálogo maestro y programación de los módulos de indexación de inventario.</li>
+              <li><strong>Fase 3: Despliegue y Capacitación Operativa:</strong> Habilitación de la infraestructura de red, instalación del WMS en los equipos del almacén y entrenamiento en el puesto de trabajo para todo el equipo operativo.</li>
+              <li><strong>Fase 4: Transición y Monitoreo Continuo:</strong> Salida en vivo (go-live), seguimiento de los indicadores de picking, resolución inmediata de incidencias y consolidación del nuevo estándar operativo.</li>
+            </ul>
+
+            <h3 class="text-base sm:text-lg font-bold text-neutral-950 mt-6 mb-2">4.2 Enfoque Adaptativo y Gestión Scrum</h3>
+            <p class="text-justify mb-4">
+              La adopción de Scrum en 4 Sprints iterativos de 2 a 3 semanas garantiza una retroalimentación continua con los operarios de almacén para perfeccionar la ergonomía del software y el hardware:
+            </p>
+
+            <h4 class="font-bold text-neutral-950 text-base mt-6 mb-2">Mapa de Historias de Usuario (User Story Map)</h4>
+            <div class="overflow-x-auto">
+              <table>
+                <thead>
+                  <tr>
+                    <th style="width: 18%;">Épica</th>
+                    <th style="width: 17%;">Actividad</th>
+                    <th style="width: 8%; text-align: center;">ID</th>
+                    <th style="width: 44%;">Historia de Usuario</th>
+                    <th style="width: 13%; text-align: center;">Sprint</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td rowspan="2"><strong>Infraestructura y Codificación</strong></td>
+                    <td>Segmentar almacén</td>
+                    <td style="text-align: center;">US01</td>
+                    <td>Como supervisor de almacén, requiero codificar los racks por pasillo, columna y nivel para ubicar cualquier producto de manera inmediata.</td>
+                    <td rowspan="2" style="text-align: center;">Sprint 1</td>
+                  </tr>
+                  <tr>
+                    <td>Etiquetado de productos</td>
+                    <td style="text-align: center;">US02</td>
+                    <td>Como operario, requiero etiquetar cajas y fardos con su código de ubicación para identificarlos sin buscar de memoria.</td>
+                  </tr>
+                  <tr>
+                    <td rowspan="2"><strong>Módulo de Inventario WMS</strong></td>
+                    <td>Registrar ingresos</td>
+                    <td style="text-align: center;">US03</td>
+                    <td>Como receptor de carga, requiero ingresar lotes asociándolos a su fecha de vencimiento bajo el método PEPS para evitar mermas.</td>
+                    <td rowspan="2" style="text-align: center;">Sprint 2</td>
+                  </tr>
+                  <tr>
+                    <td>Buscador de posiciones</td>
+                    <td style="text-align: center;">US04</td>
+                    <td>Como preparador de pedidos, requiero consultar el nombre de un artículo y visualizar su coordenada exacta en pantalla.</td>
+                  </tr>
+                  <tr>
+                    <td rowspan="2"><strong>Preparación de Pedidos con el WMS</strong></td>
+                    <td>Validar picking</td>
+                    <td style="text-align: center;">US05</td>
+                    <td>Como operario de picking, requiero confirmar en el WMS cada artículo recogido para validar en el acto que coincide con la nota de entrega.</td>
+                    <td rowspan="2" style="text-align: center;">Sprint 3</td>
+                  </tr>
+                  <tr>
+                    <td>Actualización de stock</td>
+                    <td style="text-align: center;">US06</td>
+                    <td>Como sistema central, debo rebajar el stock en tiempo real al confirmarse la recolección física del lote.</td>
+                  </tr>
+                  <tr>
+                    <td rowspan="2"><strong>Control y Supervisión de Despachos</strong></td>
+                    <td>Reportar discrepancias</td>
+                    <td style="text-align: center;">US07</td>
+                    <td>Como Jefe de Operaciones, requiero emitir reportes automáticos de diferencias entre existencias físicas y registros digitales.</td>
+                    <td rowspan="2" style="text-align: center;">Sprint 4</td>
+                  </tr>
+                  <tr>
+                    <td>Tablero de indicadores</td>
+                    <td style="text-align: center;">US08</td>
+                    <td>Como Gerente General, requiero consultar métricas en tiempo real sobre la reducción en los tiempos de preparación y entrega.</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+
+            <h4 class="font-bold text-neutral-950 text-base mt-6 mb-2">Matriz de Priorización de Funcionalidades (Valor vs. Esfuerzo)</h4>
+            <div class="overflow-x-auto">
+              <table>
+                <thead>
+                  <tr>
+                    <th style="width: 6%; text-align: center;">ID</th>
+                    <th style="width: 34%;">Funcionalidad del WMS</th>
+                    <th style="width: 12%; text-align: center;">Esfuerzo (X)</th>
+                    <th style="width: 12%; text-align: center;">Valor (Y)</th>
+                    <th style="width: 18%;">Cuadrante</th>
+                    <th style="width: 18%;">Acción Recomendada</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td style="text-align: center;">F1</td>
+                    <td>Codificación de Racks y Ubicaciones Físicas</td>
+                    <td style="text-align: center;">2</td>
+                    <td style="text-align: center;">5</td>
+                    <td>Ganancias Rápidas</td>
+                    <td>Sprint 1 / Inmediato</td>
+                  </tr>
+                  <tr>
+                    <td style="text-align: center;">F2</td>
+                    <td>Buscador Digital de Productos por Coordenada</td>
+                    <td style="text-align: center;">2</td>
+                    <td style="text-align: center;">4</td>
+                    <td>Ganancias Rápidas</td>
+                    <td>Sprint 1 / Inmediato</td>
+                  </tr>
+                  <tr>
+                    <td style="text-align: center;">F3</td>
+                    <td>Validación de Picking en el WMS</td>
+                    <td style="text-align: center;">4</td>
+                    <td style="text-align: center;">5</td>
+                    <td>Proyectos Clave</td>
+                    <td>Sprint 2 / Prioritario</td>
+                  </tr>
+                  <tr>
+                    <td style="text-align: center;">F4</td>
+                    <td>Sincronización de Stock en Tiempo Real</td>
+                    <td style="text-align: center;">4</td>
+                    <td style="text-align: center;">5</td>
+                    <td>Proyectos Clave</td>
+                    <td>Sprint 3 / Estratégico</td>
+                  </tr>
+                  <tr>
+                    <td style="text-align: center;">F5</td>
+                    <td>Registro Automatizado de Mermas y Vencimientos (PEPS)</td>
+                    <td style="text-align: center;">2</td>
+                    <td style="text-align: center;">3</td>
+                    <td>Tareas Complementarias</td>
+                    <td>Sprint 4 / Secundario</td>
+                  </tr>
+                  <tr>
+                    <td style="text-align: center;">F6</td>
+                    <td>Integración de Cámaras de Seguridad Periféricas</td>
+                    <td style="text-align: center;">3</td>
+                    <td style="text-align: center;">2</td>
+                    <td>Tareas Secundarias</td>
+                    <td>Evaluar en Fase Posterior</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>

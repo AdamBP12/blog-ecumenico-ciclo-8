@@ -1,0 +1,11 @@
+# Environment and OS files
+.DS_Store
+Thumbs.db
+*.log
+node_modules/
+
+.vercel
+
+# Material local no versionado
+Fotos ecumenico/
+Plan Estrategico*.docx

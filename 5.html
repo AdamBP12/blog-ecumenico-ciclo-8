@@ -1,0 +1,104 @@
+<div style="font-family: 'Times New Roman', Times, serif; font-size: 12pt; line-height: 1.6; color: #000000; text-align: justify;">
+
+  <h2 style="font-size: 14pt; font-weight: bold; color: #000000; text-align: justify; border-bottom: 1px solid #000000; padding-bottom: 4px; margin-top: 20px; margin-bottom: 12px;">5. Ingeniería y Tecnología Propuesta</h2>
+
+  <h3 style="font-size: 12pt; font-weight: bold; color: #000000; text-align: justify; margin-top: 16px; margin-bottom: 8px;">5.1 Diseño de Infraestructura Física y Zonificación</h3>
+  <p style="text-align: justify; margin-top: 0; margin-bottom: 12px;">
+    El diseño operativo del estado futuro (TO-BE) de Distribuidora Ecuménico moderniza el almacenamiento a ras de piso, transformándolo en una estructura vertical organizada mediante racks industriales metálicos, zonificación técnica según la rotación de la mercadería y herramientas portátiles de lectura óptica.
+  </p>
+
+  <ul style="text-align: justify; margin-top: 0; margin-bottom: 16px; padding-left: 24px;">
+    <li style="margin-bottom: 8px;">
+      <b>Zona A (Sazonadores y Colorantes - Alta Rotación):</b> Ubicada en la zona frontal inmediata al área de consolidación y empaque (staging). Alberga productos fraccionados en gavetas plásticas apilables y rotuladas para líneas de alta demanda (marcas Sibarita, Firme y Lopeza).
+    </li>
+    <li style="margin-bottom: 8px;">
+      <b>Zona B (Especias Secas y Abarrotes - Rotación Media):</b> Módulos de estantería de capacidad intermedia destinados a fardos y sacos de orégano, comino procesado, pimienta y mezclas culinarias.
+    </li>
+    <li style="margin-bottom: 8px;">
+      <b>Zona C (Líquidos y Esencias - Cuidados Especiales):</b> Niveles inferiores con bandejas de contención antiderrames para bidones y cajas de vinagre, sillao y esencias aromáticas, garantizando aislamiento preventivo.
+    </li>
+  </ul>
+
+  <h3 style="font-size: 12pt; font-weight: bold; color: #000000; text-align: justify; margin-top: 16px; margin-bottom: 8px;">5.2 Arquitectura del Sistema WMS e Integración Físico-Digital</h3>
+  <p style="text-align: justify; margin-top: 0; margin-bottom: 12px;">
+    La solución de software corresponde a un sistema WMS ligero bajo arquitectura cliente-servidor, conectado a través de una red local Wi-Fi industrial de cobertura total en piso. Su función esencial radica en vincular cada nota de pedido emitida por preventa con la ubicación espacial exacta de cada producto en las estanterías.
+  </p>
+
+  <p style="font-weight: bold; text-align: justify; margin-top: 16px; margin-bottom: 8px;">Flujo Operativo de Integración Físico-Digital</p>
+  <ol style="text-align: justify; margin-top: 0; margin-bottom: 18px; padding-left: 24px;">
+    <li style="margin-bottom: 8px;">
+      <b>Transmisión del Pedido:</b> Los preventistas sincronizan al término del día las notas de venta consolidadas hacia el servidor central.
+    </li>
+    <li style="margin-bottom: 8px;">
+      <b>Generación de la Lista de Preparación (Picking List):</b> El sistema WMS organiza automáticamente los productos por orden secuencial de coordenadas (pasillo, columna y nivel), trazando la ruta más corta y eficiente para el operario.
+    </li>
+    <li style="margin-bottom: 8px;">
+      <b>Validación Óptica en Piso:</b> El operario escanea la etiqueta de ubicación del rack y posteriormente el código de barras del producto con la terminal portátil (handheld), recibiendo confirmación sonora y visual de acierto.
+    </li>
+    <li style="margin-bottom: 8px;">
+      <b>Actualización Automática y Despacho:</b> Al registrarse la última unidad, el sistema rebaja las existencias digitales en tiempo real y genera la etiqueta consolidada de bulto para el chofer de reparto matutino (06:00 am).
+    </li>
+  </ol>
+
+  <h3 style="font-size: 12pt; font-weight: bold; color: #000000; text-align: justify; margin-top: 16px; margin-bottom: 8px;">5.3 Especificación de Casos de Uso del Sistema</h3>
+  <p style="text-align: justify; margin-top: 0; margin-bottom: 12px;">
+    Detalle de las interacciones funcionales entre los roles operativos y el sistema WMS para asegurar una gestión confiable y sin fricciones:
+  </p>
+
+  <table style="width: 100%; border-collapse: collapse; border: 1px solid #000000; margin-top: 10px; margin-bottom: 20px; font-size: 10pt; color: #000000;">
+    <thead>
+      <tr style="background-color: #ffffff;">
+        <th style="border: 1px solid #000000; padding: 6px 8px; text-align: center; font-weight: bold; color: #000000; width: 8%;">ID</th>
+        <th style="border: 1px solid #000000; padding: 6px 8px; text-align: left; font-weight: bold; color: #000000; width: 23%;">Caso de Uso</th>
+        <th style="border: 1px solid #000000; padding: 6px 8px; text-align: left; font-weight: bold; color: #000000; width: 18%;">Actor Principal</th>
+        <th style="border: 1px solid #000000; padding: 6px 8px; text-align: left; font-weight: bold; color: #000000; width: 22%;">Precondición</th>
+        <th style="border: 1px solid #000000; padding: 6px 8px; text-align: left; font-weight: bold; color: #000000; width: 29%;">Flujo Principal</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td style="border: 1px solid #000000; padding: 6px 8px; text-align: center; vertical-align: middle;">UC-01</td>
+        <td style="border: 1px solid #000000; padding: 6px 8px; vertical-align: middle;"><b>Codificar Ubicación de Rack</b></td>
+        <td style="border: 1px solid #000000; padding: 6px 8px; vertical-align: middle;">Supervisor de Almacén</td>
+        <td style="border: 1px solid #000000; padding: 6px 8px; vertical-align: middle;">Racks armados y señalizados físicamente.</td>
+        <td style="border: 1px solid #000000; padding: 6px 8px; vertical-align: middle;">Registra la coordenada espacial (Pasillo, Columna y Nivel) en el sistema maestro del WMS.</td>
+      </tr>
+      <tr>
+        <td style="border: 1px solid #000000; padding: 6px 8px; text-align: center; vertical-align: middle;">UC-02</td>
+        <td style="border: 1px solid #000000; padding: 6px 8px; vertical-align: middle;"><b>Consultar Ubicación de Producto</b></td>
+        <td style="border: 1px solid #000000; padding: 6px 8px; vertical-align: middle;">Operario de Picking</td>
+        <td style="border: 1px solid #000000; padding: 6px 8px; vertical-align: middle;">Nota de venta cargada en el sistema.</td>
+        <td style="border: 1px solid #000000; padding: 6px 8px; vertical-align: middle;">El sistema presenta en pantalla la ruta ordenada y la ubicación exacta de cada artículo a recolectar.</td>
+      </tr>
+      <tr>
+        <td style="border: 1px solid #000000; padding: 6px 8px; text-align: center; vertical-align: middle;">UC-03</td>
+        <td style="border: 1px solid #000000; padding: 6px 8px; vertical-align: middle;"><b>Escanear y Validar Producto</b></td>
+        <td style="border: 1px solid #000000; padding: 6px 8px; vertical-align: middle;">Operario de Picking</td>
+        <td style="border: 1px solid #000000; padding: 6px 8px; vertical-align: middle;">Terminal móvil sincronizada con la red Wi-Fi.</td>
+        <td style="border: 1px solid #000000; padding: 6px 8px; vertical-align: middle;">Escaneo del código de barras; si el ítem no coincide con el pedido, el dispositivo emite una alerta acústica inmediata.</td>
+      </tr>
+      <tr>
+        <td style="border: 1px solid #000000; padding: 6px 8px; text-align: center; vertical-align: middle;">UC-04</td>
+        <td style="border: 1px solid #000000; padding: 6px 8px; vertical-align: middle;"><b>Registrar Ingresos bajo Norma PEPS</b></td>
+        <td style="border: 1px solid #000000; padding: 6px 8px; vertical-align: middle;">Operario de Recepción</td>
+        <td style="border: 1px solid #000000; padding: 6px 8px; vertical-align: middle;">Llegada física de mercadería desde el proveedor.</td>
+        <td style="border: 1px solid #000000; padding: 6px 8px; vertical-align: middle;">Registro de lote y fecha de vencimiento en el sistema para programar la rotación del lote más antiguo en primer lugar.</td>
+      </tr>
+      <tr>
+        <td style="border: 1px solid #000000; padding: 6px 8px; text-align: center; vertical-align: middle;">UC-05</td>
+        <td style="border: 1px solid #000000; padding: 6px 8px; vertical-align: middle;"><b>Confirmar Despacho Vehicular</b></td>
+        <td style="border: 1px solid #000000; padding: 6px 8px; vertical-align: middle;">Chofer de Reparto</td>
+        <td style="border: 1px solid #000000; padding: 6px 8px; vertical-align: middle;">Bultos embalados y rotulados en zona de staging.</td>
+        <td style="border: 1px solid #000000; padding: 6px 8px; vertical-align: middle;">Verificación y carga completa en la unidad de transporte antes del inicio de ruta a las 06:00 am.</td>
+      </tr>
+      <tr>
+        <td style="border: 1px solid #000000; padding: 6px 8px; text-align: center; vertical-align: middle;">UC-06</td>
+        <td style="border: 1px solid #000000; padding: 6px 8px; vertical-align: middle;"><b>Monitorear Tiempos y Rendimiento</b></td>
+        <td style="border: 1px solid #000000; padding: 6px 8px; vertical-align: middle;">Gerente General</td>
+        <td style="border: 1px solid #000000; padding: 6px 8px; vertical-align: middle;">Inicio de sesión con credenciales directivas.</td>
+        <td style="border: 1px solid #000000; padding: 6px 8px; vertical-align: middle;">Visualización de métricas de desempeño, cumplimiento de horarios de salida y porcentaje de reducción en tiempos de picking.</td>
+      </tr>
+    </tbody>
+  </table>
+
+</div>

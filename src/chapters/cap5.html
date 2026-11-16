@@ -1,0 +1,95 @@
+<!-- title: Ingeniería y Propuesta Tecnológica TO-BE -->
+<h3 class="text-base sm:text-lg font-bold text-neutral-950 mt-5 mb-2">5.1 Diseño de Infraestructura Física y Zonificación</h3>
+            <p class="text-justify mb-4">
+              El diseño operativo del estado futuro (TO-BE) de Distribuidora Ecuménico moderniza el almacenamiento a ras de piso, transformándolo en una estructura vertical organizada mediante racks industriales metálicos, zonificación técnica según la rotación de la mercadería y un sistema WMS que guía cada movimiento:
+            </p>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-4 my-6">
+              <div class="p-4 border border-neutral-300 rounded-xl bg-neutral-50">
+                <span class="text-xs font-mono font-bold uppercase text-neutral-600">Zona A</span>
+                <h4 class="font-bold text-neutral-900 text-sm mt-1">Sazonadores y Colorantes</h4>
+                <p class="text-xs text-neutral-600 mt-2">Ubicada frente al área de staging. Gavetas plásticas apilables para marcas Sibarita, Firme y Lopeza (alta rotación).</p>
+              </div>
+              <div class="p-4 border border-neutral-300 rounded-xl bg-neutral-50">
+                <span class="text-xs font-mono font-bold uppercase text-neutral-600">Zona B</span>
+                <h4 class="font-bold text-neutral-900 text-sm mt-1">Especias Secas y Abarrotes</h4>
+                <p class="text-xs text-neutral-600 mt-2">Racks de volumen medio para sacos y fardos de orégano, comino, pimienta y mezclas seleccionadas.</p>
+              </div>
+              <div class="p-4 border border-neutral-300 rounded-xl bg-neutral-50">
+                <span class="text-xs font-mono font-bold uppercase text-neutral-600">Zona C</span>
+                <h4 class="font-bold text-neutral-900 text-sm mt-1">Líquidos y Esencias</h4>
+                <p class="text-xs text-neutral-600 mt-2">Niveles inferiores con bandejas antiderrames para vinagres, sillao y esencias aromáticas.</p>
+              </div>
+            </div>
+
+            <h3 class="text-base sm:text-lg font-bold text-neutral-950 mt-6 mb-2">5.2 Arquitectura del Sistema WMS e Integración Físico-Digital</h3>
+            <p class="text-justify mb-4">
+              La solución de software corresponde a un sistema WMS ligero bajo arquitectura cliente-servidor, conectado a través de una red local Wi-Fi industrial de cobertura total en piso.
+            </p>
+
+            <h4 class="font-bold text-neutral-950 text-base mt-6 mb-2">Flujo Operativo de Integración Físico-Digital</h4>
+            <ol class="list-decimal pl-6 mb-4 space-y-2 text-justify">
+              <li><strong>Transmisión del Pedido:</strong> Los preventistas sincronizan al término del día las notas de venta consolidadas hacia el servidor central.</li>
+              <li><strong>Generación de la Lista de Preparación (Picking List):</strong> El sistema WMS organiza automáticamente los productos por orden secuencial de coordenadas (pasillo, columna y nivel), trazando la ruta más corta y eficiente para el operario.</li>
+              <li><strong>Validación en Piso:</strong> El operario confirma en el WMS la ubicación del rack y cada producto recogido según la lista de preparación; el sistema advierte de inmediato si un artículo no corresponde al pedido.</li>
+              <li><strong>Actualización Automática y Despacho:</strong> Al registrarse la última unidad, el sistema rebaja las existencias digitales en tiempo real y genera la etiqueta consolidada de bulto para el chofer de reparto matutino (06:00 am).</li>
+            </ol>
+
+            <h3 class="text-base sm:text-lg font-bold text-neutral-950 mt-6 mb-2">5.3 Especificación de Casos de Uso del Sistema</h3>
+            <div class="overflow-x-auto">
+              <table>
+                <thead>
+                  <tr>
+                    <th style="width: 8%; text-align: center;">ID</th>
+                    <th style="width: 23%;">Caso de Uso</th>
+                    <th style="width: 18%;">Actor Principal</th>
+                    <th style="width: 22%;">Precondición</th>
+                    <th style="width: 29%;">Flujo Principal</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td style="text-align: center;">UC-01</td>
+                    <td><strong>Codificar Ubicación de Rack</strong></td>
+                    <td>Supervisor de Almacén</td>
+                    <td>Racks armados y señalizados físicamente.</td>
+                    <td>Registra la coordenada espacial (Pasillo, Columna y Nivel) en el sistema maestro del WMS.</td>
+                  </tr>
+                  <tr>
+                    <td style="text-align: center;">UC-02</td>
+                    <td><strong>Consultar Ubicación de Producto</strong></td>
+                    <td>Operario de Picking</td>
+                    <td>Nota de venta cargada en el sistema.</td>
+                    <td>El sistema presenta en pantalla la ruta ordenada y la ubicación exacta de cada artículo a recolectar.</td>
+                  </tr>
+                  <tr>
+                    <td style="text-align: center;">UC-03</td>
+                    <td><strong>Confirmar y Validar Producto</strong></td>
+                    <td>Operario de Picking</td>
+                    <td>Lista de preparación generada en el WMS.</td>
+                    <td>El operario confirma cada artículo en el WMS; si el ítem no coincide con el pedido, el sistema muestra una alerta inmediata.</td>
+                  </tr>
+                  <tr>
+                    <td style="text-align: center;">UC-04</td>
+                    <td><strong>Registrar Ingresos bajo Norma PEPS</strong></td>
+                    <td>Operario de Recepción</td>
+                    <td>Llegada física de mercadería desde el proveedor.</td>
+                    <td>Registro de lote y fecha de vencimiento en el sistema para programar la rotación del lote más antiguo en primer lugar.</td>
+                  </tr>
+                  <tr>
+                    <td style="text-align: center;">UC-05</td>
+                    <td><strong>Confirmar Despacho Vehicular</strong></td>
+                    <td>Chofer de Reparto</td>
+                    <td>Bultos embalados y rotulados en zona de staging.</td>
+                    <td>Verificación y carga completa en la unidad de transporte antes del inicio de ruta a las 06:00 am.</td>
+                  </tr>
+                  <tr>
+                    <td style="text-align: center;">UC-06</td>
+                    <td><strong>Monitorear Tiempos y Rendimiento</strong></td>
+                    <td>Gerente General</td>
+                    <td>Inicio de sesión con credenciales directivas.</td>
+                    <td>Visualización de métricas de desempeño, cumplimiento de horarios de salida y porcentaje de reducción en tiempos de picking.</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>

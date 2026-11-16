@@ -1,0 +1,175 @@
+<div style="font-family: 'Times New Roman', Times, serif; font-size: 12pt; line-height: 1.6; color: #000000; text-align: justify;">
+
+  <h2 style="font-size: 14pt; font-weight: bold; color: #000000; text-align: justify; border-bottom: 1px solid #000000; padding-bottom: 4px; margin-top: 20px; margin-bottom: 12px;">4. Marco Metodológico</h2>
+
+  <h3 style="font-size: 12pt; font-weight: bold; color: #000000; text-align: justify; margin-top: 16px; margin-bottom: 8px;">4.1 Fases del Ciclo de Vida y Hoja de Ruta (Roadmap)</h3>
+  <ul style="text-align: justify; margin-top: 0; margin-bottom: 16px; padding-left: 24px;">
+    <li style="margin-bottom: 8px;">
+      <b>Fase 1: Diagnóstico y Estructuración Física:</b> Levantamiento planimétrico del almacén actual, zonificación técnica y diseño de la nueva codificación espacial en racks y pasillos.
+    </li>
+    <li style="margin-bottom: 8px;">
+      <b>Fase 2: Desarrollo e Integración Tecnológica:</b> Configuración de la base de datos del sistema WMS, parametrización del catálogo maestro y programación de los módulos de indexación de inventario.
+    </li>
+    <li style="margin-bottom: 8px;">
+      <b>Fase 3: Despliegue y Capacitación Operativa:</b> Habilitación de la infraestructura de red, enlace de terminales móviles de lectura óptica y entrenamiento en el puesto de trabajo para todo el equipo operativo.
+    </li>
+    <li style="margin-bottom: 8px;">
+      <b>Fase 4: Transición y Monitoreo Continuo:</b> Salida en vivo (go-live), seguimiento de los indicadores de picking, resolución inmediata de incidencias y consolidación del nuevo estándar operativo.
+    </li>
+  </ul>
+
+  <h3 style="font-size: 12pt; font-weight: bold; color: #000000; text-align: justify; margin-top: 16px; margin-bottom: 8px;">4.2 Enfoque Adaptativo y Gestión Scrum</h3>
+  <ul style="text-align: justify; margin-top: 0; margin-bottom: 14px; padding-left: 24px;">
+    <li style="margin-bottom: 8px;">
+      <b>Justificación metodológica:</b> La dinámica del sector mayorista de abarrotes y la alta rotación exigen un marco ágil que involucre de manera directa al personal de piso en la validación de soluciones, evitando brechas entre el diseño y la práctica diaria.
+    </li>
+    <li style="margin-bottom: 8px;">
+      <b>Transparencia y control:</b> Las entregas cortas permiten corroborar tempranamente la ergonomía del software y los equipos, ajustando cualquier desajuste operativo antes del despliegue definitivo.
+    </li>
+    <li style="margin-bottom: 8px;">
+      <b>Estructura de ejecución iterativa por Sprints:</b>
+      <ul style="margin-top: 6px; margin-bottom: 8px; padding-left: 20px; list-style-type: circle;">
+        <li style="margin-bottom: 6px;"><b>Sprint 1 (Mapeo Espacial):</b> Definición de la nomenclatura de estanterías, rotulación física de racks y demarcación de sentidos de tránsito en pasillos.</li>
+        <li style="margin-bottom: 6px;"><b>Sprint 2 (Arquitectura WMS):</b> Configuración de la plataforma digital, carga del catálogo de productos y módulo de consulta de posiciones.</li>
+        <li style="margin-bottom: 6px;"><b>Sprint 3 (Integración de Hardware):</b> Vinculación y calibración de las lectoras portátiles de códigos de barras con la base de datos en tiempo real.</li>
+        <li style="margin-bottom: 6px;"><b>Sprint 4 (Pruebas Piloto y Ajustes en Piso):</b> Simulaciones de picking y packing junto a los operarios de almacén para perfeccionar la usabilidad y garantizar fluidez en las salidas matutinas (06:00 am).</li>
+      </ul>
+    </li>
+  </ul>
+
+  <h3 style="font-size: 12pt; font-weight: bold; color: #000000; text-align: justify; margin-top: 16px; margin-bottom: 8px;">4.3 Mapa de Historias de Usuario (User Story Map)</h3>
+  <p style="text-align: justify; margin-top: 0; margin-bottom: 12px;">
+    La priorización de las historias de usuario responde a la necesidad de estabilizar primero el orden físico del almacén y luego asegurar la rapidez de respuesta tecnológica en las horas de mayor demanda:
+  </p>
+
+  <table style="width: 100%; border-collapse: collapse; border: 1px solid #000000; margin-top: 10px; margin-bottom: 20px; font-size: 10pt; color: #000000;">
+    <thead>
+      <tr style="background-color: #ffffff;">
+        <th style="border: 1px solid #000000; padding: 6px 8px; text-align: left; font-weight: bold; color: #000000; width: 18%;">Épica</th>
+        <th style="border: 1px solid #000000; padding: 6px 8px; text-align: left; font-weight: bold; color: #000000; width: 17%;">Actividad del Usuario</th>
+        <th style="border: 1px solid #000000; padding: 6px 8px; text-align: center; font-weight: bold; color: #000000; width: 8%;">ID</th>
+        <th style="border: 1px solid #000000; padding: 6px 8px; text-align: left; font-weight: bold; color: #000000; width: 44%;">Historia de Usuario</th>
+        <th style="border: 1px solid #000000; padding: 6px 8px; text-align: center; font-weight: bold; color: #000000; width: 13%;">Sprint</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td rowspan="2" style="border: 1px solid #000000; padding: 6px 8px; vertical-align: middle;"><b>Infraestructura y Codificación</b></td>
+        <td style="border: 1px solid #000000; padding: 6px 8px; vertical-align: middle;">Segmentar almacén</td>
+        <td style="border: 1px solid #000000; padding: 6px 8px; text-align: center; vertical-align: middle;">US01</td>
+        <td style="border: 1px solid #000000; padding: 6px 8px; vertical-align: middle;">Como supervisor de almacén, requiero codificar los racks por pasillo, columna y nivel para ubicar cualquier producto de manera inmediata.</td>
+        <td rowspan="2" style="border: 1px solid #000000; padding: 6px 8px; text-align: center; vertical-align: middle;">Sprint 1</td>
+      </tr>
+      <tr>
+        <td style="border: 1px solid #000000; padding: 6px 8px; vertical-align: middle;">Etiquetado de productos</td>
+        <td style="border: 1px solid #000000; padding: 6px 8px; text-align: center; vertical-align: middle;">US02</td>
+        <td style="border: 1px solid #000000; padding: 6px 8px; vertical-align: middle;">Como operario, requiero etiquetar cajas y fardos con códigos legibles para permitir su captura óptica en piso.</td>
+      </tr>
+      <tr>
+        <td rowspan="2" style="border: 1px solid #000000; padding: 6px 8px; vertical-align: middle;"><b>Módulo de Inventario WMS</b></td>
+        <td style="border: 1px solid #000000; padding: 6px 8px; vertical-align: middle;">Registrar ingresos</td>
+        <td style="border: 1px solid #000000; padding: 6px 8px; text-align: center; vertical-align: middle;">US03</td>
+        <td style="border: 1px solid #000000; padding: 6px 8px; vertical-align: middle;">Como receptor de carga, requiero ingresar lotes asociándolos a su fecha de vencimiento bajo el método PEPS para evitar mermas.</td>
+        <td rowspan="2" style="border: 1px solid #000000; padding: 6px 8px; text-align: center; vertical-align: middle;">Sprint 2</td>
+      </tr>
+      <tr>
+        <td style="border: 1px solid #000000; padding: 6px 8px; vertical-align: middle;">Buscador de posiciones</td>
+        <td style="border: 1px solid #000000; padding: 6px 8px; text-align: center; vertical-align: middle;">US04</td>
+        <td style="border: 1px solid #000000; padding: 6px 8px; vertical-align: middle;">Como preparador de pedidos, requiero consultar el nombre de un artículo y visualizar su coordenada exacta en pantalla.</td>
+      </tr>
+      <tr>
+        <td rowspan="2" style="border: 1px solid #000000; padding: 6px 8px; vertical-align: middle;"><b>Integración con Terminales Móviles</b></td>
+        <td style="border: 1px solid #000000; padding: 6px 8px; vertical-align: middle;">Validar picking</td>
+        <td style="border: 1px solid #000000; padding: 6px 8px; text-align: center; vertical-align: middle;">US05</td>
+        <td style="border: 1px solid #000000; padding: 6px 8px; vertical-align: middle;">Como operario de picking, requiero escanear el artículo con el terminal móvil para validar en el acto que coincide con la nota de entrega.</td>
+        <td rowspan="2" style="border: 1px solid #000000; padding: 6px 8px; text-align: center; vertical-align: middle;">Sprint 3</td>
+      </tr>
+      <tr>
+        <td style="border: 1px solid #000000; padding: 6px 8px; vertical-align: middle;">Actualización de stock</td>
+        <td style="border: 1px solid #000000; padding: 6px 8px; text-align: center; vertical-align: middle;">US06</td>
+        <td style="border: 1px solid #000000; padding: 6px 8px; vertical-align: middle;">Como sistema central, debo rebajar el stock en tiempo real al confirmarse la recolección física del lote.</td>
+      </tr>
+      <tr>
+        <td rowspan="2" style="border: 1px solid #000000; padding: 6px 8px; vertical-align: middle;"><b>Control y Supervisión de Despachos</b></td>
+        <td style="border: 1px solid #000000; padding: 6px 8px; vertical-align: middle;">Reportar discrepancias</td>
+        <td style="border: 1px solid #000000; padding: 6px 8px; text-align: center; vertical-align: middle;">US07</td>
+        <td style="border: 1px solid #000000; padding: 6px 8px; vertical-align: middle;">Como Jefe de Operaciones, requiero emitir reportes automáticos de diferencias entre existencias físicas y registros digitales.</td>
+        <td rowspan="2" style="border: 1px solid #000000; padding: 6px 8px; text-align: center; vertical-align: middle;">Sprint 4</td>
+      </tr>
+      <tr>
+        <td style="border: 1px solid #000000; padding: 6px 8px; vertical-align: middle;">Tablero de indicadores</td>
+        <td style="border: 1px solid #000000; padding: 6px 8px; text-align: center; vertical-align: middle;">US08</td>
+        <td style="border: 1px solid #000000; padding: 6px 8px; vertical-align: middle;">Como Gerente General, requiero consultar métricas en tiempo real sobre la reducción en los tiempos de preparación y entrega.</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h3 style="font-size: 12pt; font-weight: bold; color: #000000; text-align: justify; margin-top: 16px; margin-bottom: 8px;">4.4 Matriz de Priorización de Funcionalidades (Valor vs. Esfuerzo)</h3>
+  <p style="text-align: justify; margin-top: 0; margin-bottom: 12px;">
+    Clasificación estratégica para optimizar la secuencia de desarrollo tecnológico, ponderando el esfuerzo técnico requerido frente al beneficio aportado al negocio:
+  </p>
+
+  <table style="width: 100%; border-collapse: collapse; border: 1px solid #000000; margin-top: 10px; margin-bottom: 20px; font-size: 10pt; color: #000000;">
+    <thead>
+      <tr style="background-color: #ffffff;">
+        <th style="border: 1px solid #000000; padding: 6px 8px; text-align: center; font-weight: bold; color: #000000; width: 6%;">ID</th>
+        <th style="border: 1px solid #000000; padding: 6px 8px; text-align: left; font-weight: bold; color: #000000; width: 34%;">Funcionalidad del WMS</th>
+        <th style="border: 1px solid #000000; padding: 6px 8px; text-align: center; font-weight: bold; color: #000000; width: 12%;">Esfuerzo (X)</th>
+        <th style="border: 1px solid #000000; padding: 6px 8px; text-align: center; font-weight: bold; color: #000000; width: 12%;">Valor (Y)</th>
+        <th style="border: 1px solid #000000; padding: 6px 8px; text-align: left; font-weight: bold; color: #000000; width: 18%;">Cuadrante</th>
+        <th style="border: 1px solid #000000; padding: 6px 8px; text-align: left; font-weight: bold; color: #000000; width: 18%;">Acción Recomendada</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td style="border: 1px solid #000000; padding: 6px 8px; text-align: center; vertical-align: middle;">F1</td>
+        <td style="border: 1px solid #000000; padding: 6px 8px; vertical-align: middle;">Codificación de Racks y Ubicaciones Físicas</td>
+        <td style="border: 1px solid #000000; padding: 6px 8px; text-align: center; vertical-align: middle;">2</td>
+        <td style="border: 1px solid #000000; padding: 6px 8px; text-align: center; vertical-align: middle;">5</td>
+        <td style="border: 1px solid #000000; padding: 6px 8px; vertical-align: middle;">Ganancias Rápidas</td>
+        <td style="border: 1px solid #000000; padding: 6px 8px; vertical-align: middle;">Sprint 1 / Inmediato</td>
+      </tr>
+      <tr>
+        <td style="border: 1px solid #000000; padding: 6px 8px; text-align: center; vertical-align: middle;">F2</td>
+        <td style="border: 1px solid #000000; padding: 6px 8px; vertical-align: middle;">Buscador Digital de Productos por Coordenada</td>
+        <td style="border: 1px solid #000000; padding: 6px 8px; text-align: center; vertical-align: middle;">2</td>
+        <td style="border: 1px solid #000000; padding: 6px 8px; text-align: center; vertical-align: middle;">4</td>
+        <td style="border: 1px solid #000000; padding: 6px 8px; vertical-align: middle;">Ganancias Rápidas</td>
+        <td style="border: 1px solid #000000; padding: 6px 8px; vertical-align: middle;">Sprint 1 / Inmediato</td>
+      </tr>
+      <tr>
+        <td style="border: 1px solid #000000; padding: 6px 8px; text-align: center; vertical-align: middle;">F3</td>
+        <td style="border: 1px solid #000000; padding: 6px 8px; vertical-align: middle;">Validador de Picking con Lectores Ópticos</td>
+        <td style="border: 1px solid #000000; padding: 6px 8px; text-align: center; vertical-align: middle;">4</td>
+        <td style="border: 1px solid #000000; padding: 6px 8px; text-align: center; vertical-align: middle;">5</td>
+        <td style="border: 1px solid #000000; padding: 6px 8px; vertical-align: middle;">Proyectos Clave</td>
+        <td style="border: 1px solid #000000; padding: 6px 8px; vertical-align: middle;">Sprint 2 / Prioritario</td>
+      </tr>
+      <tr>
+        <td style="border: 1px solid #000000; padding: 6px 8px; text-align: center; vertical-align: middle;">F4</td>
+        <td style="border: 1px solid #000000; padding: 6px 8px; vertical-align: middle;">Sincronización de Stock en Tiempo Real</td>
+        <td style="border: 1px solid #000000; padding: 6px 8px; text-align: center; vertical-align: middle;">4</td>
+        <td style="border: 1px solid #000000; padding: 6px 8px; text-align: center; vertical-align: middle;">5</td>
+        <td style="border: 1px solid #000000; padding: 6px 8px; vertical-align: middle;">Proyectos Clave</td>
+        <td style="border: 1px solid #000000; padding: 6px 8px; vertical-align: middle;">Sprint 3 / Estratégico</td>
+      </tr>
+      <tr>
+        <td style="border: 1px solid #000000; padding: 6px 8px; text-align: center; vertical-align: middle;">F5</td>
+        <td style="border: 1px solid #000000; padding: 6px 8px; vertical-align: middle;">Registro Automatizado de Mermas y Vencimientos (PEPS)</td>
+        <td style="border: 1px solid #000000; padding: 6px 8px; text-align: center; vertical-align: middle;">2</td>
+        <td style="border: 1px solid #000000; padding: 6px 8px; text-align: center; vertical-align: middle;">3</td>
+        <td style="border: 1px solid #000000; padding: 6px 8px; vertical-align: middle;">Tareas Complementarias</td>
+        <td style="border: 1px solid #000000; padding: 6px 8px; vertical-align: middle;">Sprint 4 / Secundario</td>
+      </tr>
+      <tr>
+        <td style="border: 1px solid #000000; padding: 6px 8px; text-align: center; vertical-align: middle;">F6</td>
+        <td style="border: 1px solid #000000; padding: 6px 8px; vertical-align: middle;">Integración de Cámaras de Seguridad Periféricas</td>
+        <td style="border: 1px solid #000000; padding: 6px 8px; text-align: center; vertical-align: middle;">3</td>
+        <td style="border: 1px solid #000000; padding: 6px 8px; text-align: center; vertical-align: middle;">2</td>
+        <td style="border: 1px solid #000000; padding: 6px 8px; vertical-align: middle;">Tareas Secundarias</td>
+        <td style="border: 1px solid #000000; padding: 6px 8px; vertical-align: middle;">Evaluar en Fase Posterior</td>
+      </tr>
+    </tbody>
+  </table>
+
+</div>

@@ -1,0 +1,416 @@
+{
+  "_instrucciones": "Respuestas transcritas en limpio de los cuestionarios aplicados en octubre de 2026 (un cuestionario por perfil). likert: valor 1-5 por item en orden. tipo d = diagnostico, f = disposicion al cambio. Regenerar con: python src/build.py",
+  "aplicacion": "octubre de 2026",
+  "formularios": [
+    {
+      "n": 1,
+      "perfil": "Gerencia y Jefaturas",
+      "dirigido": "Gerente General, Jefe de Operaciones y Jefe de Ventas",
+      "nivel": "Estratégico",
+      "dimensiones": [
+        {
+          "t": "Costos y rentabilidad",
+          "tipo": "d",
+          "rel": "Efecto indirecto 1 y efecto final",
+          "items": [
+            "Las demoras al preparar los pedidos le restan rentabilidad a la empresa.",
+            "El personal de almacén trabaja horas extra con frecuencia para completar los despachos.",
+            "La empresa pierde mercadería por vencimiento, derrames o aplastamiento.",
+            "Los pedidos incompletos obligan a hacer segundas entregas que elevan los costos de reparto."
+          ]
+        },
+        {
+          "t": "Control de inventario e información",
+          "tipo": "d",
+          "rel": "Causa directa 2 (causas indirectas 2.1 y 2.2)",
+          "items": [
+            "Con frecuencia se vende un producto que luego no se encuentra en el almacén.",
+            "El inventario registrado no coincide con las existencias físicas del almacén.",
+            "No cuento con información confiable sobre los tiempos reales de preparación de pedidos.",
+            "Me entero de los retrasos principalmente por los reclamos de los clientes."
+          ]
+        },
+        {
+          "t": "Servicio al cliente",
+          "tipo": "d",
+          "rel": "Efectos directos 1 y 2, y efecto indirecto 2",
+          "items": [
+            "Los clientes reciben sus pedidos fuera del horario acordado con frecuencia.",
+            "La empresa ha perdido ventas o clientes por pedidos incompletos o tardíos.",
+            "La salida tardía de la unidad de reparto afecta el cumplimiento de la ruta del día."
+          ]
+        },
+        {
+          "t": "Organización y procesos",
+          "tipo": "d",
+          "rel": "Causa directa 3 (causa indirecta 3.1)",
+          "items": [
+            "Las tareas del almacén dependen de la experiencia de los trabajadores más antiguos.",
+            "La empresa no cuenta con procedimientos escritos para recibir, guardar y despachar mercadería.",
+            "Debo intervenir personalmente para resolver los problemas diarios del almacén."
+          ]
+        },
+        {
+          "t": "Disposición a la mejora",
+          "tipo": "f",
+          "rel": "Riesgo de resistencia al cambio (cap. 6.3) y alcance por etapas",
+          "items": [
+            "Estoy dispuesto a invertir por etapas en racks y en un sistema de gestión de almacén.",
+            "Prefiero una implementación gradual que no detenga las ventas diarias.",
+            "Un reporte periódico de tiempos y errores me ayudaría a tomar mejores decisiones.",
+            "Considero alcanzable reducir en 40 % el tiempo de preparación de pedidos en seis meses.",
+            "Estoy dispuesto a destinar horas del personal a su capacitación en los nuevos procedimientos."
+          ]
+        }
+      ],
+      "likert": [
+        4,
+        4,
+        3,
+        4,
+        3,
+        4,
+        4,
+        4,
+        4,
+        3,
+        4,
+        5,
+        4,
+        4,
+        4,
+        5,
+        5,
+        3,
+        4
+      ],
+      "abiertas": [
+        {
+          "p": "¿Cuánto estima que pierde la empresa al mes por demoras, horas extra y mercadería vencida o dañada? (monto aproximado en soles)",
+          "r": "Aproximadamente S/ 3,500 al mes entre horas extra, fletes de segundas entregas y mermas."
+        },
+        {
+          "p": "¿Qué monto o rango de inversión considera viable para la primera etapa del proyecto?",
+          "r": "Entre S/ 5,000 y S/ 8,000 para la primera etapa de ordenamiento y racks."
+        },
+        {
+          "p": "¿Qué tendría que ocurrir en seis meses para considerar que el proyecto valió la pena?",
+          "r": "Tener menos reclamos por entregas tarde y un control real de inventarios sin descuadres grandes."
+        },
+        {
+          "p": "¿Qué indicadores le gustaría revisar cada semana (tiempos de preparación, errores, mermas, puntualidad de salida u otros)?",
+          "r": "Tiempo de preparación de pedidos, porcentaje de errores y puntualidad de salida de camiones."
+        },
+        {
+          "p": "¿Qué riesgos o temores tiene respecto a implementar un sistema y nuevos procedimientos en el almacén?",
+          "r": "Que el personal operativo rechace el uso de nuevos sistemas o equipos por resistencia al cambio."
+        }
+      ],
+      "siglas": "GJ",
+      "color": "a1",
+      "area": "Gerencia",
+      "objetivo": "Dimensionar el impacto económico de las demoras y los errores, la calidad de la información disponible para decidir y la disposición a invertir por etapas."
+    },
+    {
+      "n": 2,
+      "perfil": "Supervisión de Almacén e Inventarios",
+      "dirigido": "Supervisor de almacén y encargados de inventario",
+      "nivel": "Táctico",
+      "dimensiones": [
+        {
+          "t": "Ubicación y orden del almacén",
+          "tipo": "d",
+          "rel": "Causa directa 1 (causas indirectas 1.1 y 1.2)",
+          "items": [
+            "La mercadería nueva se coloca donde haya espacio libre, sin una zona asignada.",
+            "Es difícil ubicar un producto cuando no está la persona que lo guardó.",
+            "Los pasillos suelen estar ocupados por cajas o mercadería.",
+            "Los productos líquidos y los secos se guardan juntos o muy cerca."
+          ]
+        },
+        {
+          "t": "Registro e inventario",
+          "tipo": "d",
+          "rel": "Causa directa 2 (causas indirectas 2.1 y 2.2)",
+          "items": [
+            "Las entradas y salidas de mercadería se anotan a mano en cuadernos o talonarios.",
+            "El conteo de inventario rara vez cuadra con lo registrado.",
+            "Los productos pequeños (sobres, tiras) son los que más se pierden en el conteo.",
+            "Los faltantes se descubren recién al momento de armar el pedido."
+          ]
+        },
+        {
+          "t": "Rotación y vencimientos",
+          "tipo": "d",
+          "rel": "Causa indirecta 1.3",
+          "items": [
+            "En la práctica se despacha la mercadería más accesible y no necesariamente la más antigua.",
+            "Al recibir mercadería no se anotan los lotes ni las fechas de vencimiento.",
+            "Se han vencido productos que quedaron olvidados en el almacén."
+          ]
+        },
+        {
+          "t": "Procedimientos y capacitación",
+          "tipo": "d",
+          "rel": "Causa directa 3 (causa indirecta 3.1)",
+          "items": [
+            "No existe un manual que explique cómo recibir, guardar y despachar mercadería.",
+            "Un trabajador nuevo necesita varias semanas para trabajar al ritmo de los demás.",
+            "Me interrumpen con frecuencia para preguntarme dónde está un producto."
+          ]
+        },
+        {
+          "t": "Disposición al cambio",
+          "tipo": "f",
+          "rel": "Riesgo de resistencia al cambio (cap. 6.3)",
+          "items": [
+            "Codificar los racks por pasillo, columna y nivel facilitaría el trabajo del almacén.",
+            "Un sistema que registre las entradas y salidas al momento mejoraría el control del inventario.",
+            "Estoy dispuesto a liderar la capacitación del personal en los nuevos procedimientos.",
+            "Considero que el personal a mi cargo aceptaría usar lectores de código de barras."
+          ]
+        }
+      ],
+      "likert": [
+        4,
+        4,
+        4,
+        3,
+        4,
+        4,
+        4,
+        4,
+        4,
+        3,
+        3,
+        4,
+        4,
+        5,
+        5,
+        5,
+        4,
+        3
+      ],
+      "abiertas": [
+        {
+          "p": "¿Cuántas veces por semana se vende un producto que luego no se encuentra en el almacén?",
+          "r": "De 4 a 6 veces por semana ocurre que no encontramos stock registrado."
+        },
+        {
+          "p": "¿Cada cuánto se hace un conteo completo del inventario y cuánto tiempo toma?",
+          "r": "Un conteo completo se hace cada fin de mes y toma cerca de un día entero."
+        },
+        {
+          "p": "¿Qué productos o marcas presentan más descuadres, vencimientos o daños?",
+          "r": "Los productos pequeños y abarrotes sueltos o en tiras son los que más se descuadran."
+        },
+        {
+          "p": "Si el almacén se ordenara por zonas, ¿qué productos ubicaría más cerca de la zona de despacho y por qué?",
+          "r": "Los de mayor rotación y salida rápida cerca de la puerta para agilizar el despacho."
+        },
+        {
+          "p": "¿Qué dificultades prevé al capacitar al personal en un sistema nuevo?",
+          "r": "El temor a la tecnología o que se equivoquen al registrar las entradas y salidas con lectores."
+        }
+      ],
+      "siglas": "SA",
+      "color": "a2",
+      "area": "Almacén",
+      "objetivo": "Conocer las reglas actuales de ubicación, registro y rotación de la mercadería y la forma en que se capacita al personal."
+    },
+    {
+      "n": 3,
+      "perfil": "Operarios de Almacén",
+      "dirigido": "Operarios de picking, packing, recepción y carga",
+      "nivel": "Operativo",
+      "dimensiones": [
+        {
+          "t": "Búsqueda y preparación de pedidos",
+          "tipo": "d",
+          "rel": "Causa directa 1 y efecto directo 1",
+          "items": [
+            "Pierdo tiempo buscando productos en el almacén cuando armo un pedido.",
+            "Cuando falta un producto de la lista, doy varias vueltas antes de confirmar que no hay.",
+            "Es fácil confundir productos parecidos (por ejemplo, comino entero y comino molido).",
+            "Un pedido grande me toma más de 30 minutos en armarse."
+          ]
+        },
+        {
+          "t": "Esfuerzo físico y seguridad",
+          "tipo": "d",
+          "rel": "Efecto directo 3 (causas indirectas 1.1 y 1.2)",
+          "items": [
+            "Termino el turno con dolor de espalda o de cintura.",
+            "Tengo que agacharme constantemente para sacar cajas del piso.",
+            "He visto derrames de botellas que malograron otros productos.",
+            "Los pasillos ocupados dificultan el paso con la carretilla (diablo).",
+            "No cuento con equipo de protección (faja, guantes, calzado) para cargar."
+          ]
+        },
+        {
+          "t": "Orden y registro",
+          "tipo": "d",
+          "rel": "Causas indirectas 1.1, 1.3, 2.1 y 3.1",
+          "items": [
+            "Cada trabajador guarda la mercadería donde encuentra espacio.",
+            "Anotar a mano los pedidos genera errores cuando hay apuro.",
+            "Saco primero la mercadería que está más a la mano, aunque haya otra más antigua.",
+            "Aprendí el trabajo mirando a mis compañeros, sin una guía escrita."
+          ]
+        },
+        {
+          "t": "Disposición al cambio",
+          "tipo": "f",
+          "rel": "Riesgo de resistencia al cambio (cap. 6.3)",
+          "items": [
+            "Una \"pistola\" lectora de códigos me ayudaría a evitar errores.",
+            "Me sentiría cómodo usando un equipo portátil si recibo una buena capacitación.",
+            "Tener los racks con etiquetas de ubicación me ahorraría tiempo de búsqueda.",
+            "Me gustaría dar ideas para organizar mejor el almacén."
+          ]
+        }
+      ],
+      "likert": [
+        4,
+        4,
+        4,
+        3,
+        4,
+        4,
+        3,
+        4,
+        3,
+        4,
+        4,
+        4,
+        5,
+        5,
+        4,
+        5,
+        4
+      ],
+      "abiertas": [
+        {
+          "p": "¿Cuánto tiempo le toma, más o menos, armar un pedido pequeño y uno grande?",
+          "r": "Un pedido pequeño toma entre 10 y 15 minutos y uno grande más de 30 o 40 minutos. Armar todos los pedidos de una zona (Surco, Chorrillos, Villa María del Triunfo, Villa El Salvador, entre otras) toma alrededor de 1 hora cuando hay pocos pedidos y de 2 a 3 horas cuando hay bastantes."
+        },
+        {
+          "p": "¿Qué productos le cuesta más encontrar o se confunden con más facilidad?",
+          "r": "Las presentaciones muy parecidas de condimentos o abarrotes en bolsa pequeña."
+        },
+        {
+          "p": "¿Qué parte de su trabajo le genera más cansancio o riesgo de accidente?",
+          "r": "Levantar cajas pesadas desde el piso y agacharse constantemente."
+        },
+        {
+          "p": "¿Qué le preocupa de usar un lector de códigos o un equipo portátil?",
+          "r": "Que el equipo se malogre o no saber usarlo rápido y retrasar el trabajo."
+        },
+        {
+          "p": "¿Qué cambio en el almacén le haría el trabajo más fácil?",
+          "r": "Tener los pasillos despejados y etiquetas claras en los racks."
+        }
+      ],
+      "siglas": "OA",
+      "color": "a3",
+      "area": "Almacén",
+      "objetivo": "Entender el tiempo y el esfuerzo físico que demanda preparar los pedidos, los errores más comunes y la disposición a usar lectores de código de barras."
+    },
+    {
+      "n": 4,
+      "perfil": "Personal de Reparto",
+      "dirigido": "Choferes y ayudantes de reparto",
+      "nivel": "Operativo",
+      "dimensiones": [
+        {
+          "t": "Salida y horario",
+          "tipo": "d",
+          "rel": "Efecto directo 2 (causa indirecta 4.1)",
+          "items": [
+            "La unidad de reparto sale después de las 6:00 a. m. con frecuencia.",
+            "La salida se retrasa porque los pedidos no están listos a tiempo.",
+            "Por salir tarde me encuentro con el tráfico de la hora punta.",
+            "Debo esperar en el almacén a que terminen de armar los pedidos."
+          ]
+        },
+        {
+          "t": "Planificación de rutas",
+          "tipo": "d",
+          "rel": "Causa directa 4 (causas indirectas 4.1 y 4.2)",
+          "items": [
+            "El orden de visita a los clientes depende de mi experiencia y no de un plan.",
+            "Me guío por un plano marcado a mano para hacer la ruta.",
+            "Cuando hay un cliente nuevo o cambian la ruta, pierdo tiempo ubicándolo.",
+            "La carga no se acomoda en la unidad según el orden de entrega."
+          ]
+        },
+        {
+          "t": "Calidad de la entrega",
+          "tipo": "d",
+          "rel": "Efecto directo 1 y efecto indirecto 2",
+          "items": [
+            "Los clientes reciben pedidos incompletos o con productos equivocados.",
+            "He tenido que regresar otro día o dar una segunda vuelta por un pedido incompleto.",
+            "Llegan productos dañados (aplastados o derramados) al cliente.",
+            "Los clientes se quejan por la hora de llegada de sus pedidos."
+          ]
+        },
+        {
+          "t": "Disposición al cambio",
+          "tipo": "f",
+          "rel": "Plan de mitigación de salidas tardías (cap. 6.3)",
+          "items": [
+            "Tener los pedidos armados y ordenados por ruta desde la tarde anterior me permitiría salir a tiempo.",
+            "Una etiqueta en cada bulto con el nombre del cliente facilitaría la entrega.",
+            "Usaría una aplicación en el celular para ordenar mi ruta si me enseñan a usarla.",
+            "Revisar la carga con una lista antes de salir reduciría los errores de entrega."
+          ]
+        }
+      ],
+      "likert": [
+        4,
+        4,
+        4,
+        4,
+        4,
+        3,
+        4,
+        4,
+        3,
+        3,
+        3,
+        4,
+        5,
+        5,
+        4,
+        5
+      ],
+      "abiertas": [
+        {
+          "p": "¿A qué hora sale realmente la unidad en un día normal y a qué hora termina la ruta?",
+          "r": "Salimos entre las 7:00 y las 8:00 a. m. y terminamos la ruta alrededor de las 6:00 p. m."
+        },
+        {
+          "p": "¿Cuántos clientes visita por ruta y cuántos días a la semana sale a repartir?",
+          "r": "Visitamos alrededor de 100 clientes por ruta, y en algunos días se pasa de 130; en la unidad van dos personas para entregar los pedidos. Salimos a repartir 6 días a la semana."
+        },
+        {
+          "p": "¿Cuántas veces al mes debe regresar por pedidos incompletos o equivocados?",
+          "r": "Unas 3 o 4 veces al mes debido a bultos equivocados o faltantes."
+        },
+        {
+          "p": "¿Qué zonas o clientes le generan más demoras y por qué?",
+          "r": "Las zonas céntricas por el tráfico pesado de la mañana y demoras en encontrar direcciones nuevas."
+        },
+        {
+          "p": "¿Qué cambio le ayudaría más a salir a tiempo y completar la ruta?",
+          "r": "Tener los pedidos listos desde la tarde anterior y la mercadería ordenada por ruta en el camión."
+        }
+      ],
+      "siglas": "PR",
+      "color": "a4",
+      "area": "Distribución",
+      "objetivo": "Identificar las causas de las salidas tardías, la forma en que hoy se planifican las rutas y la calidad de las entregas."
+    }
+  ]
+}
