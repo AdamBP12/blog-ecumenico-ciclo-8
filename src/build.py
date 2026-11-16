@@ -37,6 +37,9 @@ META = [
     dict(id="cap9", n="09", kicker="Objetivos y alternativas", short="Objetivos y Alternativas",
          dek="Del problema a la solución: árbol de objetivos, acciones por medio fundamental y la evaluación que define el proyecto a ejecutar.",
          art="c9"),
+    dict(id="cap10", n="10", kicker="Línea base y EDT", short="Línea Base del Alcance y EDT",
+         dek="Enunciado del alcance, EDT formal en sustantivos, ficha del diccionario EDT, red de actividades, arquitectura Cloud VPS y costos 2026.",
+         art="c10"),
 ]
 
 ICONS = {
@@ -47,6 +50,7 @@ ICONS = {
     "c7": '<path d="M12 21V11m0 0L7 7m5 4l5-4M7 7V3m10 4V3M4 21h16"/>',
     "c9": '<path d="M12 21a9 9 0 100-18 9 9 0 000 18zm0-4a5 5 0 100-10 5 5 0 000 10zm0-4a1 1 0 100-2 1 1 0 000 2z"/>',
     "c8": '<path d="M12 3a3 3 0 00-3 3v6a3 3 0 006 0V6a3 3 0 00-3-3zM5 11a7 7 0 0014 0M12 18v3m-4 0h8"/>',
+    "c10": '<path d="M4 5a1 1 0 011-1h4a1 1 0 011 1v4a1 1 0 01-1 1H5a1 1 0 01-1-1V5zm10 0a1 1 0 011-1h4a1 1 0 011 1v4a1 1 0 01-1 1h-4a1 1 0 01-1-1V5zM9 14a1 1 0 011-1h4a1 1 0 011 1v4a1 1 0 01-1 1h-4a1 1 0 01-1-1v-4zM7 10v3m10-3v3m-5 1v-1"/>',
 }
 PATTERNS = {
     "c3": '<pattern id="p{u}" width="40" height="40" patternUnits="userSpaceOnUse"><circle cx="20" cy="20" r="2" fill="#fff"/><circle cx="20" cy="20" r="12" fill="none" stroke="#fff" stroke-width=".8"/></pattern>',
@@ -56,6 +60,7 @@ PATTERNS = {
     "c7": '<pattern id="p{u}" width="34" height="34" patternUnits="userSpaceOnUse"><path d="M17 6l7 12H10z" fill="none" stroke="#fff" stroke-width=".9"/></pattern>',
     "c9": '<pattern id="p{u}" width="38" height="38" patternUnits="userSpaceOnUse"><circle cx="19" cy="19" r="13" fill="none" stroke="#fff" stroke-width=".8"/><circle cx="19" cy="19" r="6" fill="none" stroke="#fff" stroke-width=".8"/></pattern>',
     "c8": '<pattern id="p{u}" width="40" height="30" patternUnits="userSpaceOnUse"><path d="M6 8h22a3 3 0 013 3v7a3 3 0 01-3 3H14l-5 4v-4H6a3 3 0 01-3-3v-7a3 3 0 013-3z" fill="none" stroke="#fff" stroke-width=".9"/></pattern>',
+    "c10": '<pattern id="p{u}" width="32" height="32" patternUnits="userSpaceOnUse"><path d="M0 16h32M16 0v32" stroke="#fff" stroke-width=".8"/></pattern>',
 }
 TEAM = [("MR", "Modesto Romero Bryan Adam", "a1"), ("JA", "Julca Achas Cristian Sebastian", "a2"),
         ("FC", "Felix Cecinario Hernan", "a3"), ("AM", "Avalos Mendoza Jeshua Raul", "a4")]
@@ -245,10 +250,15 @@ for idx, m in enumerate(META):
     prev_m = META[idx - 1] if idx > 0 else None
     next_m = META[idx + 1] if idx < total - 1 else None
 
-    cover_click = f' onclick="openLightbox(\'{m["img"]}\', \'{m["cap"]}\')"' if "img" in m else ""
-    figcap = f'<figcaption>{m["cap"]}</figcaption>' if "img" in m else ""
-    steps = "".join(f'<a href="#{x["id"]}"{" class=\"on\"" if x is m else (" class=\"done\"" if j < idx else "")} title="Capítulo {x["n"]}: {x["short"]}" aria-label="Capítulo {x["n"]}"></a>'
-                    for j, x in enumerate(META))
+    img_p = m.get("img", "")
+    img_c = m.get("cap", "")
+    cover_click = f" onclick=\"openLightbox('{img_p}', '{img_c}')\"" if "img" in m else ""
+    figcap = f'<figcaption>{img_c}</figcaption>' if "img" in m else ""
+    step_items = []
+    for j, x in enumerate(META):
+        c_attr = ' class="on"' if x is m else (' class="done"' if j < idx else '')
+        step_items.append(f'<a href="#{x["id"]}"{c_attr} title="Capítulo {x["n"]}: {x["short"]}" aria-label="Capítulo {x["n"]}"></a>')
+    steps = "".join(step_items)
     pager = ""
     if prev_m:
         pager += f'<a href="#{prev_m["id"]}" class="prev"><div class="l">← Capítulo anterior</div><div class="h">{chapters[prev_m["id"]][0]}</div></a>'
