@@ -188,8 +188,33 @@
               En estricto cumplimiento del <strong>Estándar de Práctica del PMI para la Gestión del Cronograma (Practice Standard for Scheduling)</strong> y la norma <strong>ISO 21502 (Cláusula 7.4: Programación y Gestión del Tiempo)</strong>, los paquetes de trabajo de la EDT se descomponen a un nivel de granularidad ejecutable denominado <strong>actividades del cronograma</strong> mediante la técnica de planificación gradual (<i>Rolling Wave Planning</i>). Esta descomposición separa el alcance en tareas secuenciales bien definidas de infraestructura física de almacén, aprovisionamiento cloud, arquitectura de datos, desarrollo modular WMS y aseguramiento de calidad.
             </p>
             <p class="text-justify mb-4">
-              Para calcular la duración esperada ($T_E$), se aplican los métodos formales de estimación por tres valores del <strong>Estándar PMI para la Gestión del Cronograma</strong>, empleando la <strong>Distribución Beta (PERT)</strong> ($T_E = rac{T_O + 4T_M + T_P}{6}$), la desviación estándar ($\sigma = rac{T_P - T_O}{6}$), la varianza ($\sigma^2$) y el cálculo de <strong>Horas-Hombre de esfuerzo</strong> ($	ext{Esfuerzo} = T_E 	imes 8	ext{ h/día} 	imes 	ext{Recursos}$):
+              Para cuantificar la variabilidad e incertidumbre técnica de cada actividad, se aplica la técnica formal de estimación por tres valores basada en la <strong>Distribución Beta (PERT)</strong> y el cálculo de <strong>Horas-Hombre de esfuerzo de ingeniería</strong> según el estándar internacional <strong>IEEE 1058</strong>:
             </p>
+
+            <!-- Card de Fórmulas PERT y Esfuerzo -->
+            <div class="my-5 p-5 rounded-2xl border border-sky-200 bg-sky-50/60 shadow-xs">
+              <div class="text-xs uppercase tracking-wider font-bold text-sky-900 mb-3 flex items-center gap-2">
+                <svg class="w-4 h-4 text-sky-700" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 7h6m0 10v-3m-3 3h.01M9 17h.01M9 14h.01M12 14h.01M15 11h.01M12 11h.01M9 11h.01M7 21h10a2 2 0 002-2V5a2 2 0 00-2-2H7a2 2 0 00-2 2v14a2 2 0 002 2z"></path></svg>
+                Formulación Matemática de Estimación Temporal y Esfuerzo (Estándares PMI Scheduling e IEEE 1058)
+              </div>
+              <div class="grid grid-cols-1 md:grid-cols-3 gap-4 text-center">
+                <div class="bg-white p-4 rounded-xl border border-sky-100 shadow-2xs">
+                  <div class="text-xs text-neutral-500 font-bold uppercase tracking-wider mb-1">Duración Esperada Beta (PERT)</div>
+                  <div class="text-lg text-neutral-900 py-2">$$T_E = \frac{T_O + 4T_M + T_P}{6}$$</div>
+                  <div class="text-xs text-neutral-500">Promedio ponderado con sesgo modal ($4T_M$)</div>
+                </div>
+                <div class="bg-white p-4 rounded-xl border border-sky-100 shadow-2xs">
+                  <div class="text-xs text-neutral-500 font-bold uppercase tracking-wider mb-1">Desviación Estándar y Varianza</div>
+                  <div class="text-lg text-neutral-900 py-2">$$\sigma = \frac{T_P - T_O}{6} \quad ; \quad \sigma^2 = \left(\frac{T_P - T_O}{6}\right)^2$$</div>
+                  <div class="text-xs text-neutral-500">Rango probabilístico de incertidumbre ($\pm 3\sigma$)</div>
+                </div>
+                <div class="bg-white p-4 rounded-xl border border-sky-100 shadow-2xs">
+                  <div class="text-xs text-neutral-500 font-bold uppercase tracking-wider mb-1">Esfuerzo de Ingeniería (IEEE 1058)</div>
+                  <div class="text-lg text-neutral-900 py-2">$$\text{Esfuerzo (HH)} = T_E \times 8\,\text{h/día} \times \text{Recursos}$$</div>
+                  <div class="text-xs text-neutral-500">Carga laboral neta por cuadrilla asignada</div>
+                </div>
+              </div>
+            </div>
 
             <div class="overflow-x-auto">
               <table class="wide">
@@ -199,12 +224,12 @@
                     <th style="width: 28%;">Descripción de la Actividad</th>
                     <th style="width: 8%; text-align: center;">Pred.</th>
                     <th style="width: 8%; text-align: center;">Duración (Semanas)</th>
-                    <th style="width: 6%; text-align: center;">$T_O$ (días)</th>
-                    <th style="width: 6%; text-align: center;">$T_M$ (días)</th>
-                    <th style="width: 6%; text-align: center;">$T_P$ (días)</th>
-                    <th style="width: 9%; text-align: center;">$T_E$ PERT (Días)</th>
-                    <th style="width: 7%; text-align: center;">$\sigma$ (días)</th>
-                    <th style="width: 6%; text-align: center;">$\sigma^2$</th>
+                    <th style="width: 6%; text-align: center;"><i>T</i><sub>O</sub> (días)</th>
+                    <th style="width: 6%; text-align: center;"><i>T</i><sub>M</sub> (días)</th>
+                    <th style="width: 6%; text-align: center;"><i>T</i><sub>P</sub> (días)</th>
+                    <th style="width: 9%; text-align: center;"><i>T</i><sub>E</sub> (Días)</th>
+                    <th style="width: 7%; text-align: center;">&sigma; (días)</th>
+                    <th style="width: 6%; text-align: center;">&sigma;&sup2;</th>
                     <th style="width: 11%; text-align: center;">Esfuerzo (HH)</th>
                   </tr>
                 </thead>
@@ -550,8 +575,38 @@
               </table>
             </div>
 
+                        <!-- Card de Ecuaciones CPM -->
+            <div class="my-5 p-5 rounded-2xl border border-slate-200 bg-slate-50/80 shadow-xs">
+              <div class="text-xs uppercase tracking-wider font-bold text-slate-800 mb-3 flex items-center gap-2">
+                <svg class="w-4 h-4 text-slate-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+                Ecuaciones del Método del Camino Crítico (CPM / PDM)
+              </div>
+              <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-3 text-center">
+                <div class="bg-white p-3 rounded-xl border border-slate-200 shadow-2xs">
+                  <div class="text-xs text-neutral-500 font-semibold mb-1">Paso Hacia Adelante (Forward)</div>
+                  <div class="text-base font-semibold text-neutral-900 py-1">$$EF = ES + T_E$$</div>
+                  <div class="text-[0.7rem] text-neutral-400">$$ES = \max(EF_{\text{pred}})$$</div>
+                </div>
+                <div class="bg-white p-3 rounded-xl border border-slate-200 shadow-2xs">
+                  <div class="text-xs text-neutral-500 font-semibold mb-1">Paso Hacia Atrás (Backward)</div>
+                  <div class="text-base font-semibold text-neutral-900 py-1">$$LS = LF - T_E$$</div>
+                  <div class="text-[0.7rem] text-neutral-400">$$LF = \min(LS_{\text{succ}})$$</div>
+                </div>
+                <div class="bg-white p-3 rounded-xl border border-slate-200 shadow-2xs">
+                  <div class="text-xs text-neutral-500 font-semibold mb-1">Holgura Total (Total Float)</div>
+                  <div class="text-base font-semibold text-neutral-900 py-1">$$HT = LS - ES$$</div>
+                  <div class="text-[0.7rem] text-neutral-400">$$HT = LF - EF$$</div>
+                </div>
+                <div class="bg-white p-3 rounded-xl border border-red-200 bg-red-50/30 shadow-2xs">
+                  <div class="text-xs text-red-700 font-bold mb-1">Condición de Ruta Crítica</div>
+                  <div class="text-base font-bold text-red-600 py-1">$$HT = 0$$</div>
+                  <div class="text-[0.7rem] text-red-600 font-medium">Margen de demora cero</div>
+                </div>
+              </div>
+            </div>
+
             <p class="text-justify mb-4">
-              Aplicando el <strong>Paso hacia Adelante (Forward Pass)</strong> para determinar las fechas tempranas ($ES, EF$), y el <strong>Paso hacia Atrás (Backward Pass)</strong> para determinar las fechas tardías ($LF, LS$) y la Holgura Total ($	ext{HT} = LS - ES = LF - EF$), se obtiene la matriz de cálculo matemático CPM:
+              Aplicando estas fórmulas mediante el <strong>Paso hacia Adelante</strong> y el <strong>Paso hacia Atrás</strong> a través de toda la red de 22 actividades, se obtiene la matriz de cálculo matemático CPM:
             </p>
 
             <div class="overflow-x-auto">
@@ -560,7 +615,7 @@
                   <tr>
                     <th style="width: 5%; text-align: center;">Act.</th>
                     <th style="width: 31%;">Nombre de la Actividad</th>
-                    <th style="width: 8%; text-align: center;">$T_E$ (Días)</th>
+                    <th style="width: 8%; text-align: center;"><i>T</i><sub>E</sub> (Días)</th>
                     <th style="width: 8%; text-align: center;">Dur. (Sem.)</th>
                     <th style="width: 7%; text-align: center;">ES</th>
                     <th style="width: 7%; text-align: center;">EF</th>
@@ -603,12 +658,45 @@
               Cualquier retraso no planificado en el montaje de los racks (G), en la rotulación de gavetas (H) o en los módulos de software en ruta crítica traslada inmediatamente la fecha final del proyecto. Por su parte, las actividades técnicas paralelas (como el modelo de base de datos D con $HT=1$ o el diseño de interfaces E con $HT=2$) disponen de holgura suficiente para absorber imprevistos sin comprometer la entrega comprometida con la gerencia de Distribuidora Ecuménico.
             </p>
 
-            <p class="text-justify mb-4">
-              <strong>Análisis Probabilístico de Conclusión del Proyecto (Distribución Normal PERT):</strong><br>
-              La varianza acumulada de la ruta crítica es $\sigma_P^2 = \sum \sigma_{	ext{críticas}}^2 = 1.39	ext{ días}^2$, lo que arroja una desviación estándar del proyecto de $\sigma_P = \sqrt{1.39} = 1.18	ext{ días}$. Si la gerencia de Distribuidora Ecuménico establece una fecha contractual máxima de 52 días hábiles (~10.4 semanas laborales), el factor $Z$ se calcula como:
-              $$Z = rac{T_S - \mu}{\sigma_P} = rac{52 - 49}{1.18} = rac{3}{1.18} = 2.54$$
-              Consultando la tabla de distribución normal estándar acumulada, $P(Z \le 2.54) = 0.9945$. Es decir, <strong>el proyecto tiene un 99.45 % de probabilidad matemática de culminar a tiempo</strong> dentro del margen de 52 días laborables.
-            </p>
+                        <!-- Card de Análisis Probabilístico de Conclusión del Proyecto -->
+            <div class="my-6 p-6 rounded-2xl border border-emerald-200 bg-emerald-50/60 shadow-xs">
+              <div class="text-xs uppercase tracking-wider font-bold text-emerald-900 mb-2 flex items-center gap-2">
+                <svg class="w-5 h-5 text-emerald-700" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                Análisis Probabilístico de Conclusión del Proyecto (Distribución Normal PERT)
+              </div>
+              <p class="text-justify text-neutral-800 text-sm sm:text-base mb-4 leading-relaxed">
+                De acuerdo con el Teorema del Límite Central (TLC), la duración global del proyecto sigue una distribución normal aproximada $N(\mu_P, \sigma_P^2)$, donde la media de culminación esperada es $\mu_P = 49\,\text{días hábiles}$ y la varianza acumulada ($\sigma_P^2$) corresponde a la sumatoria de las varianzas de las 16 actividades que integran la ruta crítica continua:
+              </p>
+
+              <div class="grid grid-cols-1 md:grid-cols-2 gap-4 my-4">
+                <div class="bg-white p-4 rounded-xl border border-emerald-100 shadow-2xs">
+                  <div class="text-xs font-bold uppercase tracking-wider text-neutral-500 mb-1">1. Varianza y Desviación Estándar de la Ruta Crítica:</div>
+                  <div class="py-2 text-neutral-900 text-center">
+                    $$\sigma_P^2 = \sum \sigma_{\text{críticas}}^2 = 1.39\,\text{días}^2$$
+                    $$\sigma_P = \sqrt{\sigma_P^2} = \sqrt{1.39} = 1.18\,\text{días hábiles}$$
+                  </div>
+                  <div class="text-xs text-neutral-500 text-center mt-1">Margen de desviación típica del cronograma</div>
+                </div>
+
+                <div class="bg-white p-4 rounded-xl border border-emerald-100 shadow-2xs">
+                  <div class="text-xs font-bold uppercase tracking-wider text-neutral-500 mb-1">2. Estandarización de la Variable Normal ($Z$ a 52 días contractuales):</div>
+                  <div class="py-2 text-neutral-900 text-center">
+                    $$Z = \frac{T_S - \mu_P}{\sigma_P} = \frac{52 - 49}{1.18} = \frac{3.00}{1.18} = +2.54$$
+                  </div>
+                  <div class="text-xs text-neutral-500 text-center mt-1">Donde $T_S = 52\,\text{días}$ es el plazo máximo contractual</div>
+                </div>
+              </div>
+
+              <div class="bg-white p-5 rounded-xl border border-emerald-200 text-center shadow-2xs">
+                <div class="text-xs font-bold uppercase tracking-wider text-neutral-500 mb-1">Cálculo de Probabilidad Acumulada (Función de Gauss $\Phi$):</div>
+                <div class="text-xl sm:text-2xl font-bold text-emerald-800 py-2">
+                  $$P(T \le 52\,\text{días}) = \Phi(+2.54) = \mathbf{99.45\,\%}$$
+                </div>
+                <p class="text-xs sm:text-sm text-neutral-700 mt-2 max-w-2xl mx-auto leading-relaxed">
+                  Conclusión matemática formal: Existe un <strong>99.45 % de certeza estadística</strong> de que el proyecto de Distribuidora Ecuménico culminará a tiempo dentro del compromiso contractual de 52 días laborables (~10.4 semanas), disponiendo de un colchón de contingencia técnica de 3 días hábiles respecto a la línea base de 49 días.
+                </p>
+              </div>
+            </div>
 <h3 class="text-base sm:text-lg font-bold text-neutral-950 mt-6 mb-2">10.6 Técnicas de Optimización y Compresión del Cronograma (Normas ANSI/PMI 99-001 e ISO 21502)</h3>
             <p class="text-justify mb-4">
               De acuerdo con las directrices de optimización de tiempos estipuladas en la <strong>Guía del PMBOK® (Sección 6.5.2.6: Compresión del Cronograma)</strong> y la norma <strong>ISO 21502</strong>, se aplican dos estrategias técnicas formales de compresión para asegurar los plazos sin alterar los requerimientos de calidad:
