@@ -1,0 +1,32 @@
+﻿UID,ID,Nivel_EDT,Codigo_WBS,Nombre_Tarea,Duracion_Dias,Dias_Calendario_Ejecucion,Fecha_Inicio,Fecha_Fin,Predecesores,Holgura_Total_Dias,Es_Ruta_Critica,Cuadrilla_Asignada,Horas_Hombre_HH
+1,1,1,1,Proyecto Implementación Sistema WMS y Optimización Operativa — Distribuidora Ecuménico,49 días,Días 1 al 49,16/11/2026,22/01/2027,—,0 d,SÍ,Cuadrilla Multidisciplinaria,984 HH
+2,2,2,1.1,Hito de Arranque: Apertura formal del proyecto y conformación de cuadrillas,0 días (Hito),Día 0,16/11/2026,16/11/2026,—,0 d,SÍ,Todo el equipo,0 HH
+3,3,2,1.2,Fase 1: Requisitos del Sistema y Reglas de Negocio,4 días,Días 1 al 4,16/11/2026,20/11/2026,—,0 d,SÍ,2 Analistas,64 HH
+4,4,3,1.2.1,Act. A: Levantamiento de requisitos funcionales y reglas de negocio del almacén,4 días,Días 1 al 4,16/11/2026,20/11/2026,2,0 d,SÍ,2 Analistas de Procesos,64 HH
+5,5,2,1.3,"Fase 2: Infraestructura Física, Cloud VPS y Arquitectura de Datos",8 días,Días 5 al 12,20/11/2026,02/12/2026,—,0 d,SÍ,Cuadrilla Mixta,280 HH
+6,6,3,1.3.1,"Act. B: Flujos de inventario, zonificación ABC y especificación de casos de uso",3 días,Días 5 al 7,20/11/2026,25/11/2026,4,1 d,No,2 Desarrolladores,48 HH
+7,7,3,1.3.2,Act. C: Arquitectura técnica Cloud VPS y conectividad Wi-Fi de almacén,3 días,Días 5 al 7,20/11/2026,25/11/2026,4,1 d,No,1 Ingeniero DevOps,24 HH
+8,8,3,1.3.3,Act. G: Montaje mecánico y anclaje de racks industriales (3 niveles),5 días,Días 5 al 9,20/11/2026,27/11/2026,4,0 d,SÍ,3 Operarios Técnicos,120 HH
+9,9,3,1.3.4,Act. E: Prototipos de interfaces de usuario PWA móvil / desktop asistidos por IA,3 días,Días 8 al 10,25/11/2026,30/11/2026,6,2 d,No,1 Diseñador UI/UX,24 HH
+10,10,3,1.3.5,Act. D: Modelo de datos relacional (DER) de inventario y lotes en PostgreSQL,2 días,Días 8 al 9,25/11/2026,27/11/2026,"6,7",1 d,No,2 Desarrolladores,32 HH
+11,11,3,1.3.6,"Act. F: Aprovisionamiento de servidor Cloud VPS, firewall y PostgreSQL",2 días,Días 8 al 9,25/11/2026,27/11/2026,7,1 d,No,1 Ingeniero DevOps,16 HH
+12,12,3,1.3.7,"Act. H: Codificación espacial vinílica de pasillos, columnas y gavetas",3 días,Días 10 al 12,27/11/2026,02/12/2026,8,0 d,SÍ,2 Operarios Técnicos,48 HH
+13,13,3,1.3.8,"Act. I: Base de datos desplegada, catálogo SKU y datos iniciales de prueba",2 días,Días 10 al 11,27/11/2026,01/12/2026,"10,11",1 d,No,1 Administrador BD,16 HH
+14,14,2,1.4,Fase 3: Desarrollo Modular del Software WMS,14 días,Días 13 al 26,02/12/2026,22/12/2026,—,0 d,SÍ,Equipo de Desarrollo,224 HH
+15,15,3,1.4.1,Act. J: Módulo WMS de ubicaciones espaciales y consulta de stock en tiempo real,3 días,Días 13 al 15,02/12/2026,07/12/2026,"9,12,13",0 d,SÍ,2 Desarrolladores,48 HH
+16,16,3,1.4.2,"Act. K: Módulo de ingresos de mercadería, control de lotes y regla PEPS",4 días,Días 16 al 19,07/12/2026,11/12/2026,15,0 d,SÍ,2 Desarrolladores,64 HH
+17,17,3,1.4.3,Act. L: Módulo de pedidos de preventa y listas consolidadas de preparación,3 días,Días 20 al 22,11/12/2026,16/12/2026,16,0 d,SÍ,2 Desarrolladores,48 HH
+18,18,3,1.4.4,Act. M: Algoritmo de picking secuencial optimizado y rebaja automática de stock,4 días,Días 23 al 26,16/12/2026,22/12/2026,17,0 d,SÍ,2 Desarrolladores,64 HH
+19,19,2,1.5,"Fase 4: Módulos de Auditoría, Despacho y Resiliencia Offline",6 días,Días 27 al 32,22/12/2026,30/12/2026,—,0 d,SÍ,Equipo de Desarrollo,128 HH
+20,20,3,1.5.1,"Act. N: Módulo de auditoría de inventario físico, mermas e indicadores KPI",3 días,Días 27 al 29,22/12/2026,25/12/2026,18,0 d,SÍ,2 Desarrolladores,48 HH
+21,21,3,1.5.2,"Act. P: Módulo de confirmación de despacho, generación de etiquetas y bultos",2 días,Días 27 al 28,22/12/2026,24/12/2026,18,4 d,No,1 Desarrollador,32 HH
+22,22,3,1.5.3,Act. O: Módulo offline-first con IndexedDB y sincronización en cola,3 días,Días 30 al 32,25/12/2026,30/12/2026,20,0 d,SÍ,2 Desarrolladores,48 HH
+23,23,2,1.6,Fase 5: Aseguramiento de la Calidad y Pruebas Operativas,6 días,Días 33 al 38,30/12/2026,07/01/2027,—,0 d,SÍ,Equipo QA y Almacén,112 HH
+24,24,3,1.6.1,Act. Q: Pruebas funcionales unitarias por módulo y validación de escáner óptico,3 días,Días 33 al 35,30/12/2026,04/01/2027,"21,22",0 d,SÍ,2 Ingenieros QA,48 HH
+25,25,3,1.6.2,Act. R: Pruebas integradas de flujo continuo físico-digital en piso de almacén,3 días,Días 36 al 38,04/01/2027,07/01/2027,24,0 d,SÍ,Cuadrilla Completa,64 HH
+26,26,2,1.7,"Fase 6: Despliegue en Almacén, Capacitación, Migración y Cierre",11 días,Días 39 al 49,07/01/2027,22/01/2027,—,0 d,SÍ,Todo el personal,264 HH
+27,27,3,1.7.1,Act. S: Elaboración de manuales SOP y capacitación práctica al personal,3 días,Días 39 al 41,07/01/2027,12/01/2027,25,0 d,SÍ,2 Capacitadores,48 HH
+28,28,3,1.7.2,"Act. T: Migración, etiquetado masivo y conteo físico inicial de stock en almacén",4 días,Días 42 al 45,12/01/2027,18/01/2027,27,0 d,SÍ,4 Integrantes,128 HH
+29,29,3,1.7.3,Act. U: Marcha blanca operativa y calibración en vivo (5 días piloto de despacho),3 días,Días 46 al 48,18/01/2027,21/01/2027,28,0 d,SÍ,3 Integrantes,72 HH
+30,30,3,1.7.4,"Act. V: Acta de aceptación formal, entrega de llaves y cierre del proyecto",1 días,Día 49,21/01/2027,22/01/2027,29,0 d,SÍ,2 Líderes de Proyecto,16 HH
+31,31,2,1.8,Hito Final: Sistema WMS y Almacén Operativo en Producción Plena,0 días (Hito),Día 49,22/01/2027,22/01/2027,30,0 d,SÍ,Todo el equipo,0 HH

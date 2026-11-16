@@ -698,7 +698,82 @@
                 </p>
               </div>
             </div>
-<h3 class="text-base sm:text-lg font-bold text-neutral-950 mt-6 mb-2">10.6 Técnicas de Optimización y Compresión del Cronograma (Normas ANSI/PMI 99-001 e ISO 21502)</h3>
+
+            <h3 class="text-base sm:text-lg font-bold text-neutral-950 mt-8 mb-3">10.6 Cronograma Maestro de Actividades (Diagrama de Gantt) y Exportación a Software de Gestión (Microsoft Project / ProjectLibre)</h3>
+            <p class="text-justify mb-4">
+              En estricto cumplimiento de la norma <strong>ANSI/PMI 99-001 (Guía del PMBOK® — Sección 6.5.3: Salidas del Desarrollo del Cronograma)</strong> y la norma <strong>ISO 21502:2020</strong>, los resultados analíticos del Método del Camino Crítico (CPM) se plasman en el <strong>Cronograma Maestro de Actividades en formato de Diagrama de Gantt</strong>. Este instrumento visualiza la programación temporal de las 22 actividades en un horizonte de <strong>49 días hábiles (9.8 semanas laborables)</strong>, articulando de manera secuencial la asignación de cuadrillas técnicas, las holguras permisibles y las dependencias de inicio-a-fin (FS).
+            </p>
+
+            <figure class="dg-fig my-6">
+              <div class="dg-frame" onclick="openLightbox('assets/images/cronograma-gantt.png', 'Cronograma Maestro de Actividades — Diagrama de Gantt (Distribuidora Ecuménico)')">
+                <img src="assets/images/cronograma-gantt.png" alt="Cronograma maestro de actividades en diagrama de Gantt — Distribuidora Ecuménico" loading="lazy">
+              </div>
+              <figcaption>
+                <span><b>Cronograma Maestro de Actividades (Diagrama de Gantt).</b> Programación temporal día a día (Día 0 al Día 49 / Semanas 1 a 10) estructurada por fases de la EDT, con diferenciación cromática de las 16 actividades en ruta crítica continua ($HT=0$, barras rojas), 6 actividades paralelas con holgura positiva ($HT>0$, barras azules con extensión celeste de margen), hitos contractuales de arranque y cierre, y asignación de cuadrillas técnicas conforme a las normas ANSI/PMI 99-001, ISO 21502 e IEEE 1058.</span>
+                <span class="dg-act">
+                  <button type="button" onclick="openLightbox('assets/images/cronograma-gantt.png', 'Cronograma Maestro de Actividades — Diagrama de Gantt')">Ampliar</button>
+                  <a href="assets/images/cronograma-gantt.png" download>Descargar PNG</a>
+                </span>
+              </figcaption>
+            </figure>
+
+            <!-- Card de Exportación y Descarga de Archivos para Software de Gestión -->
+            <div class="my-6 p-6 rounded-2xl border border-blue-200 bg-blue-50/70 shadow-xs">
+              <div class="text-xs uppercase tracking-wider font-bold text-blue-900 mb-2 flex items-center gap-2">
+                <svg class="w-5 h-5 text-blue-700" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"></path></svg>
+                Archivos Editables del Cronograma (Compatibilidad con Microsoft Project y Alternativas Open Source)
+              </div>
+              <p class="text-justify text-neutral-800 text-sm sm:text-base mb-4 leading-relaxed">
+                Para garantizar la transferibilidad y permitir la edición, simulación y seguimiento del avance físico del proyecto en herramientas de gestión profesional, se ponen a disposición los archivos normalizados del cronograma maestro en formato estándar de intercambio de datos <strong>MSPDI XML (Microsoft Project Data Interchange)</strong> y en hoja estructurada <strong>CSV / Excel</strong>:
+              </p>
+
+              <div class="grid grid-cols-1 md:grid-cols-2 gap-4 my-4">
+                <div class="bg-white p-5 rounded-xl border border-blue-200 shadow-2xs flex flex-col justify-between">
+                  <div>
+                    <div class="flex items-center gap-2 mb-2">
+                      <span class="px-2 py-1 rounded-md text-xs font-bold bg-blue-100 text-blue-800">MSPDI XML</span>
+                      <span class="text-xs text-neutral-500 font-semibold">Formato Nativo MS Project</span>
+                    </div>
+                    <h4 class="font-bold text-neutral-900 text-sm mb-1">Archivo de Proyecto para Microsoft Project / ProjectLibre</h4>
+                    <p class="text-xs text-neutral-600 mb-4 leading-relaxed">
+                      Estructura jerárquica completa de la EDT con las 31 tareas del proyecto (resúmenes de fase, hitos y actividades A a V), duraciones en días laborables, vínculos de dependencia FS, holguras calculadas y asignación de cuadrillas.
+                    </p>
+                  </div>
+                  <a href="assets/downloads/cronograma-distribuidora-ecumenico.xml" download class="inline-flex items-center justify-center gap-2 w-full py-2.5 px-4 rounded-lg bg-blue-700 hover:bg-blue-800 text-white font-bold text-xs sm:text-sm transition-colors shadow-xs">
+                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"></path></svg>
+                    Descargar XML (Microsoft Project / ProjectLibre)
+                  </a>
+                </div>
+
+                <div class="bg-white p-5 rounded-xl border border-blue-200 shadow-2xs flex flex-col justify-between">
+                  <div>
+                    <div class="flex items-center gap-2 mb-2">
+                      <span class="px-2 py-1 rounded-md text-xs font-bold bg-emerald-100 text-emerald-800">CSV / EXCEL</span>
+                      <span class="text-xs text-neutral-500 font-semibold">Formato Universal Tabular</span>
+                    </div>
+                    <h4 class="font-bold text-neutral-900 text-sm mb-1">Matriz Tabular para Excel / Google Sheets</h4>
+                    <p class="text-xs text-neutral-600 mb-4 leading-relaxed">
+                      Matriz detallada con código WBS, identificadores de tarea, períodos calendarios (días 1 al 49), fechas laborales estimadas, predecesores, holgura total, esfuerzo en horas-hombre (984 HH) y clasificación de criticidad.
+                    </p>
+                  </div>
+                  <a href="assets/downloads/cronograma-distribuidora-ecumenico.csv" download class="inline-flex items-center justify-center gap-2 w-full py-2.5 px-4 rounded-lg bg-emerald-700 hover:bg-emerald-800 text-white font-bold text-xs sm:text-sm transition-colors shadow-xs">
+                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"></path></svg>
+                    Descargar Matriz CSV (Excel / GanttProject)
+                  </a>
+                </div>
+              </div>
+
+              <div class="bg-white/80 p-4 rounded-xl border border-blue-100 text-xs sm:text-sm text-neutral-700 leading-relaxed mt-2">
+                <strong>Instrucciones de Importación y Edición:</strong>
+                <ul class="list-disc pl-5 mt-1 space-y-1">
+                  <li><strong>Microsoft Project (2013, 2016, 2019, 2021 o Microsoft 365):</strong> Iniciar Microsoft Project, seleccionar <i>Archivo &gt; Abrir</i>, cambiar el filtro a <i>"Todos los archivos (*.*)"</i> o <i>"Formato XML (*.xml)"</i> y seleccionar <code>cronograma-distribuidora-ecumenico.xml</code>. El software reconstruirá de inmediato la EDT, la escala de tiempo y el camino crítico en color rojo.</li>
+                  <li><strong>ProjectLibre (Software Libre y Gratuito):</strong> Descargar o abrir ProjectLibre, seleccionar <i>File &gt; Open</i> y elegir el archivo XML. Es el sustituto de código abierto directo de Microsoft Project para Windows, macOS y Linux.</li>
+                  <li><strong>GanttProject (Software Gratuito):</strong> Permite importar la estructura de tareas mediante <i>Proyecto &gt; Importar &gt; Archivo de Microsoft Project (*.xml)</i> o directamente desde la matriz CSV.</li>
+                </ul>
+              </div>
+            </div>
+
+            <h3 class="text-base sm:text-lg font-bold text-neutral-950 mt-8 mb-3">10.7 Técnicas de Optimización y Compresión del Cronograma (Normas ANSI/PMI 99-001 e ISO 21502)</h3>
             <p class="text-justify mb-4">
               De acuerdo con las directrices de optimización de tiempos estipuladas en la <strong>Guía del PMBOK® (Sección 6.5.2.6: Compresión del Cronograma)</strong> y la norma <strong>ISO 21502</strong>, se aplican dos estrategias técnicas formales de compresión para asegurar los plazos sin alterar los requerimientos de calidad:
             </p>
@@ -707,7 +782,7 @@
               <li><strong>Equilibrio y Nivelación de Recursos (Resource Leveling):</strong> La cuadrilla de 4 integrantes del proyecto se distribuye tácticamente: mientras 2 integrantes lideran el montaje físico y rotulado en almacén (H e I), los otros 2 integrantes configuran la base de datos PostgreSQL en el VPS y parametrizan la PWA móvil.</li>
             </ul>
 
-            <h3 class="text-base sm:text-lg font-bold text-neutral-950 mt-6 mb-2">10.7 Sustento Técnico de Arquitectura: Servidor Cloud VPS frente a Servidor Físico</h3>
+            <h3 class="text-base sm:text-lg font-bold text-neutral-950 mt-8 mb-3">10.8 Sustento Técnico de Arquitectura: Servidor Cloud VPS frente a Servidor Físico</h3>
             <p class="text-justify mb-4">
               Uno de los puntos clave evaluados para la viabilidad de la solución fue la decisión entre adquirir un servidor físico local (<i>On-Premise</i>) o contratar una instancia privada virtual en la nube (<i>Cloud VPS</i>):
             </p>
@@ -751,7 +826,7 @@
               </table>
             </div>
 
-            <h3 class="text-base sm:text-lg font-bold text-neutral-950 mt-6 mb-2">10.8 Presupuesto y Estructura de Costos del Proyecto (2026)</h3>
+            <h3 class="text-base sm:text-lg font-bold text-neutral-950 mt-8 mb-3">10.9 Presupuesto y Estructura de Costos del Proyecto (2026)</h3>
             <div class="overflow-x-auto">
               <table class="wide">
                 <thead>
