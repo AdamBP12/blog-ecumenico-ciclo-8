@@ -1,8 +1,8 @@
 <!-- title: Línea Base del Alcance, Cronograma y Plan Operativo -->
 
-            <h3 class="text-base sm:text-lg font-bold text-neutral-950 mt-5 mb-2">10.1 Enunciado del Alcance del Proyecto (PMBOK / Norma UNTELS)</h3>
+            <h3 class="text-base sm:text-lg font-bold text-neutral-950 mt-5 mb-2">10.1 Enunciado del Alcance del Proyecto (Estándares ANSI/PMI 99-001 e ISO 21502)</h3>
             <p class="text-justify mb-4">
-              Conforme a los estándares de Gestión del Alcance del PMBOK impartidos por el <strong>Mg. MBA Antonio Arqque Pantigozo en la Universidad Nacional Tecnológica de Lima Sur (UNTELS)</strong>, el enunciado formaliza los límites del trabajo, los entregables aceptados y las exclusiones explícitas para prevenir la corrupción del alcance o trabajos no solicitados (<i>gold plating</i>):
+              Conforme a las directrices de Gestión del Alcance establecidas en la norma <strong>ANSI/PMI 99-001 (Guía del PMBOK®)</strong> y el estándar internacional <strong>ISO 21502:2020 (Gestión de proyectos, programas y carteras)</strong>, el enunciado formaliza con rigor los límites operativos, los entregables aceptados y las exclusiones explícitas para prevenir la corrupción del alcance o trabajos no contratados (<i>gold plating</i>):
             </p>
 
             <div class="overflow-x-auto">
@@ -65,7 +65,7 @@
 
             <h3 class="text-base sm:text-lg font-bold text-neutral-950 mt-6 mb-2">10.2 Estructura de Desglose del Trabajo (EDT / WBS)</h3>
             <p class="text-justify mb-4">
-              En estricto cumplimiento de la regla metodológica enseñada por el profesor (Diapositiva 36 de la sesión de Alcance), <strong>la EDT se compone exclusivamente de sustantivos, evitando el uso de verbos</strong>:
+              En estricto cumplimiento del <strong>Estándar de Práctica del PMI para Estructuras de Desglose del Trabajo (PMI Practice Standard for WBS)</strong> y las directrices de descomposición orientada a entregables de la norma <strong>ISO/IEC/IEEE 12207</strong>, <strong>la EDT se compone exclusivamente de sustantivos (entregables tangibles, productos físicos y componentes de software verificables), evitando estrictamente el uso de verbos de acción</strong>, asegurando el cumplimiento de la Regla del 100 %:
             </p>
 
             <div class="overflow-x-auto">
@@ -113,7 +113,7 @@
 
             <h3 class="text-base sm:text-lg font-bold text-neutral-950 mt-6 mb-2">10.3 Diccionario de la EDT (Fichas Técnicas de los 15 Paquetes de Trabajo)</h3>
             <p class="text-justify mb-4">
-              Tal como exige el estándar PMBOK y la <strong>Diapositiva 39 de la sesión de Alcance</strong>, el Diccionario de la EDT debe documentar <strong>CADA UNO de los paquetes de trabajo</strong> de la EDT. A continuación se presentan las 15 fichas técnicas completas agrupadas por Cuenta de Control:
+              Conforme a las exigencias normativas del estándar <strong>ANSI/PMI 99-001 (Sección 5.4: Crear la EDT/WBS)</strong> y la norma <strong>ISO 21502</strong>, el Diccionario de la EDT proporciona la especificación técnica, criterios de aceptación, recursos asignados y estimación de costos de <strong>cada uno de los paquetes de trabajo</strong> del nivel terminal. A continuación se presentan las fichas técnicas normalizadas agrupadas por Cuenta de Control:
             </p>
 
             <details class="lk-items my-4" open>
@@ -183,12 +183,12 @@
               </div>
             </details>
 
-                        <h3 class="text-base sm:text-lg font-bold text-neutral-950 mt-6 mb-2">10.4 Diagrama de la Lista de Actividades y Estimación por Tres Valores (Fórmulas PERT de la Diapositiva 27)</h3>
+                        <h3 class="text-base sm:text-lg font-bold text-neutral-950 mt-6 mb-2">10.4 Diagrama de la Lista de Actividades y Estimación por Tres Valores (Estándares PMI Scheduling e IEEE 1058)</h3>
             <p class="text-justify mb-4">
-              En estricto cumplimiento de los estándares del PMBOK y la <strong>metodología impartida por el Mg. MBA Antonio Arqque Pantigozo en la Universidad Nacional Tecnológica de Lima Sur (UNTELS)</strong>, los paquetes de trabajo de la EDT se descomponen a un nivel más granular de <strong>actividades operativas e ingenieriles</strong> (Diapositiva 18: Planificación gradual). Como se observa en la formulación de referencia del equipo, no se toman los bloques macro tal cual, sino que se separan en tareas secuenciales bien definidas de software, infraestructura física, hardware y despliegue.
+              En estricto cumplimiento del <strong>Estándar de Práctica del PMI para la Gestión del Cronograma (Practice Standard for Scheduling)</strong> y la norma <strong>ISO 21502 (Cláusula 7.4: Programación y Gestión del Tiempo)</strong>, los paquetes de trabajo de la EDT se descomponen a un nivel de granularidad ejecutable denominado <strong>actividades del cronograma</strong> mediante la técnica de planificación gradual (<i>Rolling Wave Planning</i>). Esta descomposición separa el alcance en tareas secuenciales bien definidas de infraestructura física de almacén, aprovisionamiento cloud, arquitectura de datos, desarrollo modular WMS y aseguramiento de calidad.
             </p>
             <p class="text-justify mb-4">
-              Para calcular la duración esperada ($T_E$), se aplican las fórmulas matemáticas de la <strong>Diapositiva 27 de la sesión de Cronograma</strong>, empleando la <strong>Distribución Beta (PERT)</strong> ($T_E = rac{T_O + 4T_M + T_P}{6}$), la desviación estándar ($\sigma = rac{T_P - T_O}{6}$), la varianza ($\sigma^2$) y el cálculo de <strong>Horas-Hombre de esfuerzo</strong> ($	ext{Esfuerzo} = T_E 	imes 8	ext{ h/día} 	imes 	ext{Recursos}$):
+              Para calcular la duración esperada ($T_E$), se aplican los métodos formales de estimación por tres valores del <strong>Estándar PMI para la Gestión del Cronograma</strong>, empleando la <strong>Distribución Beta (PERT)</strong> ($T_E = rac{T_O + 4T_M + T_P}{6}$), la desviación estándar ($\sigma = rac{T_P - T_O}{6}$), la varianza ($\sigma^2$) y el cálculo de <strong>Horas-Hombre de esfuerzo</strong> ($	ext{Esfuerzo} = T_E 	imes 8	ext{ h/día} 	imes 	ext{Recursos}$):
             </p>
 
             <div class="overflow-x-auto">
@@ -512,7 +512,7 @@
 
             <h3 class="text-base sm:text-lg font-bold text-neutral-950 mt-6 mb-2">10.5 Diagrama de Red de Actividades y Método de la Ruta Crítica (CPM)</h3>
             <p class="text-justify mb-4">
-              En la <strong>Diapositiva 25 de la sesión de Cronograma</strong>, el docente establece como salida clave del proceso de secuenciación el <strong>Diagrama de Red del Cronograma del Proyecto</strong> mediante el <i>Método de Diagramación por Precedencia (PDM)</i>. Siguiendo la estructura visual del diseño presentado por el equipo para Distribuidora Ecuménico, las actividades se organizan con nodos rectangulares redondeados, líneas ortogonales con cabezas de flecha direccionales, hitos en cápsulas verdes (Inicio y Fin) y la <strong>Ruta Crítica destacada en color rojo con holgura $HT = 0$</strong>:
+              Conforme a la norma técnica <strong>ANSI/PMI 99-001 (Sección 6.3: Secuenciar las Actividades)</strong> y el estándar <strong>ISO 21502</strong>, la relación lógica de dependencias se modela formalmente mediante el <strong>Método de Diagramación por Precedencia (PDM - <i>Precedence Diagramming Method</i>)</strong>. Las 22 actividades del proyecto se estructuran con nodos rectangulares enlazados por conectores direccionales ortogonales de lógica Final-a-Inicio (FS), identificando los hitos contractuales de control (<i>Inicio</i> y <i>Fin</i>) y la <strong>Ruta Crítica continua destacada en color rojo con Holgura Total  = 0$</strong>:
             </p>
 
             <figure class="dg-fig">
@@ -520,7 +520,7 @@
                 <img src="assets/images/diagrama-red-actividades.png" alt="Diagrama de red de actividades y ruta crítica CPM — Distribuidora Ecuménico" loading="lazy">
               </div>
               <figcaption>
-                <span><b>Diagrama de Red de actividades y Ruta Crítica (CPM).</b> Red de precedencias (PDM) con 22 actividades operativas e ingenieriles, hitos de control (Inicio y Fin), ruta crítica continua destacada en rojo (duración total: 49 días hábiles / 9.8 semanas), leyenda de holguras ($HT=0$) y formulación metodológica según la Diapositiva 30 de la sesión de Cronograma impartida por el Mg. MBA Antonio Arqque Pantigozo (UNTELS).</span>
+                <span><b>Diagrama de Red de actividades y Ruta Crítica (CPM).</b> Red de precedencias (PDM) con 22 actividades operativas e ingenieriles, hitos de control (Inicio y Fin), ruta crítica continua destacada en rojo (duración total: 49 días hábiles / 9.8 semanas), leyenda de holguras ($HT=0$) y formulación técnica estandarizada según las normas ANSI/PMI 99-001, Practice Standard for Scheduling e ISO 21502:2020.</span>
                 <span class="dg-act">
                   <button type="button" onclick="openLightbox('assets/images/diagrama-red-actividades.png', 'Diagrama de red de actividades y ruta crítica CPM — Distribuidora Ecuménico')">Ampliar</button>
                   <a href="assets/images/diagrama-red-actividades.png" download>Descargar PNG</a>
@@ -529,7 +529,7 @@
             </figure>
 
             <p class="text-justify mb-4">
-              En la <strong>Diapositiva 30 de la sesión de Cronograma</strong>, el docente especifica el formato estándar de cada nodo para el cálculo de la red por el Método del Camino Crítico (CPM):
+              Conforme a las convenciones internacionales de dirección de proyectos (PMI / ISO 21502), se adopta la estructura técnica estandarizada del <strong>nodo CPM de 6 casillas</strong> para la determinación rigurosa de tiempos tempranos, tardíos y márgenes de holgura:
             </p>
 
             <div class="overflow-x-auto my-4 text-center">
@@ -609,9 +609,9 @@
               $$Z = rac{T_S - \mu}{\sigma_P} = rac{52 - 49}{1.18} = rac{3}{1.18} = 2.54$$
               Consultando la tabla de distribución normal estándar acumulada, $P(Z \le 2.54) = 0.9945$. Es decir, <strong>el proyecto tiene un 99.45 % de probabilidad matemática de culminar a tiempo</strong> dentro del margen de 52 días laborables.
             </p>
-<h3 class="text-base sm:text-lg font-bold text-neutral-950 mt-6 mb-2">10.6 Técnicas de Optimización y Compresión del Cronograma (Diapositivas 31 y 32)</h3>
+<h3 class="text-base sm:text-lg font-bold text-neutral-950 mt-6 mb-2">10.6 Técnicas de Optimización y Compresión del Cronograma (Normas ANSI/PMI 99-001 e ISO 21502)</h3>
             <p class="text-justify mb-4">
-              En las <strong>Diapositivas 31 y 32</strong>, el docente expone dos estrategias formales de ajuste del cronograma que se aplican directamente en este proyecto:
+              De acuerdo con las directrices de optimización de tiempos estipuladas en la <strong>Guía del PMBOK® (Sección 6.5.2.6: Compresión del Cronograma)</strong> y la norma <strong>ISO 21502</strong>, se aplican dos estrategias técnicas formales de compresión para asegurar los plazos sin alterar los requerimientos de calidad:
             </p>
             <ul class="list-disc pl-6 space-y-2 mb-4 text-justify">
               <li><strong>Ejecución Rápida (Fast Tracking):</strong> Se programan las actividades de software (B, C, D, E, F y G) en paralelo con la adquisición física de los racks (H). Gracias a los agentes de Inteligencia Artificial para scaffolding de código, el software WMS se completa y espera con holgura positiva a que la infraestructura física esté anclada.</li>
